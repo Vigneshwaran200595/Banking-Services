@@ -1,0 +1,98 @@
+/* Shared dashboard CSS (Option B color scheme) */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;width:100%;font-family:Inter, "Segoe UI", Arial, sans-serif;background:#f5f5f5;color:#111;overflow-x:hidden}
+
+/* SIDEBAR */
+.sidebar{
+  position:fixed;left:0;top:0;width:220px;height:100vh;
+  background:linear-gradient(180deg,#4b0000 0%, #3b0000 100%);
+  color:#fff;padding:22px 16px;display:flex;flex-direction:column;gap:18px;z-index:40;
+}
+.logo-box{display:flex;align-items:center;justify-content:center;padding:6px 0 2px 0}
+.logo{width:130px;max-width:100%;display:block}
+.menu{display:flex;flex-direction:column;gap:6px;overflow:auto;padding-right:6px}
+.menu-item{
+  display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;
+  color:#fff;text-decoration:none;cursor:pointer;font-weight:600;transition:all .18s ease;
+}
+.menu-item i{width:20px;text-align:center}
+.menu-item:hover{background:#E71228;color:#fff;transform:translateX(3px)}
+.menu-item.active{background:#E71228;box-shadow:0 8px 20px rgba(231,18,40,.12)}
+
+/* MAIN RIGHT */
+.main{margin-left:220px;min-height:100vh;display:flex;flex-direction:column}
+
+/* TOP HEADER */
+.top-header{
+  position:fixed;left:220px;right:0;top:0;height:72px;background:#fff;
+  border-bottom:1px solid #eee;display:flex;align-items:center;justify-content:space-between;padding:0 22px;z-index:30;
+}
+.header-left{display:flex;align-items:center;gap:18px}
+.home-btn{
+  background:#E71228;color:#fff;border:none;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;
+  position:relative;overflow:hidden;transition:all .28s ease;
+}
+.home-btn::before{content:"";position:absolute;left:-100%;top:0;height:100%;width:100%;background:#b30000;z-index:-1;transition:left .35s ease}
+.home-btn:hover::before{left:0}
+.home-btn:hover{transform:translateY(-2px)}
+.header-breadcrumb{font-weight:700;color:#5A0606;font-size:18px}
+
+/* ADMIN INFO */
+.admin-box{display:flex;align-items:center;gap:12px}
+.admin-img{width:48px;height:48px;border-radius:8px;object-fit:cover;border:2px solid #eee}
+.admin-info h4{color:#5A0606;font-weight:700}
+.admin-info small{display:block;color:#777}
+
+/* CONTENT AREA */
+.content-area{
+  margin-top:88px;padding:28px 32px;height:calc(100vh - 88px);
+  overflow-y:auto;overflow-x:hidden;
+}
+.content-area::-webkit-scrollbar{width:12px}
+.content-area::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.12);border-radius:8px}
+
+/* TITLES & KPI */
+.page-title{font-size:32px;color:#5A0606;margin-bottom:18px;font-weight:800}
+.kpi-box{display:flex;gap:18px;margin:12px 0 24px;flex-wrap:wrap}
+.kpi{background:#fff;border-radius:12px;padding:18px;flex:1;box-shadow:0 8px 28px rgba(0,0,0,0.06)}
+.kpi p{color:#777;margin-bottom:6px;font-weight:600}
+.kpi h2{font-size:26px;color:#5A0606}
+
+/* Chart rows - 2 per row layout (bigger charts) */
+.chart-row{display:flex;gap:18px;margin-bottom:20px;flex-wrap:wrap}
+.chart-card{
+  background:#fff;border-radius:12px;padding:18px;flex:1 1 calc(50% - 9px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);min-width:320px;display:flex;flex-direction:column;
+}
+.chart-card h3{margin:0 0 12px;color:#5A0606;font-size:18px}
+.chart-wrap{flex:1 1 auto;min-height:300px;display:flex;align-items:center;justify-content:center}
+.chart-wrap canvas{width:100% !important;height:100% !important;display:block}
+
+/* large card (tables) */
+.large-card{background:#fff;border-radius:12px;padding:18px;margin-top:18px;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
+.simple-table{width:100%;border-collapse:collapse;font-size:14px}
+.simple-table thead th{background:#fafafa;color:#333;padding:12px;border-bottom:1px solid #eee;text-align:left}
+.simple-table tbody td{padding:12px;border-bottom:1px solid #f0f0f0}
+
+/* small ghost button */
+.btn-ghost{border:1px solid #b84;background:transparent;padding:8px 12px;border-radius:10px;color:#8B0000;font-weight:700;cursor:pointer}
+
+/* responsive */
+@media (max-width:980px){
+  .sidebar{width:64px;padding:18px 8px}
+  .logo{width:48px}
+  .menu-item span{display:none}
+  .main{margin-left:64px}
+  .top-header{left:64px;width:calc(100% - 64px)}
+  .chart-card{flex:1 1 100%;min-width:unset}
+  .kpi-box{flex-direction:column}
+  .page-title{font-size:24px}
+  .chart-wrap{min-height:220px}
+}
+@media (max-width:520px){
+  .content-area{padding:18px}
+  .top-header{padding:0 12px}
+  .admin-info h4{font-size:13px}
+  .admin-info small{display:none}
+  .logo{width:42px}
+}

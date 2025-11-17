@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modern Login / Signup</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <!-- ===== LOGO + HOME BACK ===== -->
+        <div class="top-header">
+            <img src="Images/logo.webp" class="auth-logo" alt="Logo"> <!-- change logo.png -->
+            <p class="back-home" onclick="goHome()">← Back to Home</p>
+        </div>
+
+        <!-- ===== TABS ===== -->
+        <div class="auth-tabs">
+            <button class="auth-tab active" data-auth="signin">Sign In</button>
+            <span class="divider"></span>
+            <button class="auth-tab" data-auth="signup">Sign Up</button>
+        </div>
+
+        <!-- ===== SIGN IN ===== -->
+        <form id="signinForm" class="auth-form active">
+            <h2>Welcome Back</h2>
+
+            <div class="input-group">
+                <input type="text" placeholder="Email Address" class="email">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="password" placeholder="Password" class="password">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <p class="forgot" onclick="openForget()">Forgot Password?</p>
+
+            <button class="auth-btn" type="submit">Sign In</button>
+        </form>
+
+        <!-- ===== SIGN UP ===== -->
+        <form id="signupForm" class="auth-form">
+            <h2>Create Account</h2>
+
+            <div class="input-group">
+                <input type="text" placeholder="Your Name" class="name">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="text" placeholder="Email Address" class="email">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="password" placeholder="Password" class="password">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <button class="auth-btn" type="submit">Sign Up</button>
+        </form>
+
+        <!-- ===== FORGET PASSWORD ===== -->
+        <form id="forgetForm" class="auth-form forget-form">
+            <h2>Reset Password</h2>
+
+            <div class="input-group">
+                <input type="text" placeholder="Enter Your Email" class="forget-email">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <button class="auth-btn" type="button" onclick="sendReset()">Send Reset Link</button>
+<p class="reset-success"></p>
+
+
+            <p class="back" onclick="closeForget()">← Back to Sign In</p>
+        </form>
+
+    </div>
+
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reports & Analytics — Admin</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="dashboard.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo-box"><img src="Images/logo.webp" alt="Logo" class="logo"></div>
+    <nav class="menu">
+      <a class="menu-item" href="dashboard.html"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></a>
+      <a class="menu-item" href="customers.html"><i class="fa-solid fa-users"></i><span>Customer Accounts</span></a>
+      <a class="menu-item" href="creditcards.html"><i class="fa-solid fa-credit-card"></i><span>Credit Card Applications</span></a>
+      <a class="menu-item" href="loans1.html"><i class="fa-solid fa-file-invoice"></i><span>Loan Applications</span></a>
+      <a class="menu-item" href="transactions.html"><i class="fa-solid fa-money-bill-transfer"></i><span>Transactions</span></a>
+      <a class="menu-item active" href="reports.html"><i class="fa-solid fa-chart-pie"></i><span>Reports & Analytics</span></a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="top-header">
+      <div class="header-left"><button class="home-btn" onclick="location.href='index.html'">Home</button><div class="header-breadcrumb">Reports & Analytics</div></div>
+      <div class="admin-box"><img src="Images/profile.webp" alt="Admin" class="admin-img"><div class="admin-info"><h4>Admin Name</h4><small>Administrator</small></div></div>
+    </header>
+
+    <div class="content-area">
+      <section id="reports" class="section active">
+        <h1 class="page-title">Reports & Analytics</h1>
+
+        <div class="chart-row">
+          <div class="chart-card"><h3>Revenue Comparison</h3><div class="chart-wrap canvas-holder"><canvas id="repChart1"></canvas></div></div>
+          <div class="chart-card"><h3>Account Growth</h3><div class="chart-wrap canvas-holder"><canvas id="repChart2"></canvas></div></div>
+        </div>
+
+        <div class="chart-row">
+          <div class="chart-card"><h3>Customer Satisfaction</h3><div class="chart-wrap canvas-holder"><canvas id="repChart3"></canvas></div></div>
+          <div class="chart-card"><h3>Download Reports</h3>
+            <div style="margin-top:12px">
+              <button class="home-btn" onclick="downloadReport('Monthly Revenue Report')">Download Monthly Revenue</button>
+              <button class="home-btn" style="margin-top:10px" onclick="downloadReport('Customer Summary')">Download Customer Summary</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="large-card">
+          <h3>Generated Reports</h3>
+          <table class="simple-table" style="margin-top:14px">
+            <thead><tr><th>Report Name</th><th>Date</th><th>Download</th></tr></thead>
+            <tbody>
+              <tr><td>Monthly Revenue</td><td>Nov 2025</td><td><button class="home-btn" onclick="downloadReport('Monthly Revenue')">Download</button></td></tr>
+              <tr><td>Customer Summary</td><td>Nov 2025</td><td><button class="home-btn" onclick="downloadReport('Customer Summary')">Download</button></td></tr>
+              <tr><td>Loan Analytics</td><td>Nov 2025</td><td><button class="home-btn" onclick="downloadReport('Loan Analytics')">Download</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

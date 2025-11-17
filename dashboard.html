@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — Admin</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="dashboard.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo-box"><img src="Images/logo.webp" alt="Logo" class="logo"></div>
+    <nav class="menu">
+      <a class="menu-item active" href="dashboard.html"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></a>
+      <a class="menu-item" href="customers.html"><i class="fa-solid fa-users"></i><span>Customer Accounts</span></a>
+      <a class="menu-item" href="creditcards.html"><i class="fa-solid fa-credit-card"></i><span>Credit Card Applications</span></a>
+      <a class="menu-item" href="loans1.html"><i class="fa-solid fa-file-invoice"></i><span>Loan Applications</span></a>
+      <a class="menu-item" href="transactions.html"><i class="fa-solid fa-money-bill-transfer"></i><span>Transactions</span></a>
+      <a class="menu-item" href="reports.html"><i class="fa-solid fa-chart-pie"></i><span>Reports & Analytics</span></a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="top-header">
+      <div class="header-left">
+        <button class="home-btn" onclick="location.href='index.html'">Home</button>
+        <div class="header-breadcrumb">Dashboard</div>
+      </div>
+      <div class="admin-box">
+        <img src="Images/profile.webp" alt="Admin" class="admin-img">
+        <div class="admin-info"><h4>Admin Name</h4><small>Administrator</small></div>
+      </div>
+    </header>
+
+    <div class="content-area">
+      <section id="dashboard" class="section active">
+        <h1 class="page-title">Dashboard Overview</h1>
+        <div class="kpi-box">
+          <div class="kpi"><p>Total Customers</p><h2>12,540</h2></div>
+          <div class="kpi"><p>Active Accounts</p><h2>9,320</h2></div>
+          <div class="kpi"><p>Pending Loans</p><h2>128</h2></div>
+          <div class="kpi"><p>Credit Card Apps</p><h2>452</h2></div>
+        </div>
+
+        <div class="chart-row">
+          <div class="chart-card">
+            <h3>Customer Growth</h3>
+            <div class="chart-wrap canvas-holder"><canvas id="cgChart"></canvas></div>
+            <div style="margin-top:10px;display:flex;justify-content:flex-end"><button class="btn-ghost" onclick="downloadCSV('Customer Growth','Jan,Feb,Mar,Apr,May,Jun','200,300,450,600,750,900')">Download CSV</button></div>
+          </div>
+
+          <div class="chart-card">
+            <h3>Transaction Volume</h3>
+            <div class="chart-wrap canvas-holder"><canvas id="tvChart"></canvas></div>
+            <div style="margin-top:10px;display:flex;justify-content:flex-end"><button class="btn-ghost" onclick="downloadCSV('Transaction Volume','Jan,Feb,Mar,Apr,May,Jun','1500,1800,2200,2600,3000,3500')">Download CSV</button></div>
+          </div>
+        </div>
+
+        <div class="chart-row">
+          <div class="chart-card"><h3>Credit Card Applications</h3><div class="chart-wrap canvas-holder"><canvas id="ccChart"></canvas></div></div>
+          <div class="chart-card"><h3>Loan Status</h3><div class="chart-wrap canvas-holder"><canvas id="loanChart"></canvas></div></div>
+        </div>
+
+        <div class="chart-row">
+          <div class="chart-card"><h3>Monthly Revenue</h3><div class="chart-wrap canvas-holder"><canvas id="revChart"></canvas></div></div>
+          <div class="chart-card"><h3>Account Types</h3><div class="chart-wrap canvas-holder"><canvas id="pieChart"></canvas></div></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

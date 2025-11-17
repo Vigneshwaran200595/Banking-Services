@@ -1,0 +1,4068 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* WRAPPER */
+.header-wrapper {
+  position: relative;
+  padding-left: 240px;
+}
+
+/* LEFT LOGO FIXED */
+.left-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+.left-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #1f1f23;
+  color: #fff;
+  padding: 12px 40px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* RIGHT SIDE */
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.red-icon {
+  color: #e71228;
+  margin-right: 5px;
+}
+
+/* NAV BAR */
+.nav-bar {
+  background: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CENTER MENU */
+.menu-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* GLOBAL NAV ITEMS */
+.menu li {
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+.menu li:hover {
+  color: #e71228;
+}
+
+/* Underline animation (GLOBAL — EXCEPT DROPDOWN) */
+.menu li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e71228;
+  transition: width 0.3s ease;
+}
+.menu li:hover::after {
+  width: 100%;
+}
+
+/* REMOVE UNDERLINE ONLY FOR DROPDOWN */
+.menu > li.home-dropdown::after,
+.menu > li.home-dropdown:hover::after {
+  content: none !important;
+  width: 0 !important;
+}
+
+/* REMOVE GAP FOR DROPDOWN */
+.menu > li.home-dropdown {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* REMOVE ALL UNDERLINES & BLUE COLOR */
+.menu a,
+.menu li a,
+.dropdown-menu li a {
+  text-decoration: none !important;
+  color: inherit !important;   /* keeps text same color */
+}
+
+/* REMOVE THE RED UNDERLINE ANIMATION */
+.menu li::after {
+  content: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* REMOVE HOVER COLOR CHANGE TO BLUE */
+.menu li:hover a,
+.menu li:hover {
+  color: #e71228 !important;   /* your red hover color */
+}
+    
+
+/* DROPDOWN WRAPPER */
+.home-dropdown {
+  position: relative;
+}
+
+/* HOME LINK — ALIGNED PERFECTLY */
+.home-dropdown > a {
+  text-decoration: none !important;
+  color: #000 !important;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 0 !important;
+  margin: 0;
+  line-height: normal;
+}
+
+/* Hover color */
+.home-dropdown:hover > a {
+  color: #e71228 !important;
+}
+
+/* Caret arrow alignment */
+.home-dropdown > a .fa-caret-down {
+  font-size: 10px;
+  margin-top: 2px;
+  transition: 0.3s;
+}
+.home-dropdown:hover > a .fa-caret-down {
+  color: #e71228;
+}
+
+/* DROPDOWN MENU */
+.home-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 140px;
+  background: #fff;
+  padding: 5px 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+.home-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* DROPDOWN ITEMS */
+.home-dropdown .dropdown-menu li a {
+  padding: 8px 12px;
+  display: block;
+  color: #333;
+  font-size: 14px;
+}
+.home-dropdown .dropdown-menu li a:hover {
+  background: #e71228;
+  color: #fff;
+}
+
+/* BUTTONS */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+.login-btn {
+  padding: 10px 20px;
+  border: 2px solid #000;
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+.login-btn:hover {
+  background: #000;
+  color: #fff;
+}
+.open-btn {
+  padding: 10px 25px;
+  background: #e71228;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.open-btn:hover {
+  background: #c10f21;
+  transform: translateY(-2px);
+}
+
+/* Remove bullets for dropdown list */
+.home-dropdown .dropdown-menu {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove bullets for dropdown li */
+.home-dropdown .dropdown-menu li {
+  list-style: none !important;
+}
+
+/* Remove underline from dropdown links */
+.home-dropdown .dropdown-menu li a {
+  text-decoration: none !important;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #000;
+}
+
+
+
+/* Mobile Menu Hidden */
+#mobile-menu {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  #mobile-menu {
+    display: none !important;
+  }
+
+  #mobile-menu.active {
+    display: block !important;
+  }
+}
+
+.home-dropdown a .fa-caret-down {
+  font-size: 18px !important;   /* bigger arrow */
+  transition: .3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+
+  /* Center whole mobile menu */
+  .menu {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Center HOME itself */
+ /* --- MOBILE HOME DROPDOWN FIX (NO OVERLAY) --- */
+
+.home-dropdown {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important; /* important: vertical layout */
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Home title centered */
+.home-dropdown > a {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px;
+  padding: 12px 0;
+}
+
+/* Dropdown list acts like normal block */
+.home-dropdown .dropdown-menu {
+  display: none !important;
+  width: 100% !important;
+  margin-top: 5px !important;  /* space below Home */
+  position: relative !important; /* remove absolute */
+  left: 0 !important;
+  text-align: center !important;
+  background: #fff !important;
+  padding: 10px 0 !important;
+  box-shadow: none !important;
+}
+
+/* Show dropdown */
+.dropdown-menu.show {
+  display: block !important;
+}
+
+/* Dropdown item full width */
+/* Dropdown item styling */
+.dropdown-menu li a {
+  display: block !important;
+  width: 100% !important;
+  padding: 6px 0 !important;   /* reduced top & bottom padding */
+  font-size: 17px !important;  /* increased text size */
+  text-align: center !important;
+  background: #fff !important;
+}
+
+/* Arrow rotation */
+.home-dropdown .fa-caret-down {
+  font-size: 18px !important;
+  transition: .3s;
+}
+
+.home-dropdown .rotate {
+  transform: rotate(180deg);
+}
+
+}
+
+
+
+
+/* ===============================================
+   RESPONSIVE STYLING FOR ALL DEVICES
+   1024px → 768px → 576px → 480px → 360px
+================================================ */
+
+  /* ============= 1024px (small laptops / tablets) ============= */
+  @media (max-width: 1024px) {
+
+    .header-wrapper {
+      padding-left: 0 !important;
+    }
+
+    .left-logo {
+      position: relative !important;
+      width: 240px;
+      height: auto;
+      margin: 10px auto;
+    }
+
+    .nav-bar {
+      padding: 15px 20px;
+    }
+
+    .menu {
+      gap: 20px;
+    }
+  }
+
+  /* ============= 768px (tablets & large mobiles) ============= */
+  @media (max-width: 768px) {
+
+    /* --- LOGO FIX --- */
+    .left-logo {
+      width: 180px;
+      margin-left: 0px;
+    }
+
+      .left-logo  img{
+      width: 180px;
+    }
+
+    /* --- TOP BAR FIX --- */
+    .top-right {
+      flex-direction: column;
+      font-size: 14px;
+      gap: 6px;
+    }
+
+    /* --- NAVBAR BACKGROUND BLACK --- */
+    .nav-bar {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 20px;
+    }
+
+    /* --- HAMBURGER SHOW --- */
+    .hamburger {
+      display: block;
+      color: #000000 !important;
+      margin-bottom: 12px;
+    }
+
+    /* --- MENU HIDE INITIALLY --- */
+    .menu-container {
+      width: 100%;
+      display: none;
+      background: #fff;
+      padding: 12px 0;
+    }
+
+    .menu-container.active {
+      display: block !important;
+    }
+
+    /* --- MENU STACKED --- */
+    .menu {
+      flex-direction: column !important;
+      gap: 15px;
+      width: 100%;
+      padding-left: 10px;
+    }
+
+    .menu li {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    /* --- BUTTONS FULL WIDTH --- */
+    .nav-buttons {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+      gap: 12px;
+    }
+
+    .login-btn,
+    .open-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  /* ============= 576px (normal phones) ============= */
+  @media (max-width: 576px) {
+
+    .left-logo {
+      width: 160px;
+    }
+
+    .top-right {
+      font-size: 13px;
+    }
+
+    .menu li {
+      font-size: 15px;
+    }
+
+    .home-dropdown > a {
+      font-size: 16px;
+    }
+  }
+
+  /* ============= 480px (small phones) ============= */
+  @media (max-width: 480px) {
+
+    .top-bar {
+      padding: 10px;
+      text-align: center;
+      height: auto;
+    }
+
+    .nav-bar {
+      padding: 12px 15px;
+    }
+
+    .login-btn,
+    .open-btn {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+
+  /* ============= 360px (mini phones) ============= */
+  @media (max-width: 360px) {
+
+    .left-logo {
+      width: 140px;
+    }
+
+    .top-right {
+      font-size: 12px;
+    }
+
+    .menu li {
+      font-size: 14px;
+    }
+
+    .login-btn,
+    .open-btn {
+      font-size: 13px;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+
+    /* Make top-bar normal container */
+    .top-bar {
+      position: relative;
+      padding-top: 60px;   /* space for logo overlay */
+      text-align: center;
+    }
+
+    /* Logo overlays top bar */
+    .left-logo {
+      position: absolute !important;
+      top: -30px !important;      /* adjust overlay amount */
+      left: 50% !important;
+      transform: translateX(-50%); /* center logo */
+      z-index: 999 !important;
+      width: 160px !important;
+      height: auto;
+      margin: 0 !important;
+    }
+
+    .left-logo img {
+      width: 100% !important;
+    }
+
+    /* Contact info below logo */
+    .top-right {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 14px;
+      color: #fff;
+    }
+
+  }
+
+
+  @media (max-width: 768px) {
+
+    /* Remove desktop offset */
+    .header-wrapper {
+      padding-left: 0 !important;
+    }
+
+    /* TOP BAR becomes container for contact only */
+  .top-right {
+      display: flex !important;
+      flex-direction: row !important;   /* ← side by side */
+      align-items: center !important;
+      justify-content: center !important; 
+      gap: 8px !important;             /* space between email & phone */
+      text-align: center !important;
+      font-size: 12px !important;
+      color: #fff !important;
+    }
+
+
+    /* LOGO overlays top bar + navbar */
+    .left-logo {
+    position: absolute !important;
+    top: 0px !important;      /* vertical positioning */
+    left: 70px !important;      /* THIS moves logo to left side */
+    z-index: 999 !important;
+    width: 160px !important;
+    height: auto;
+  }
+
+    .top-bar {
+      padding-top: 20px !important;   /* reduced from 60px/70px */
+      padding-bottom: 5px !important;
+    }
+
+    .left-logo img {
+      width: 100% !important;
+      height: auto;
+    }
+
+    /* CONTACT stays BELOW logo */
+    .top-right {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center !important;
+      gap: 5px;
+      font-size: 14px;
+      color: #fff !important;
+    }
+
+    /* NAVBAR BELOW top bar */
+    .nav-bar {
+      width: 100%;
+      background: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
+
+    /* Hamburger goes RIGHT */
+    .hamburger {
+      display: block !important;
+      font-size: 28px;
+      color: #000 !important;
+    }
+
+    /* MENU hidden initially */
+    .menu-container {
+      display: none;
+      width: 100%;
+    }
+
+    .menu-container.active {
+      display: block !important;
+    }
+
+    /* MENU stacks vertically */
+    .menu {
+      flex-direction: column !important;
+      width: 100%;
+      gap: 15px;
+      padding-left: 10px;
+    }
+
+    .menu li {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    /* BUTTONS full width */
+    .nav-buttons {
+      flex-direction: column !important;
+      width: 100%;
+      margin-top: 10px;
+      gap: 10px;
+    }
+
+    .login-btn,
+    .open-btn {
+      width: 100% !important;
+      text-align: center;
+    }
+  }
+
+
+  /* DESKTOP DROPDOWN MENU (RED) */
+.home-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100px;
+  list-style: none;
+  padding: 0;
+  background: #e71228;  /* RED */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.home-dropdown .dropdown-menu li a {
+  color: #fff !important;     /* WHITE TEXT */
+  display: block;
+  padding: 10px 14px;
+  font-size: 15px;
+}
+
+.home-dropdown .dropdown-menu li a:hover {
+  background: #fff !important;
+  color: #e71228 !important;  /* RED TEXT */
+}
+
+/* Desktop hover open */
+@media (min-width: 769px) {
+  .home-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* NAV LINKS COLOR RESET */
+.menu a {
+  color: #000 !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+/* MOBILE MODE */
+@media (max-width: 768px) {
+
+  .menu-container {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-container.active {
+    display: block !important;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .home-dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-dropdown .dropdown-menu {
+    position: relative !important;
+    width: 100%;
+    display: none;
+    box-shadow: none!important;
+    background: #fff !important;
+  }
+
+  .home-dropdown .dropdown-menu li a {
+    color: #000 !important;
+    padding: 8px 0 !important;
+    background: #fff;
+  }
+
+  /* Show dropdown when toggled */
+  .dropdown-menu.show {
+    display: block !important;
+  }
+
+  /* Rotate arrow */
+  .dropdown-arrow.rotate {
+    transform: rotate(180deg);
+  }
+}
+
+/* MAKE HOME TEXT SAME STYLE AS OTHER NAV LINKS */
+.menu a,
+.home-link {
+  font-size: 18px !important;
+  font-weight: normal !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  padding: 0;      /* SAME AS OTHER LINKS */
+  margin: 0;
+}
+
+/* Hover color same as others */
+.home-link:hover {
+  color: #e71228 !important;
+}
+
+/* Arrow style same */
+.dropdown-arrow {
+  font-size: 14px !important;
+  margin-left: 4px;
+  transition: .3s;
+}
+
+
+@media (max-width: 768px) {
+    .nav-bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between !important;  /* keeps logo left + hamburger right */
+        align-items: center !important;
+    }
+
+    .hamburger {
+        display: block !important;
+        margin-left: auto !important;  /* pushes hamburger to the right */
+        margin-right: 10px;            /* little right spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    .home-dropdown .dropdown-menu li a {
+        background: #e71228 !important;  /* red hover */
+        color: #fff !important;          /* white text */
+    }
+}
+
+/* MAIN DROPDOWN WRAPPER */
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  margin-top: 7px;
+  overflow: hidden;
+}
+
+/* Slide Base */
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Background Image With Zoom Effect */
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 3s ease;
+}
+
+.slide.active .slide-img {
+  transform: scale(1.15); /* ZOOM IN */
+}
+
+/* RED CURVED OVERLAY */
+.red-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 55%;
+  height: 100%;
+  background: rgba(115, 6, 6, 0.8);
+  border-top-right-radius: 450px;
+  border-bottom-right-radius: 450px;
+}
+
+/* Slide Content */
+.slide-content {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 10;
+}
+
+.slide-content .tag {
+  background: #e71228;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.slide-content h1 {
+  font-size: 55px;
+  line-height: 1.2;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: #e71228;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+/* Pagination */
+.pagination {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagination .dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+}
+
+.pagination .dot.active {
+  background: #e71228;
+  border-color: #e71228;
+}
+
+.pagination span {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+  .hero-slider {
+    height: 420px;
+  }
+
+  .slide-content {
+    left: 8%;
+    top: 48%;
+  }
+
+  .slide-content h1 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .slide-content .tag {
+    font-size: 11px;
+    padding: 5px 14px;
+  }
+
+  .btn-primary {
+    font-size: 13px;
+    padding: 10px 18px;
+  }
+
+  .slide.active .slide-img {
+    transform: scale(1.05); /* smaller zoom */
+  }
+}
+
+
+@media (max-width: 576px) {
+
+  .hero-slider {
+    height: 360px;
+  }
+
+  .slide-content {
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 85%;
+  }
+
+  .slide-content h1 {
+    font-size: 24px;
+  }
+
+  .slide-content .tag {
+    font-size: 10px;
+    padding: 4px 12px;
+  }
+
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .slide.active .slide-img {
+    transform: scale(1.03);
+  }
+
+  .pagination {
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero-slider {
+    height: 320px;
+  }
+  .slide-content {
+    margin-left:-90px;
+  }
+
+  .slide-content h1 {
+    font-size: 20px
+  }
+
+  .slide-content .tag {
+    font-size: 9px;
+    padding: 3px 10px;
+  }
+
+  .btn-primary {
+    font-size: 11px;
+    padding: 7px 14px;
+  }
+
+  .slide.active .slide-img {
+    transform: scale(1.02);
+  }
+}
+
+
+
+/* SECTION SPACING */
+.banking-section {
+    padding: 40px 0 20px;
+    overflow: hidden;
+}
+
+/* HEADER */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header .label {
+    color: #e71228;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: .5px;
+    position: relative;
+}
+
+.section-header .label::before {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: #e71228;
+    position: absolute;
+    left: -55px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section-header h2 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-top: 10px;
+    color: #222;
+}
+
+/* TABS */
+.tabs-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    padding: 5px 0;
+    margin-top: 10px;
+}
+
+.tab-item {
+    text-align: center;
+    padding: 35px 15px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+.icon-bg {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffffff 65%, #f2f2f2 100%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.icon-bg img {
+    width: 48px;
+    height: auto;
+    opacity: 1 !important;
+    transition: .3s;
+}
+
+/* ACTIVE STATE */
+.tab-item.active .icon-bg {
+    background: radial-gradient(circle, #ffffff 30%, #e71228 95%);
+    transform: scale(1.25);
+}
+
+/* ✔ DO NOT turn icon white */
+.tab-item.active .icon-bg img {
+    filter: none !important;   /* keep original colored icon */
+    opacity: 1;
+}
+
+
+.tab-item h3 {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.tab-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* ACTIVE RED ARROW */
+.arrow {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 12px solid #e71228;
+    opacity: 0;
+}
+
+.tab-item.active .arrow {
+    opacity: 1;
+}
+
+/* CONTENT BOX */
+.content-box {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 55px;
+}
+
+.content-box.active {
+    display: grid;
+}
+
+.left-img img {
+    width: 100%;
+    height: 380px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+/* RIGHT INFO */
+.right-info h2 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.key-title {
+    margin-top: 25px;
+    color: #e71228;
+    font-weight: 800;
+}
+
+.benefits li {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.tick {
+    width: 26px;
+    height: 26px;
+    background: #e71228;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* Bottom Note */
+.note {
+    margin-top: 18px;
+    color: #222;
+    font-weight: 600;
+}
+
+.note i {
+    color: #e71228;
+    margin-right: 8px;
+}
+
+
+.top-label {
+  display: flex;
+  padding-top: 30px;
+  align-items: center;
+  justify-content: center;   /* Center horizontally */
+  gap: 10px;
+  text-align: center;
+}
+
+.red-line {
+  width: 25px;
+  height: 4px;
+  background: red;
+  display: inline-block;
+}
+
+.label-text {
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #d30000;
+  font-weight: 600;
+}
+
+/* =========================================================
+   📱 MOBILE & TABLET RESPONSIVE STYLING
+   ========================================================= */
+
+/* ---------- TABLETS (max 1024px) ---------- */
+@media (max-width: 1024px) {
+
+  .section-header h2 {
+    font-size: 32px;
+  }
+
+  .tabs-row {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 0;
+  }
+
+  .tab-item {
+    padding: 25px 10px;
+  }
+
+  .icon-bg {
+    width: 90px;
+    height: 90px;
+  }
+
+  .icon-bg img {
+    width: 40px;
+  }
+
+  .content-box {
+    gap: 30px;
+  }
+
+  .right-info h2 {
+    font-size: 26px;
+  }
+}
+
+
+/* ---------- LARGE MOBILES (max 768px) ---------- */
+@media (max-width: 768px) {
+
+  .section-header h2 {
+    font-size: 28px;
+  }
+
+  .tabs-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tab-item {
+    padding: 20px 5px;
+  }
+
+  .icon-bg {
+    width: 75px;
+    height: 75px;
+  }
+
+  .icon-bg img {
+    width: 34px;
+  }
+
+  .tab-item h3 {
+    font-size: 16px;
+  }
+
+  .tab-item p {
+    font-size: 12px;
+  }
+
+  .content-box {
+    grid-template-columns: 1fr;  
+    margin-top: 35px;
+  }
+
+  .left-img img {
+    height: 260px;
+  }
+
+  .right-info h2 {
+    font-size: 24px;
+  }
+
+  .benefits li {
+    font-size: 14px;
+  }
+
+  .tick {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+  }
+}
+
+
+/* ---------- NORMAL PHONES (max 576px) ---------- */
+@media (max-width: 576px) {
+
+  .section-header h2 {
+    font-size: 24px;
+  }
+
+  .tabs-row {
+    grid-template-columns: 1fr 1fr; /* still 2 columns */
+    gap: 8px;
+  }
+
+  .tab-item {
+    padding: 18px 5px;
+  }
+
+  .icon-bg {
+    width: 68px;
+    height: 68px;
+  }
+
+  .icon-bg img {
+    width: 30px;
+  }
+
+  .tab-item h3 {
+    font-size: 15px;
+  }
+
+  .content-box {
+    margin-top: 25px;
+  }
+
+  .left-img img {
+    height: 220px;
+  }
+
+  .right-info h2 {
+    font-size: 20px;
+  }
+
+  .note {
+    font-size: 13px;
+  }
+}
+
+
+/* ---------- SMALL PHONES (max 480px) ---------- */
+@media (max-width: 480px) {
+
+  .section-header h2 {
+    font-size: 22px;
+  }
+
+  .section-header .label {
+    font-size: 12px;
+  }
+
+  .tabs-row {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .tab-item {
+    padding: 15px 5px;
+  }
+
+  .icon-bg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-bg img {
+    width: 26px;
+  }
+
+  .tab-item h3 {
+    font-size: 14px;
+  }
+
+  .tab-item p {
+    font-size: 12px;
+  }
+
+  .left-img img {
+    height: 200px;
+  }
+
+  .right-info h2 {
+    font-size: 18px;
+  }
+
+  .benefits li {
+    font-size: 13px;
+  }
+
+  .tick {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* ---------- MINI PHONES (max 360px) ---------- */
+@media (max-width: 360px) {
+
+  .section-header h2 {
+    font-size: 20px;
+  }
+
+  .icon-bg {
+    width: 55px;
+    height: 55px;
+  }
+
+  .icon-bg img {
+    width: 22px;
+  }
+
+  .left-img img {
+    height: 180px;
+  }
+
+  .right-info h2 {
+    font-size: 17px;
+  }
+}
+
+
+.main-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 15px 0 40px;
+  text-align: center;        /* Center the heading text */
+}
+/* =====================================================
+   CARD ROW (NO SLIDER)
+===================================================== */
+.fd-cards-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+/* =====================================================
+   CARD DESIGN
+===================================================== */
+.fd-card {
+  width: 380px;
+  background: #fff;
+  border-left: 3px solid #d30000;
+  padding: 25px;
+  border-radius: 10px;
+  transition: .3s;
+  position: relative;
+}
+
+/* Hover effect */
+.fd-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* =====================================================
+   IMAGE SECTION (IMAGE FIRST)
+===================================================== */
+.fd-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px; 
+}
+
+.fd-image img {
+  width: 100%;
+  border-radius: 10px;
+  transition: .4s;
+}
+
+/* Image zoom on hover */
+.fd-card:hover .fd-image img {
+  transform: scale(1.07);
+}
+
+/* =====================================================
+   ICON BOX (BOTTOM-RIGHT OF IMAGE)
+===================================================== */
+.fd-icon {
+  width: 65px;
+  height: 65px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+}
+
+.fd-icon i {
+  font-size: 22px;
+  color: #d30000;
+}
+
+/* =====================================================
+   CARD TEXT CONTENT
+===================================================== */
+.fd-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.fd-card p {
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  min-height: 60px; /* Ensures equal height & visibility */
+}
+
+
+.read-more {
+  color: #d30000;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  transition: .3s;
+}
+
+.read-more:hover {
+  color: #a00000;
+}
+
+/* ============================================
+   📱 FD Cards Responsive Styling
+=============================================== */
+
+/* ---------- Tablets (max 1024px) ---------- */
+@media (max-width: 1024px) {
+
+  .fd-cards-row {
+    gap: 25px;
+  }
+
+  .fd-card {
+    width: 320px;
+  }
+
+  .fd-card h3 {
+    font-size: 22px;
+  }
+
+  .fd-card p {
+    font-size: 15px;
+  }
+}
+
+/* ---------- Tablets & Large Mobiles (max 768px) ---------- */
+@media (max-width: 768px) {
+
+  .fd-cards-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .fd-card {
+    width: 80%;
+    padding: 22px;
+  }
+
+  .fd-image img {
+    height: auto;
+  }
+
+  .fd-icon {
+    width: 60px;
+    height: 60px;
+    right: -15px;
+    bottom: -15px;
+  }
+
+  .fd-icon i {
+    font-size: 20px;
+  }
+
+  .fd-card h3 {
+    font-size: 20px;
+  }
+
+  .fd-card p {
+    font-size: 14px;
+  }
+
+  .read-more {
+    font-size: 15px;
+  }
+}
+
+/* ---------- Normal Phones (max 576px) ---------- */
+@media (max-width: 576px) {
+
+  .fd-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .fd-card h3 {
+    font-size: 18px;
+  }
+
+  .fd-card p {
+    font-size: 13px;
+  }
+
+  .fd-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .fd-icon i {
+    font-size: 18px;
+  }
+
+  .read-more {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Small Phones (max 480px) ---------- */
+@media (max-width: 480px) {
+
+  .fd-card {
+    width: 92%;
+    padding: 18px;
+  }
+
+  .fd-image {
+    margin-bottom: 15px;
+  }
+
+  .fd-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .fd-icon i {
+    font-size: 16px;
+  }
+
+  .fd-card h3 {
+    font-size: 17px;
+  }
+
+  .fd-card p {
+    font-size: 12px;
+    min-height: auto; /* Auto height on small screens */
+  }
+
+  .read-more {
+    font-size: 13px;
+  }
+}
+
+/* ---------- Mini Phones (max 360px) ---------- */
+@media (max-width: 360px) {
+
+  .fd-card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .fd-card h3 {
+    font-size: 16px;
+  }
+
+  .fd-card p {
+    font-size: 12px;
+  }
+
+  .read-more {
+    font-size: 12px;
+  }
+}
+
+
+
+
+/* =============================
+   TOP HEADER WITH BACKGROUND
+============================= */
+.bankingV2-header {
+  background: linear-gradient(135deg, #5b0000, #a40000);
+  padding: 40px 60px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.v2-mini-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.v2-mini-line {
+  width: 30px;
+  height: 3px;
+  background: #ff3e3e;
+}
+
+.v2-main-heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 10px;
+  line-height: 1.2;
+}
+
+/* RIGHT SUPPORT */
+.bankingV2-header-right {
+  text-align: right;
+  position: relative;
+  margin-right: 150px;
+}
+
+.v2-support-text {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.v2-support-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.v2-support-number {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.v2-support-time {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 5px;
+  display: block;
+}
+
+/* AGENT IMAGE */
+.v2-agent-img {
+  width: 150px;
+  position: absolute;
+  margin-top: -110px;
+}
+
+
+/* ============================================================
+   📱 BANKING V2 HEADER – RESPONSIVE MEDIA QUERIES
+============================================================ */
+
+/* ---------- TABLETS (max 1024px) ---------- */
+@media (max-width: 1024px) {
+
+  .bankingV2-header {
+    padding: 35px 40px;
+  }
+
+  .v2-main-heading {
+    font-size: 38px;
+  }
+
+  .bankingV2-header-right {
+    margin-right: 80px;
+  }
+
+  .v2-agent-img {
+    width: 130px;
+    margin-top: -90px;
+  }
+}
+
+
+/* ---------- LARGE MOBILES (max 768px) ---------- */
+@media (max-width: 768px) {
+
+  .bankingV2-header {
+    padding: 30px 30px;
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .v2-mini-label {
+    justify-content: center;
+  }
+
+  .v2-main-heading {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .bankingV2-header-right {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .v2-support-info {
+    justify-content: center;
+  }
+
+  .v2-support-number {
+    font-size: 20px;
+  }
+
+  .v2-agent-img {
+    position: relative;
+    margin-top: 0;
+    width: 120px;
+  }
+}
+
+
+/* ---------- NORMAL PHONES (max 576px) ---------- */
+@media (max-width: 576px) {
+
+  .bankingV2-header {
+    padding: 25px 20px;
+    gap: 20px;
+  }
+
+  .v2-main-heading {
+    font-size: 28px;
+  }
+
+  .v2-support-text {
+    font-size: 14px;
+  }
+
+  .v2-support-number {
+    font-size: 18px;
+  }
+
+  .v2-support-time {
+    font-size: 12px;
+  }
+
+  .v2-agent-img {
+    width: 110px;
+  }
+}
+
+
+/* ---------- SMALL PHONES (max 480px) ---------- */
+@media (max-width: 480px) {
+
+  .v2-main-heading {
+    font-size: 24px;
+  }
+
+  .v2-mini-line {
+    width: 22px;
+  }
+
+  .v2-support-text {
+    font-size: 13px;
+  }
+
+  .v2-support-number {
+    font-size: 17px;
+  }
+
+  .v2-agent-img {
+    width: 100px;
+  }
+}
+
+
+/* ---------- MINI PHONES (max 360px) ---------- */
+@media (max-width: 360px) {
+
+  .v2-main-heading {
+    font-size: 20px;
+  }
+
+  .v2-support-number {
+    font-size: 16px;
+  }
+
+  .v2-agent-img {
+    width: 90px;
+  }
+}
+
+
+/* =============================
+   MAIN GRID SECTION
+============================= */
+.bankingV2-section {
+  display: grid;
+  grid-template-columns: 180px 50px 180px auto; /* REDUCED WIDTH */
+  gap: 25px;
+  padding: 40px;
+  background: #f6f6f6;
+  align-items: start;
+  overflow: hidden;
+}
+
+/* LEFT IMAGE */
+.v2-left-image img {
+  width: 300px;   /* REDUCED */
+  height: 380px;  /* REDUCED */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* LEFT TABS */
+.v2-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 50px; /* REDUCED */
+}
+
+.v2-tab {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: 10px;   /* REDUCED */
+  background: #e3e3e3;
+  margin-bottom: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px; /* REDUCED */
+}
+
+.v2-tab.active {
+  background: #d30000;
+  color: #fff;
+}
+
+/* SIDEBAR */
+.v2-sidebar {
+  background: #fff;
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 180px; /* REDUCED */
+}
+
+.v2-menu-item {
+  padding: 12px 14px; /* REDUCED */
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.v2-menu-item:hover,
+.v2-menu-item.active {
+  background: #f9eaea;
+  border-left: 3px solid #d30000; /* REDUCED */
+}
+
+.v2-menu-item h4 {
+  margin: 0;
+  font-size: 14px; /* REDUCED */
+}
+
+.v2-menu-item p {
+  margin-top: 3px;
+  color: #666;
+  font-size: 12px; /* REDUCED */
+}
+
+/* CONTENT AREA */
+.v2-content-area {
+  padding: 10px 0 10px 0;
+}
+
+.v2-content-header {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* REDUCED */
+}
+
+.v2-icon-box {
+  width: 40px; /* REDUCED */
+  height: 40px; /* REDUCED */
+  font-size: 14px; /* REDUCED */
+  background: #d30000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.v2-title {
+  font-size: 26px; /* REDUCED */
+}
+
+.v2-subtitle {
+  font-size: 13px; /* REDUCED */
+}
+
+.v2-description {
+  margin-top: 12px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 650px; /* REDUCED WIDTH */
+  font-size: 14px;   /* REDUCED */
+}
+
+.v2-stats {
+  display: flex;
+  gap: 25px; /* REDUCED */
+  margin: 20px 0;
+}
+
+.v2-stat-box h3 {
+  font-size: 22px; /* REDUCED */
+  margin-bottom: 5px;
+}
+
+.v2-btn {
+  padding: 10px 20px; /* REDUCED */
+  background: #700000;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px; /* REDUCED */
+  font-weight: 600;
+}
+
+
+.v2-tabs {
+  margin-left: 120px;
+}
+
+.v2-sidebar {
+  margin-left: 100px;
+}
+
+.v2-content-area {
+  margin-left: 100px;
+}
+
+/* ===================================================================
+   📱 BANKING V2 SECTION — RESPONSIVE MEDIA QUERIES
+=================================================================== */
+
+/* ---------- TABLETS (max 1024px) ---------- */
+@media (max-width: 1024px) {
+  .bankingV2-section {
+    grid-template-columns: 150px 40px 150px auto;
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .v2-left-image img {
+    width: 250px;
+    height: 320px;
+  }
+}
+
+
+/* ---------- LARGE MOBILES / SMALL TABLETS (max 768px) ---------- */
+@media (max-width: 768px) {
+
+  .bankingV2-section {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 30px;
+  }
+
+  /* Image Center */
+  .v2-left-image img {
+    width: 230px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  /* TABS become Horizontal */
+  .v2-tabs {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    gap: 10px;
+  }
+
+  .v2-tab {
+    writing-mode: horizontal-tb;
+    transform: none;
+    padding: 10px 14px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+
+  /* Sidebar under tabs */
+  .v2-sidebar {
+    width: 100%;
+    margin: 0;
+  }
+
+  .v2-menu-item {
+    padding: 12px;
+  }
+
+  .v2-content-area {
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .v2-title {
+    font-size: 22px;
+  }
+
+  .v2-description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .v2-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+
+/* ---------- NORMAL PHONES (max 576px) ---------- */
+@media (max-width: 576px) {
+
+  .bankingV2-section {
+    padding: 20px;
+  }
+
+  .v2-left-image img {
+    width: 200px;
+    height: 260px;
+  }
+
+  .v2-tab {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .v2-menu-item h4 {
+    font-size: 13px;
+  }
+
+  .v2-menu-item p {
+    font-size: 11px;
+  }
+
+  .v2-title {
+    font-size: 20px;
+  }
+
+  .v2-description {
+    font-size: 13px;
+  }
+
+  .v2-btn {
+    font-size: 13px;
+    padding: 9px 18px;
+  }
+}
+
+
+/* ---------- SMALL PHONES (max 480px) ---------- */
+@media (max-width: 480px) {
+
+  .v2-left-image img {
+    width: 180px;
+    height: 240px;
+  }
+
+  .v2-tabs {
+    gap: 6px;
+  }
+
+  .v2-tab {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .v2-menu-item {
+    padding: 10px;
+  }
+
+  .v2-title {
+    font-size: 18px;
+  }
+
+  .v2-description {
+    font-size: 12px;
+  }
+
+  .v2-btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+
+/* ---------- MINI PHONES (max 360px) ---------- */
+@media (max-width: 360px) {
+
+  .v2-left-image img {
+    width: 160px;
+    height: 220px;
+  }
+
+  .v2-tab {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+
+  .v2-title {
+    font-size: 16px;
+  }
+
+  .v2-description {
+    font-size: 11px;
+  }
+
+  .v2-btn {
+    padding: 7px 14px;
+    font-size: 11px;
+  }
+}
+
+
+
+/* ===============================
+   STATS SECTION WITH DIVIDER LINES
+=============================== */
+.banking-stats-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 50px 60px;
+  background: #ffffff;
+  text-align: center;
+  gap: 0; /* remove gap to align borders */
+  border-top: 1px solid #eee; /* optional */
+  overflow: hidden;
+  border-bottom: 1px solid #eee; /* optional */
+}
+
+.banking-stat-box {
+  padding: 20px 10px;
+  position: relative;
+}
+
+/* ADD VERTICAL DIVIDER LINES */
+.banking-stat-box:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: 1px;
+  height: 60%;
+  background: #ddd;
+}
+
+/* ICON STYLE */
+.stat-icon i {
+  font-size: 45px;
+  background: linear-gradient(45deg, #ff6b6b, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+/* STAT NUMBER */
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #222;
+}
+
+/* UNDERLINE */
+.stat-line {
+  width: 60%;
+  height: 1px;
+  background: #ccc;
+  margin: 15px auto;
+}
+
+/* DESCRIPTION */
+.stat-text {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #555;
+}
+
+/* ============================================================
+   📱 BANKING STATS SECTION — RESPONSIVE MEDIA QUERIES
+============================================================ */
+
+/* -------- Tablets (max 768px) -------- */
+@media (max-width: 768px) {
+
+  .banking-stats-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    padding: 35px 20px;
+    gap: 10px;
+  }
+
+  /* Vertical dividers removed */
+  .banking-stat-box::after {
+    display: none !important;
+  }
+
+  .stat-icon i {
+    font-size: 40px;
+  }
+
+  .stat-number {
+    font-size: 28px;
+  }
+
+  .stat-text {
+    font-size: 14px;
+  }
+}
+
+/* -------- Large Phones (max 576px) -------- */
+@media (max-width: 576px) {
+
+  .banking-stats-section {
+    grid-template-columns: 1fr; /* 1 per row */
+    padding: 30px 18px;
+  }
+
+  .banking-stat-box {
+    border-bottom: 1px solid #eee;
+    padding: 25px 10px;
+  }
+
+  .banking-stat-box:last-child {
+    border-bottom: none;
+  }
+
+  .stat-icon i {
+    font-size: 38px;
+  }
+
+  .stat-number {
+    font-size: 26px;
+  }
+
+  .stat-text {
+    font-size: 14px;
+  }
+}
+
+/* -------- Small Phones (max 480px) -------- */
+@media (max-width: 480px) {
+
+  .stat-icon i {
+    font-size: 34px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .stat-text {
+    font-size: 13px;
+  }
+}
+
+/* -------- Mini Phones (max 360px) -------- */
+@media (max-width: 360px) {
+
+  .banking-stat-box {
+    padding: 20px 5px;
+  }
+
+  .stat-icon i {
+    font-size: 30px;
+  }
+
+  .stat-number {
+    font-size: 22px;
+  }
+
+  .stat-text {
+    font-size: 12px;
+  }
+}
+
+
+/* ===========================
+   MAIN GRID LAYOUT
+=========================== */
+.loan-section {
+  display: grid;
+  grid-template-columns: 25% 75%; /* Reduce left image, increase right section */
+  background: #ffffff;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+/* LEFT IMAGE */
+.loan-left-img img {
+  width: 330px;           /* FIXED SIZE */
+  max-width: 340px;       /* PREVENTS GROWTH */
+  height: 600px;
+  justify-content: center;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* ===========================
+   TOP LOAN TABS
+=========================== */
+.loan-tabs {
+  display: flex;
+  background: #640101;
+  padding: 12px 30px;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: 600;
+}
+
+.loan-tab {
+  padding: 8px 15px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.loan-tab.active {
+  opacity: 1;
+  border-bottom: 3px solid #fff;
+}
+
+/* ===========================
+   MAIN CONTENT LAYOUT
+=========================== */
+.loan-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 30px;
+  padding: 20px 40px;
+  align-items: center; /* Center vertically */
+}
+
+/* ===========================
+   DETAILS TEXT
+=========================== */
+.loan-small-title {
+  color: #d00000;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#loanMainHeading {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.2;
+  max-width: 350px; /* Limit width for 3 lines only */
+}
+
+#loanDescription {
+  max-width: 350px;
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.loan-faq {
+  margin: 10px 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.loan-faq i {
+  color: #d30000;
+  margin-right: 10px;
+}
+
+/* ===========================
+   INPUT CONTROLS
+=========================== */
+.loan-input-group label {
+  margin-top: 25px;
+  display: block;
+  font-weight: 600;
+}
+
+.range-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #8b0000;
+}
+
+/* ===========================
+   EMI CARD (RIGHT SIDE)
+=========================== */
+.loan-emi-card {
+  background: #fafafa;
+  border-left: 1px solid #ddd;
+  padding: 30px;
+  border-radius: 6px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  /* Center everything */
+}
+
+.emi-icon {
+  width: 60px;
+  height: 60px;
+  background: #ffe6e6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b30000;
+}
+
+.loan-emi-card h4 {
+  color: #666;
+  margin-top: 10px;
+}
+
+.loan-emi-card h2 {
+  font-size: 32px;
+  color: #8b0000;
+  margin: 10px 0;
+}
+
+.apply-btn {
+  background: #fff;
+  color: #8b0000;
+  border: 2px solid #8b0000;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;  /* important for anchor */
+  font-weight: 600;       /* optional for better text */
+}
+
+.apply-btn:hover {
+  background: #8b0000;
+  color: #fff;
+}
+
+/* EMI Breakdown */
+.emi-breakdown {
+  margin-top: 20px;
+  text-align: left;
+  width: 100%;
+  max-width: 200px;
+}
+
+.emi-breakdown p {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   📱 LOAN SECTION — RESPONSIVE MEDIA QUERIES
+============================================================ */
+
+/* ---------- Tablets (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+  .loan-section {
+    grid-template-columns: 1fr;   /* Stack image + content */
+    padding: 20px 0;
+  }
+
+  /* Left Image — Center + Reduce */
+  .loan-left-img img {
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Loan Tabs */
+  .loan-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 10px;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  /* Content Area stacked */
+  .loan-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  #loanMainHeading {
+    font-size: 26px;
+    max-width: 100%;
+  }
+
+  #loanDescription {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .loan-input-group label {
+    font-size: 14px;
+  }
+
+  /* EMI Card full width */
+  .loan-emi-card {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* ---------- Large Phones (max-width: 576px) ---------- */
+@media (max-width: 576px) {
+
+  .loan-left-img img {
+    width: 200px;
+  }
+
+  .loan-tabs {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .loan-tab {
+    padding: 6px 12px;
+  }
+
+  #loanMainHeading {
+    font-size: 24px;
+  }
+
+  .loan-emi-card h2 {
+    font-size: 28px;
+  }
+
+  .emi-icon {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* ---------- Small Phones (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+
+  .loan-left-img img {
+    width: 170px;
+  }
+
+  .loan-section {
+    padding: 10px 0;
+  }
+
+  #loanMainHeading {
+    font-size: 22px;
+  }
+
+  .loan-emi-card h2 {
+    font-size: 26px;
+  }
+
+  .apply-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* ---------- Mini Phones (max-width: 360px) ---------- */
+@media (max-width: 360px) {
+
+  .loan-left-img img {
+    width: 150px;
+  }
+
+  .loan-tabs {
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .loan-container {
+    padding: 10px;
+  }
+
+  #loanMainHeading {
+    font-size: 20px;
+  }
+
+  .loan-emi-card h2 {
+    font-size: 24px;
+  }
+
+  .emi-breakdown p {
+    font-size: 13px;
+  }
+}
+
+
+/* MAIN SECTION */
+.creditcard-section {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  background: #5e0000;
+  padding: 70px 80px;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* LEFT SIDE */
+.cc-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cc-card-bg {
+  width: 360px;
+  height: 460px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px;
+  position: relative;
+  padding: 20px;
+}
+
+/* Cashback Badge */
+.cc-badge {
+  position: absolute;
+  background: #fff;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.cc-badge.cashback {
+  top: 20px;
+  right: -20px;
+}
+
+.cc-badge.apr {
+  bottom: -20px;
+  left: 20px;
+}
+
+/* CARD DESIGN */
+/* DEFAULT CARD */
+.cc-card {
+  background: linear-gradient(90deg, #ff2d2d, #c40000);
+  transition: 0.4s ease;
+  padding: 25px;
+  border-radius: 10px;
+  color: #fff;
+  position: absolute;
+  top: 110px;
+  left: 0;
+  transform: translateX(-15px);
+}
+
+/* REWARDS CARD COLOR */
+.cc-card.rewards {
+  background: linear-gradient(90deg, #ff2d2d, #c40000);
+}
+
+/* CASHBACK CARD COLOR */
+.cc-card.cashback {
+  background: linear-gradient(90deg, #ff9100, #ff5200);
+}
+
+/* TRAVEL CARD COLOR */
+.cc-card.travel {
+  background: linear-gradient(90deg, #008cff, #004aad);
+}
+
+/* Smooth Zoom */
+.cc-card.zoom-effect {
+  transform: scale(1.08) translateX(-15px);
+  transition: 0.4s ease;
+}
+
+/* Card Heading */
+.cc-card h4 {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cc-card span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Chip Placeholder */
+.cc-chip {
+  width: 45px;
+  height: 35px;
+  background: gold;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+/* Card Numbers */
+.cc-numbers {
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+/* Card Footer */
+.cc-footer {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cc-name {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.cc-exp {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ======================
+   RIGHT SIDE CONTENT
+====================== */
+
+.cc-small-title {
+  color: #ff9191;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.cc-title {
+  font-size: 42px;
+  margin: 15px 0 25px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* TABS */
+.cc-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.cc-tab {
+  padding: 10px 22px;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cc-tab i {
+  margin-right: 8px;
+}
+
+.cc-tab.active {
+  background: #ff2d2d;
+}
+
+/* Paragraph */
+.cc-desc {
+  width: 85%;
+  opacity: 0.85;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* Explore link */
+.cc-explore {
+  display: inline-block;
+  color: #ffb3b3;
+  margin: 20px 0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cc-explore i {
+  margin-right: 6px;
+}
+
+/* INPUT BOX + BUTTON */
+.cc-input-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.cc-input-group input {
+  width: 220px;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.cc-submit {
+  padding: 12px 22px;
+  background: #fff;
+  color: #5e0000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* ZOOM ANIMATION */
+.cc-card.zoom-effect {
+  transform: scale(1.08) translateX(-15px);
+  transition: transform 0.4s ease;
+}
+
+.cc-card {
+  transition: transform 0.4s ease;
+}
+
+
+/* ============================================================
+   📱 CREDIT CARD SECTION — RESPONSIVE MEDIA QUERIES
+============================================================ */
+
+/* ---------- Tablets (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+  .creditcard-section {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  /* LEFT CARD CENTER */
+  .cc-left {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  /* Reduce Card Background */
+  .cc-card-bg {
+    width: 280px;
+    height: 360px;
+  }
+
+  /* Reduce badges */
+  .cc-badge {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .cc-badge.cashback {
+    top: 15px;
+    right: -10px;
+  }
+  .cc-badge.apr {
+    bottom: -12px;
+    left: 10px;
+  }
+
+  /* Credit Card Design */
+  .cc-card {
+    padding: 18px;
+    top: 90px;
+    transform: translateX(-10px);
+  }
+
+  .cc-card.zoom-effect {
+    transform: scale(1.05) translateX(-10px);
+  }
+
+  /* Fonts Inside Card */
+  .cc-card h4 {
+    font-size: 16px;
+  }
+
+  .cc-numbers {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  /* RIGHT CONTENT */
+  .cc-title {
+    font-size: 30px;
+  }
+
+  .cc-desc {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* Tabs */
+  .cc-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cc-tab {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  /* Input group stack */
+  .cc-input-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cc-input-group input {
+    width: 100%;
+  }
+
+  .cc-submit {
+    width: 100%;
+  }
+}
+
+/* ---------- Large Phones (max-width: 576px) ---------- */
+@media (max-width: 576px) {
+
+  .cc-card-bg {
+    width: 240px;
+    height: 330px;
+  }
+
+  .cc-card {
+    padding: 16px;
+    top: 80px;
+  }
+
+  .cc-title {
+    font-size: 26px;
+  }
+
+  .cc-tab {
+    padding: 8px 12px;
+  }
+
+  .cc-input-group input {
+    padding: 10px;
+  }
+}
+
+/* ---------- Small Phones (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+
+  .creditcard-section {
+    padding: 30px 15px;
+  }
+
+  .cc-card-bg {
+    width: 210px;
+    height: 300px;
+  }
+
+  .cc-card {
+    padding: 14px;
+    top: 70px;
+  }
+
+  .cc-numbers {
+    font-size: 16px;
+  }
+
+  .cc-title {
+    font-size: 22px;
+  }
+}
+
+/* ---------- Mini Phones (max-width: 360px) ---------- */
+@media (max-width: 360px) {
+
+  .cc-card-bg {
+    width: 180px;
+    height: 260px;
+  }
+
+  .cc-card {
+    top: 60px;
+    padding: 12px;
+  }
+
+  .cc-numbers {
+    font-size: 14px;
+  }
+
+  .cc-title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .cc-tab {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .cc-submit {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
+/* SECTION LAYOUT */
+/* MAIN SECTION — REDUCED SIZE & EQUAL HEIGHT */
+.locker-section {
+  display: grid;
+  grid-template-columns: 45% 55%; /* slightly smaller left side */
+  align-items: center;
+  padding: 40px 60px;  /* reduced padding */
+  background: #ffffff;
+  gap: 40px;
+  min-height: 450px; /* ensures both sides align evenly */
+}
+
+/* LEFT CONTENT — REDUCED SIZE */
+.locker-small-title {
+  color: #b30000;
+  font-size: 12px; /* reduced */
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.locker-title {
+  font-size: 32px; /* reduced from 42px */
+  font-weight: 800;
+  margin: 10px 0 18px;
+  line-height: 1.3;
+  color: #111;
+}
+
+.locker-desc {
+  font-size: 14px; /* reduced */
+  line-height: 1.6;
+  color: #555;
+  width: 90%;
+}
+
+/* HIGHLIGHT */
+.locker-highlight {
+  margin-top: 15px;
+  font-size: 14px; /* reduced */
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.locker-highlight i {
+  color: #c40000;
+  font-size: 12px; /* reduced */
+}
+
+/* FEATURES BOX — SHRINKED */
+.locker-features-box {
+  background: #f7f7f7;
+  padding: 20px; /* reduced */
+  margin: 25px 0;
+  border-radius: 6px;
+}
+
+.feat-heading {
+  color: #b30000;
+  font-weight: 700;
+  font-size: 14px; /* reduced */
+  margin-bottom: 6px;
+}
+
+.feat-line {
+  width: 50px;
+  height: 3px;
+  background: #d40000;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.feat-items {
+  display: flex;
+  gap: 30px; /* reduced */
+}
+
+.feat-item i {
+  color: #d00000;
+  font-size: 18px; /* reduced */
+  margin-bottom: 5px;
+}
+
+.feat-item p {
+  margin: 0;
+  color: #444;
+  font-size: 13px; /* reduced */
+  line-height: 1.4;
+}
+
+/* BUTTON — SIZE REDUCED */
+.locker-btn {
+  margin-top: 15px;
+  padding: 10px 24px;
+  background: #700000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px; /* reduced */
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.locker-btn:hover {
+  background: #900000;
+}
+
+/* RIGHT IMAGE — MATCH HEIGHT WITH CONTENT */
+.locker-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.locker-right img {
+  width: 100%;         /* increased a bit */
+  height: 500px;      /* FIXED HEIGHT matches content */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ==========================================================
+   📱 LOCKER SECTION — FULL RESPONSIVE MEDIA QUERIES
+========================================================== */
+
+/* ---------- Tablets (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+  .locker-section {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .locker-title {
+    font-size: 26px;
+  }
+
+  .locker-desc {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .feat-items {
+    justify-content: center;
+  }
+
+  .locker-right img {
+    width: 90%;
+    height: 350px;
+  }
+
+  .locker-btn {
+    padding: 10px 20px;
+    width: auto;
+  }
+}
+
+/* ---------- Mobile (max-width: 576px) ---------- */
+@media (max-width: 576px) {
+
+  .locker-title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .locker-desc {
+    font-size: 13px;
+  }
+
+  .feat-items {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .locker-right img {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* ---------- Small Phones (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+
+  .locker-section {
+    padding: 25px 15px;
+  }
+
+  .locker-title {
+    font-size: 22px;
+  }
+
+  .locker-right img {
+    height: 260px;
+  }
+
+  .feat-item i {
+    font-size: 16px;
+  }
+
+  .feat-item p {
+    font-size: 12px;
+  }
+}
+
+/* ---------- Mini Phones (max-width: 360px) ---------- */
+@media (max-width: 360px) {
+
+  .locker-title {
+    font-size: 20px;
+  }
+
+  .locker-right img {
+    height: 220px;
+  }
+
+  .locker-btn {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+
+/* FIRST BLOG SECTION */
+.top-blog {
+    padding: 30px;
+    overflow: hidden;
+}
+
+.title {
+    color: red;
+    font-size: 20px;
+    margin-left: -25px;
+    font-weight: bold;
+}
+
+/* LATEST BLOG */
+.latest-title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.latest-title-box h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* ARROWS */
+.arrow-wrap button {
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/* GRID */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px 0;
+}
+
+/* CARD */
+.blog-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* IMAGE */
+.blog-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.blog-content {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.cat {
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.date {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    line-height: 17px;
+}
+
+.date small {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.admin {
+    color: #777;
+    margin-top: 5px;
+}
+
+.blog-content h3 {
+    font-size: 18px;
+    margin: 12px 0;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time {
+    color: #777;
+    font-size: 14px;
+}
+
+/* ============================================================
+   📱 BLOG SECTION – FULL RESPONSIVE MEDIA QUERIES
+============================================================ */
+
+/* ---------- Tablets (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .blog-card {
+    height: auto;
+  }
+
+  .latest-title-box h2 {
+    font-size: 28px;
+  }
+}
+
+/* ---------- Large Mobiles / Tablets (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+  .top-blog {
+    padding: 20px;
+  }
+
+  .latest-title-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .latest-title-box h2 {
+    font-size: 26px;
+  }
+
+  .arrow-wrap {
+    margin-top: 10px;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .blog-card {
+    height: auto;
+  }
+
+  .blog-img {
+    height: 150px;
+  }
+
+  .blog-content h3 {
+    font-size: 16px;
+  }
+
+  .date {
+    font-size: 18px;
+  }
+
+  .cat {
+    font-size: 12px;
+  }
+}
+
+/* ---------- Mobiles (max-width: 576px) ---------- */
+@media (max-width: 576px) {
+
+  .title {
+    font-size: 18px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .latest-title-box h2 {
+    font-size: 24px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr; /* SINGLE COLUMN */
+  }
+
+  .blog-img {
+    height: 160px;
+  }
+
+  .blog-content {
+    padding: 14px;
+  }
+
+  .date {
+    font-size: 16px;
+    line-height: 14px;
+  }
+
+  .date small {
+    font-size: 11px;
+  }
+
+  .blog-content h3 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .time {
+    font-size: 12px;
+  }
+}
+
+/* ---------- Small Phones (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+
+  .top-blog {
+    padding: 15px;
+  }
+
+  .latest-title-box h2 {
+    font-size: 22px;
+  }
+
+  .blog-img {
+    height: 140px;
+  }
+
+  .blog-content h3 {
+    font-size: 15px;
+  }
+
+  .date {
+    font-size: 15px;
+  }
+}
+
+/* ---------- Mini Phones (max-width: 360px) ---------- */
+@media (max-width: 360px) {
+
+  .latest-title-box h2 {
+    font-size: 20px;
+  }
+
+  .blog-img {
+    height: 130px;
+  }
+
+  .blog-content h3 {
+    font-size: 14px;
+  }
+
+  .cat {
+    font-size: 11px;
+  }
+
+  .date {
+    font-size: 13px;
+  }
+
+  .time {
+    font-size: 11px;
+  }
+}
+
+
+/* ======================
+   SUBSCRIBE SECTION
+   ====================== */
+.subscribe-section {
+    background: #e82d2d;
+    color: #fff;
+    padding: 50px 80px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe-left h2 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.subscribe-right {
+    display: flex;
+    gap: 10px;
+}
+
+.subscribe-right input {
+    width: 300px;
+    padding: 14px;
+    background: rgba(255,255,255,0.3);
+    border: none;
+    color: #fff;
+}
+
+.subscribe-right button {
+    padding: 14px 25px;
+    background: #0c1121;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* ============================================
+   📱 SUBSCRIBE SECTION – FULL RESPONSIVE CSS
+============================================ */
+
+/* ---------- Tablets (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+  .subscribe-section {
+    padding: 40px 50px;
+  }
+
+  .subscribe-left h2 {
+    font-size: 32px;
+  }
+
+  .subscribe-right input {
+    width: 260px;
+  }
+}
+
+/* ---------- Tablets & Large Mobiles (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+  .subscribe-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 40px 30px;
+  }
+
+  .subscribe-left h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .subscribe-right {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .subscribe-right input {
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+  }
+
+  .subscribe-right button {
+    width: 100%;
+    padding: 14px;
+  }
+}
+
+/* ---------- Mobiles (max-width: 576px) ---------- */
+@media (max-width: 576px) {
+  .subscribe-section {
+    padding: 35px 20px;
+  }
+
+  .subscribe-left h2 {
+    font-size: 24px;
+  }
+
+  .subscribe-right input {
+    font-size: 14px;
+  }
+
+  .subscribe-right button {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Small Phones (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+  .subscribe-left h2 {
+    font-size: 22px;
+  }
+
+  .subscribe-right input {
+    padding: 12px;
+  }
+
+  .subscribe-right button {
+    padding: 12px;
+  }
+}
+
+/* ---------- Mini Phones (max-width: 360px) ---------- */
+@media (max-width: 360px) {
+  .subscribe-left h2 {
+    font-size: 20px;
+  }
+
+  .subscribe-right input {
+    font-size: 13px;
+  }
+
+  .subscribe-right button {
+    font-size: 13px;
+  }
+}
+
+
+/* ======================
+   FOOTER
+   ====================== */
+.footer {
+    background: #0c1121;
+    color: #ccc;
+    overflow: hidden;
+    padding: 20px 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+/* LOGO */
+.footer-logo {
+    margin-bottom: 15px;
+}
+.footer-logo img {
+    width: 200px;
+}
+    
+
+.logo-icon {
+    width: 45px;
+}
+
+/* DESCRIPTION */
+.bank-desc {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social {
+    width: 40px;
+    height: 40px;
+    background: #1d2236;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+/* Hover Effects */
+.social:hover {
+    background: #e82d2d;
+    transform: translateY(-4px);
+}
+
+/* FOOTER COLUMNS */
+.footer-col h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-col ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-col ul li:hover {
+    color: #fff;
+}
+
+/* BRANCH SELECT */
+.footer-select {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #444;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-select option {
+    color: #000;
+}
+
+/* BUTTON */
+.map-btn {
+    width: 150px;
+    background: #e82d2d;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ADDRESS OUTPUT */
+.branch-output {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* COPYRIGHT */
+.copyright {
+    background: #090c18;
+    text-align: center;
+    padding: 18px;
+    color: #aaa;
+}
+
+.copyright span {
+    color: #e82d2d;
+    font-weight: bold;
+}
+
+/* ============================================================
+   📱 FOOTER SECTION – FULL RESPONSIVE MEDIA QUERIES
+============================================================ */
+
+/* ---------- Tablets (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+
+  .footer {
+    padding: 30px 50px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .footer-logo img {
+    width: 180px;
+  }
+}
+
+/* ---------- Tablets & Large Mobiles (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 30px 30px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;  /* Single column */
+    text-align: center;
+    gap: 35px;
+  }
+
+  .footer-logo img {
+    width: 160px;
+    margin: 0 auto;
+  }
+
+  .bank-desc {
+    font-size: 15px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-col h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li {
+    font-size: 15px;
+  }
+
+  .footer-select {
+    width: 100%;
+  }
+
+  .map-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .branch-output {
+    text-align: center;
+  }
+}
+
+/* ---------- Mobiles (max-width: 576px) ---------- */
+@media (max-width: 576px) {
+
+  .footer {
+    padding: 25px 20px;
+  }
+
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .social {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+  .footer-col ul li {
+    font-size: 14px;
+  }
+
+  .bank-desc {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Small Phones (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+
+  .footer {
+    padding: 20px 15px;
+  }
+
+  .footer-logo img {
+    width: 140px;
+  }
+
+  .footer-col h3 {
+    font-size: 16px;
+  }
+
+  .footer-col ul li {
+    font-size: 13px;
+  }
+
+  .map-btn {
+    padding: 10px;
+  }
+}
+
+/* ---------- Mini Phones (max-width: 360px) ---------- */
+@media (max-width: 360px) {
+
+  .footer-logo img {
+    width: 120px;
+  }
+
+  .footer-col ul li {
+    font-size: 12px;
+  }
+
+  .social {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .map-btn {
+    font-size: 14px;
+  }
+}

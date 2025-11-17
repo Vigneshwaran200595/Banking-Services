@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Header</title>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header-wrapper">
+
+  <!-- LOGO -->
+  <div class="left-logo">
+    <img src="Images/logo3.webp" alt="Stackly Logo">
+  </div>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-right">
+      <span><i class="fa-solid fa-envelope red-icon"></i> info@example.com</span>
+      <span><i class="fa-solid fa-phone red-icon"></i> +91 1234567890</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="nav-bar">
+
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENU -->
+    <div class="menu-container" id="mobile-menu">
+      <ul class="menu">
+
+        <!-- HOME DROPDOWN -->
+        <li class="home-dropdown">
+
+          <a href="index.html" class="home-link">
+            Home 
+            <i class="fa-solid fa-caret-down dropdown-arrow"></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a href="saas.html">Home 1</a></li>
+          </ul>
+
+        </li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="loans.html">Loans</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+      </ul>
+    </div>
+
+    <!-- RIGHT BUTTONS -->
+    <div class="nav-buttons">
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="account.html" class="open-btn">Open Account</a>
+    </div>
+
+  </nav>
+</div>
+
+
+
+
+<div class="hero-slider">
+
+  <!-- Slide 1 -->
+  <div class="slide active">
+    <img src="Images/slide1.webp" class="slide-img" />
+
+    <div class="red-overlay"></div>
+
+    <div class="slide-content">
+      <span class="tag">FLEXI SAVINGS</span>
+      <h1>Enjoy zero free<br>banking on your<br>sb account.</h1>
+      <a href="contact.html" class="btn-primary">Book A Consultation</a>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide">
+    <img src="Images/slide2.webp" class="slide-img" />
+
+    <div class="red-overlay"></div>
+
+    <div class="slide-content">
+      <span class="tag">BUSINESS LOAN</span>
+      <h1>Fuel your business<br>growth with our<br>easy loan.</h1>
+      <a href="loans.html" class="btn-primary">Apply Your Loan</a>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide">
+    <img src="Images/slide3.webp" class="slide-img" />
+
+    <div class="red-overlay"></div>
+
+    <div class="slide-content">
+      <span class="tag">CREDIT CARD</span>
+      <h1>Maximize benefits<br>with your every<br>transaction.</h1>
+      <a href="apply.html" class="btn-primary">Apply Your Card</a>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <span class="up">&#9650;</span>
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="down">&#9660;</span>
+  </div>
+
+</div>
+
+
+<section class="banking-section">
+
+    <!-- TOP TITLE -->
+    <div class="section-header">
+        <span class="label">CUSTOM BANKING</span>
+        <h2>Banking For Your Needs</h2>
+    </div>
+
+    <!-- TAB MENU -->
+    <div class="tabs-row">
+
+        <div class="tab-item active" data-tab="fixed">
+            <div class="icon-bg"><img src="Images/doller.webp"></div>
+            <h3>Fixed Deposit</h3>
+            <p>Higher Returns & Security.</p>
+            <span class="arrow"></span>
+        </div>
+
+        <div class="tab-item" data-tab="accounts">
+            <div class="icon-bg"><img src="Images/account.webp"></div>
+            <h3>Accounts</h3>
+            <p>Duty the obligations business.</p>
+            <span class="arrow"></span>
+        </div>
+
+        <div class="tab-item" data-tab="investments">
+            <div class="icon-bg"><img src="Images/increase.webp"></div>
+            <h3>Investments</h3>
+            <p>Secure you & your family.</p>
+            <span class="arrow"></span>
+        </div>
+
+        <div class="tab-item" data-tab="family">
+            <div class="icon-bg"><img src="Images/family.webp"></div>
+            <h3>Family 360º</h3>
+            <p>Complete banking solutions.</p>
+            <span class="arrow"></span>
+        </div>
+
+    </div>
+
+
+    <!-- CONTENT AREA -->
+    <div class="tab-content">
+
+        <!-- FIXED -->
+        <div class="content-box active" id="fixed">
+            <div class="left-img"><img src="Images/fixed.webp"></div>
+            <div class="right-info">
+                <h2>Fixed Deposit</h2>
+                <p>Secure your money with guaranteed returns and flexible tenure options suitable for every saver.</p>
+
+                <h4 class="key-title">KEY BENEFITS:</h4>
+                <ul class="benefits">
+                    <li><span class="tick"><i class="fa-solid fa-check"></i></span> Guaranteed interest earnings</li>
+                    <li><span class="tick"><i class="fa-solid fa-check"></i></span> Loan against FD available</li>
+                    <li><span class="tick"><i class="fa-solid fa-check"></i></span> Flexible maturity periods</li>
+                </ul>
+                <p class="note"><i class="fa-solid fa-arrow-right-long"></i> Find the Perfect FD Option for Your Needs.</p>
+            </div>
+        </div>
+
+        <!-- ACCOUNTS -->
+        <div class="content-box" id="accounts">
+            <div class="left-img"><img src="Images/accounts.webp"></div>
+            <div class="right-info">
+                <h2>Accounts</h2>
+                <p>Choose from savings, current, or premium accounts designed to fit your lifestyle and business needs.</p>
+
+                <h4 class="key-title">KEY BENEFITS:</h4>
+                <ul class="benefits">
+                    <li><span class="tick"><i class="fa-solid fa-check"></i></span> Zero balance options</li>
+                    <li><span class="tick"><i class="fa-solid fa-check"></i></span> Free ATM + cheque book</li>
+                    <li><span class="tick"><i class="fa-solid fa-check"></i></span> Instant digital onboarding</li>
+                </ul>
+                <p class="note"><i class="fa-solid fa-arrow-right-long"></i> Banking Made Simple & Hassle-Free.</p>
+            </div>
+        </div>
+
+        <!-- INVESTMENTS -->
+        <div class="content-box" id="investments">
+            <div class="left-img"><img src="Images/investment.webp"></div>
+            <div class="right-info">
+                <h2>Investments</h2>
+                <p>Grow your wealth with diversified investment products tailored to your future financial goals.</p>
+
+                <h4 class="key-title">KEY BENEFITS:</h4>
+                <ul class="benefits">
+                    <li><span class="tick"><i class="fa-solid fa-check"></i></span> High-growth mutual funds</li>
+                    <li><span class="tick"><i class="fa-solid fa-check"></i></span> Safe bonds & SIP plans</li>
+                    <li><span class="tick"><i class="fa-solid fa-check"></i></span> Tax-saving opportunities</li>
+                </ul>
+                <p class="note"><i class="fa-solid fa-arrow-right-long"></i> Invest Smart, Secure Tomorrow.</p>
+            </div>
+        </div>
+
+        <!-- FAMILY -->
+        <div class="content-box" id="family">
+            <div class="left-img"><img src="Images/family_1.webp"></div>
+            <div class="right-info">
+                <h2>Family 360º</h2>
+                <p>A unified financial solution designed to secure your entire family’s future with complete protection.</p>
+
+                <h4 class="key-title">KEY BENEFITS:</h4>
+                <ul class="benefits">
+                    <li><span class="tick"><i class="fa-solid fa-check"></i></span> Family-wide financial planning</li>
+                    <li><span class="tick"><i class="fa-solid fa-check"></i></span> Savings + insurance combo</li>
+                    <li><span class="tick"><i class="fa-solid fa-check"></i></span> Low premium options</li>
+                </ul>
+                <p class="note"><i class="fa-solid fa-arrow-right-long"></i> One Solution for the Whole Family.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="secure-growth-section">
+  <div class="top-label">
+    <span class="red-line"></span>
+    <span class="label-text">SECURE GROWTH</span>
+  </div>
+
+  <h2 class="main-title">Enhance Your Wealth Safely</h2>
+
+  <div class="fd-cards-row">
+
+    <!-- FD CARD 1 -->
+    <div class="fd-card">
+      <div class="fd-image">
+        <img src="Images/fd1.webp" alt="Regular FD">
+        <div class="fd-icon"><i class="fas fa-piggy-bank"></i></div>
+      </div>
+
+      <h3>Regular Fixed Deposit</h3>
+      <p>
+        A traditional FD offering stable returns at a guaranteed interest rate
+        with flexible tenure options…
+      </p>
+
+      <a href="404.html" class="read-more">→ Read More</a>
+    </div>
+
+    <!-- FD CARD 2 -->
+    <div class="fd-card">
+      <div class="fd-image">
+        <img src="images/fd2.webp" alt="Tax Saver FD">
+        <div class="fd-icon"><i class="fas fa-lock"></i></div>
+      </div>
+
+      <h3>Tax Saver Fixed Deposit</h3>
+      <p>
+        Save tax under Section 80C with a 5-year lock-in and guaranteed interest
+        growth…
+      </p>
+
+      <a href="404.html" class="read-more">→ Read More</a>
+    </div>
+
+    <!-- FD CARD 3 -->
+    <div class="fd-card">
+      <div class="fd-image">
+        <img src="images/fd3.webp" alt="Senior FD">
+        <div class="fd-icon"><i class="fas fa-chart-line"></i></div>
+      </div>
+
+      <h3>Senior Citizen Fixed Deposit</h3>
+      <p>
+        Higher interest rates for senior citizens with monthly/quarterly
+        payout options…
+      </p>
+
+      <a href="404.html" class="read-more">→ Read More</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== BANKING HEADER START ===== -->
+<section class="bankingV2-header">
+
+  <div class="bankingV2-header-left">
+    <div class="v2-mini-label">
+      <span class="v2-mini-line"></span>
+      <span>CUSTOM BANKING</span>
+    </div>
+
+    <h1 class="v2-main-heading">Banking For Your Needs</h1>
+  </div>
+
+  <div class="bankingV2-header-right">
+    <div class="v2-support-text">Get Support</div>
+
+    <div class="v2-support-info">
+      <i class="fas fa-headset"></i>
+      <span class="v2-support-number">+91 1234567890</span>
+    </div>
+
+    <span class="v2-support-time">9.00 am to 7.00 pm</span>
+
+    <img src="Images/agent.webp" class="v2-agent-img" alt="Support Agent">
+  </div>
+
+</section>
+
+
+<!-- ======================================
+      BANKING MAIN SECTION
+====================================== -->
+<section class="bankingV2-section">
+
+  <!-- LEFT IMAGE -->
+  <div class="v2-left-image">
+    <img src="Images/invest.webp" alt="Bank Image">
+  </div>
+
+  <!-- LEFT TABS -->
+  <div class="v2-tabs">
+    <div class="v2-tab active" data-tab="business">BUSINESS</div>
+    <div class="v2-tab" data-tab="individual">INDIVIDUAL</div>
+  </div>
+
+  <!-- LEFT SIDEBAR -->
+  <div class="v2-sidebar">
+
+    <!-- BUSINESS MENU -->
+    <div class="v2-menu-group businessMenu">
+
+      <div class="v2-menu-item active" data-content="savings">
+        <h4>Savings Accounts</h4>
+        <p>High interest…</p>
+      </div>
+
+      <div class="v2-menu-item" data-content="loans">
+        <h4>Consumer Loans</h4>
+        <p>Low collateral…</p>
+      </div>
+
+      <div class="v2-menu-item" data-content="creditcards">
+        <h4>Credit Cards</h4>
+        <p>No fees…</p>
+      </div>
+
+      <div class="v2-menu-item" data-content="advisory">
+        <h4>Advisory Services</h4>
+        <p>Financial advice…</p>
+      </div>
+
+      <div class="v2-menu-item" data-content="insurance">
+        <h4>Insurance Products</h4>
+        <p>Fits your needs…</p>
+      </div>
+
+      <div class="v2-menu-item" data-content="accounts">
+        <h4>Savings Account</h4>
+        <p>Banking Products</p>
+      </div>
+
+    </div>
+
+    <!-- INDIVIDUAL MENU -->
+    <div class="v2-menu-group individualMenu" style="display:none;">
+      <div class="v2-menu-item" data-content="personalSavings">
+        <h4>Personal Savings</h4>
+        <p>Secure & flexible…</p>
+      </div>
+
+      <div class="v2-menu-item" data-content="homeLoans">
+        <h4>Home Loans</h4>
+        <p>Affordable EMIs…</p>
+      </div>
+
+      <div class="v2-menu-item" data-content="debitCards">
+        <h4>Debit Cards</h4>
+        <p>Hassle-free payments…</p>
+      </div>
+
+      <div class="v2-menu-item" data-content="investments">
+        <h4>Investments</h4>
+        <p>Grow your wealth…</p>
+      </div>
+
+      <div class="v2-menu-item" data-content="lifeInsurance">
+        <h4>Life Insurance</h4>
+        <p>Protect your family…</p>
+      </div>
+
+      <div class="v2-menu-item" data-content="pensionPlans">
+        <h4>Pension Plans</h4>
+        <p>Secure retirement…</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DYNAMIC CONTENT -->
+  <div class="v2-content-area" id="dynamicContent">
+
+    <div class="v2-content-block">
+
+      <div class="v2-content-header">
+        <div class="v2-icon-box"><i class="fas fa-piggy-bank"></i></div>
+        <div>
+          <span class="v2-subtitle">Savings Accounts</span>
+          <h2 class="v2-title">Invest in Your Future,<br> Start Saving.</h2>
+        </div>
+      </div>
+
+      <p class="v2-description">
+        Open a business savings account with flexible deposit options, higher interest rates,
+        and seamless fund accessibility.
+      </p>
+
+      <div class="v2-stats">
+        <div class="v2-stat-box">
+          <h3>3.2k</h3>
+          <span>Active Accounts</span>
+        </div>
+        <div class="v2-stat-box">
+          <h3>$2b</h3>
+          <span>Total Savings</span>
+        </div>
+      </div>
+
+      <a href="404.html">
+    <button class="v2-btn">Explore Options</button>
+</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="banking-stats-section">
+
+  <div class="banking-stat-box">
+    <div class="stat-icon">
+      <i class="fas fa-users"></i>
+    </div>
+    <h2 class="stat-number">8.5k</h2>
+    <div class="stat-line"></div>
+    <p class="stat-text">Happy Customers World Wide.</p>
+  </div>
+
+  <div class="banking-stat-box">
+    <div class="stat-icon">
+      <i class="fas fa-sync"></i>
+    </div>
+    <h2 class="stat-number">0.5m</h2>
+    <div class="stat-line"></div>
+    <p class="stat-text">Transactions Processed Daily.</p>
+  </div>
+
+  <div class="banking-stat-box">
+    <div class="stat-icon">
+      <i class="fas fa-map-pin"></i>
+    </div>
+    <h2 class="stat-number">10,000+</h2>
+    <div class="stat-line"></div>
+    <p class="stat-text">ATMs and Branches Globally.</p>
+  </div>
+
+  <div class="banking-stat-box">
+    <div class="stat-icon">
+      <i class="fas fa-university"></i>
+    </div>
+    <h2 class="stat-number">50+</h2>
+    <div class="stat-line"></div>
+    <p class="stat-text">Years of Trusted Banking Service.</p>
+  </div>
+
+</section>
+
+
+<section class="loan-section">
+
+  <!-- LEFT IMAGE -->
+  <div class="loan-left-img">
+    <img src="Images/calc.webp" alt="Loan User">
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="loan-right">
+
+    <!-- TOP LOAN TABS -->
+    <div class="loan-tabs">
+      <div class="loan-tab active" data-type="home">Home Loan</div>
+      <div class="loan-tab" data-type="vehicle">Vehicle Loan</div>
+      <div class="loan-tab" data-type="personal">Personal Loan</div>
+      <div class="loan-tab" data-type="education">Education Loan</div>
+      <div class="loan-tab" data-type="mortgage">Mortgage Loan</div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="loan-container">
+
+      <!-- LEFT DETAILS -->
+      <div class="loan-details">
+
+        <span class="loan-small-title">LOAN CALCULATOR</span>
+
+        <h2 id="loanMainHeading">
+          Stackly Online Loan Calculator
+        </h2>
+
+        <p class="loan-desc" id="loanDescription">
+          Estimate your loan payments quickly & easily with our calculator.
+        </p>
+
+        <div class="loan-faq">
+          <i class="fas fa-question-circle"></i>
+          Loan Questions? Check Our Support Team
+        </div>
+
+        <!-- LOAN INPUTS -->
+        <div class="loan-input-group">
+
+          <!-- LOAN AMOUNT -->
+          <label>Loan Amount</label>
+          <div class="range-values">
+            <span id="loanMinLbl">₹50,000</span>
+            <span id="loanMaxLbl">₹2,50,00,000</span>
+          </div>
+          <input type="range" id="loanAmount" min="50000" max="25000000" value="50000" step="50000">
+
+          <!-- LOAN TERM -->
+          <label>Loan Term (Years)</label>
+          <div class="range-values">
+            <span id="loanYearMinLbl">1 Year</span>
+            <span id="loanYearMaxLbl">30 Years</span>
+          </div>
+          <input type="range" id="loanYears" min="1" max="30" value="20">
+
+          <!-- INTEREST RATE -->
+          <label>Interest Rate</label>
+          <div class="range-values">
+            <span id="loanRateMinLbl">6%</span>
+            <span id="loanRateMaxLbl">18%</span>
+          </div>
+          <input type="range" id="loanRate" min="6" max="18" value="8.5" step="0.1">
+
+        </div>
+      </div>
+
+      <!-- RIGHT EMI CARD -->
+      <div class="loan-emi-card">
+
+        <div class="emi-icon">
+          <i class="fas fa-calculator"></i>
+        </div>
+
+        <h4>Monthly EMI</h4>
+        <h2 id="emiValue">₹0</h2>
+
+       <a href="loans.html" class="apply-btn">
+    <i class="fas fa-arrow-right"></i> Apply Online
+</a>
+
+
+        <div class="emi-breakdown">
+          <p><i class="fas fa-plus"></i> Interest Amount</p>
+          <span id="interestAmount">₹0</span>
+        </div>
+
+        <div class="emi-breakdown">
+          <p><i class="fas fa-plus"></i> Total Payment</p>
+          <span id="totalPayment">₹0</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<section class="creditcard-section">
+
+  <!-- LEFT SIDE IMAGE AREA -->
+  <div class="cc-left">
+    <div class="cc-card-bg">
+
+      <div class="cc-badge cashback">Cashback Up to: 25%</div>
+
+      <div class="cc-card">
+        <h4>Credit Card <span>payment</span></h4>
+
+        <div class="cc-chip"></div>
+
+        <div class="cc-numbers">
+          1234&nbsp;&nbsp;5678&nbsp;&nbsp;9000&nbsp;&nbsp;0000
+        </div>
+
+        <div class="cc-footer">
+          <div class="cc-name">CARDHOLDER NAME</div>
+          <div class="cc-exp">09/23</div>
+        </div>
+      </div>
+
+      <div class="cc-badge apr">Average APR: 5.50%</div>
+
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE CONTENT -->
+  <div class="cc-right">
+    
+    <span class="cc-small-title">CREDIT CARD</span>
+
+    <h2 class="cc-title">Discover Our<br>Range of Credit Cards</h2>
+
+    <!-- TAB BUTTONS -->
+    <div class="cc-tabs">
+      <button class="cc-tab active"> <i class="fas fa-credit-card"></i> Rewards Cards</button>
+      <button class="cc-tab"> <i class="fas fa-coins"></i> Cashback Cards</button>
+      <button class="cc-tab"> <i class="fas fa-plane"></i> Travel Cards</button>
+    </div>
+
+    <p class="cc-desc">
+      Business it will frequently occur that pleasures have to be repudiated and
+      annoyances accepted. The wise man therefore always holds in these matters.
+    </p>
+
+    <a href="#" class="cc-explore"><i class="fas fa-arrow-right"></i> Explore Cards</a>
+
+    <div class="cc-input-group">
+      <input type="text" placeholder="📞  Ph Num...">
+      <button class="cc-submit">Submit</button>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="locker-section">
+
+  <!-- LEFT CONTENT -->
+  <div class="locker-left">
+
+    <span class="locker-small-title">LOCKER FACILITY</span>
+
+    <h2 class="locker-title">Ultimate Locker Solution<br>for Valuables</h2>
+
+    <p class="locker-desc">
+      Frequently occur that pleasures have to be repudiated and annoyances  
+      accepted the wise man always holds.
+    </p>
+
+    <p class="locker-highlight">
+      <i class="fas fa-star-of-life"></i>
+      Affordable Security, Check our Locker <a href="#" class="pricing-link">Pricing.</a>
+    </p>
+
+    <!-- FEATURES BOX -->
+    <div class="locker-features-box">
+
+      <h4 class="feat-heading">KEY FEATURES</h4>
+      <div class="feat-line"></div>
+
+      <div class="feat-items">
+
+        <div class="feat-item">
+          <i class="fas fa-check-circle"></i>
+          <p>Available in<br>Different Sizes.</p>
+        </div>
+
+        <div class="feat-item">
+          <i class="fas fa-check-circle"></i>
+          <p>Affordable Rental<br>Plans.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BUTTON -->
+    <button class="locker-btn">
+      <i class="fas fa-arrow-right"></i> Locker Request
+    </button>
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
+  <div class="locker-right">
+    <img src="Images/locker.webp" alt="Locker Image">
+  </div>
+
+</section>
+
+<!-- 🔥 FIRST BLOG SECTION -->
+<section class="top-blog">
+    <h2 class="title">BLOG POST</h2>
+</section>
+
+<!-- 🔥 LATEST FROM BLOG POST -->
+<section class="latest-blog-section">
+
+    <div class="latest-title-box">
+        <h2>Latest from Blog Post</h2>
+    </div>
+
+    <!-- 🔥 6 BLOG CARDS (ALL WITH IMAGES) -->
+    <div class="blog-grid">
+
+        <!-- CARD 1 -->
+        <div class="blog-card">
+            <img src="Images/blog1.webp" class="blog-img">
+
+            <div class="blog-content">
+                <div class="top-row">
+                    <span class="cat">ACCOUNT</span>
+                    <span class="date">17<br><small>Dec, 2024</small></span>
+                </div>
+                <span class="admin">By Admin</span>
+                <h3>How to Improve Your Credit Score Tips and Tricks.</h3>
+                <div class="bottom-row">
+                    <span class="time"><i class="fa-regular fa-clock"></i> 11 months ago</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="blog-card">
+            <img src="Images/blog2.webp" class="blog-img">
+
+            <div class="blog-content">
+                <div class="top-row">
+                    <span class="cat">FINANCIAL PLANNING</span>
+                    <span class="date">14<br><small>Sep, 2024</small></span>
+                </div>
+                <span class="admin">By Admin</span>
+                <h3>Growth Strategies for Your Small Business.</h3>
+                <div class="bottom-row">
+                    <span class="time"><i class="fa-regular fa-clock"></i> 1 year ago</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="blog-card">
+            <img src="Images/blog3.webp" class="blog-img">
+
+            <div class="blog-content">
+                <div class="top-row">
+                    <span class="cat">CREDIT</span>
+                    <span class="date">09<br><small>Aug, 2024</small></span>
+                </div>
+                <span class="admin">By Admin</span>
+                <h3>Smart Money Management for Families.</h3>
+                <div class="bottom-row">
+                    <span class="time"><i class="fa-regular fa-clock"></i> 5 months ago</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="blog-card">
+            <img src="Images/blog4.webp" class="blog-img">
+
+            <div class="blog-content">
+                <div class="top-row">
+                    <span class="cat">ACCOUNT</span>
+                    <span class="date">21<br><small>Nov, 2024</small></span>
+                </div>
+                <span class="admin">By Admin</span>
+                <h3>How to Build Savings with Small Steps.</h3>
+                <div class="bottom-row">
+                    <span class="time"><i class="fa-regular fa-clock"></i> 6 months ago</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="blog-card">
+            <img src="Images/blog5.webp" class="blog-img">
+
+            <div class="blog-content">
+                <div class="top-row">
+                    <span class="cat">FINANCE</span>
+                    <span class="date">01<br><small>Jan, 2025</small></span>
+                </div>
+                <span class="admin">By Admin</span>
+                <h3>Easy Ways to Improve Daily Budgeting.</h3>
+                <div class="bottom-row">
+                    <span class="time"><i class="fa-regular fa-clock"></i> 2 months ago</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="blog-card">
+            <img src="Images/blog6.webp" class="blog-img">
+
+            <div class="blog-content">
+                <div class="top-row">
+                    <span class="cat">LOANS</span>
+                    <span class="date">27<br><small>Dec, 2024</small></span>
+                </div>
+                <span class="admin">By Admin</span>
+                <h3>Loan Tips: Choosing the Right EMI Plan.</h3>
+                <div class="bottom-row">
+                    <span class="time"><i class="fa-regular fa-clock"></i> 3 months ago</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="subscribe-section">
+    <div class="subscribe-left">
+        <h2>Subscribe us to Receive<br>Latest Updates</h2>
+    </div>
+
+    <div class="subscribe-right">
+        <input type="text" placeholder="Your email">
+        <button>Subscribe Now</button>
+    </div>
+</section>
+
+<!-- 🔥 MAIN FOOTER -->
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <!-- COLUMN 1 - LOGO + DESCRIPTION + SOCIAL -->
+        <div class="footer-col">
+            <div class="footer-logo">
+                <img src="images/logo.webp" alt="Bank Logo" class="logo-icon">
+            </div>
+
+            <p class="bank-desc">
+                Stackly is committed to delivering secure, fast, and reliable financial 
+                services.
+            </p>
+
+            <div class="social-icons">
+                <a href="#" class="social facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="social instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- COLUMN 2 - EXPLORE -->
+        <div class="footer-col">
+            <h3>Explore</h3>
+            <ul>
+                <li>About Us</li>
+                <li>Testimonials</li>
+                <li>Careers</li>
+                <li>Career Detail</li>
+                <li>Faq's</li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 3 - USEFUL LINKS -->
+        <div class="footer-col">
+            <h3>Useful Links</h3>
+            <ul>
+                <li>Credit Card</li>
+                <li>Saving Account</li>
+                <li>Digital Gift Cards</li>
+                <li>Apply for Loans</li>
+                <li>Mobile Application</li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 4 - FIND BRANCH -->
+        <div class="footer-col">
+            <h3>Find Our Branch & ATM</h3>
+
+            <select id="branchSelect" class="footer-select">
+                <option value="">Select Branch</option>
+                <option value="chennai">Chennai</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="hyderabad">Hyderabad</option>
+            </select>
+
+            <button class="map-btn" onclick="showBranch()">Find on Map</button>
+
+            <p id="branchResult" class="branch-output"></p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- COPYRIGHT -->
+<div class="copyright">
+    Copyright 2023 by <span>Stackly</span>. All Rights Reserved.
+</div>
+
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let dots = document.querySelectorAll(".dot");
+let index = 0;
+
+function showSlide(i) {
+  slides.forEach(s => s.classList.remove("active"));
+  dots.forEach(d => d.classList.remove("active"));
+
+  slides[i].classList.add("active");
+  dots[i].classList.add("active");
+}
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    index = i;
+    showSlide(index);
+  });
+});
+
+// Auto slide every 6 seconds
+setInterval(() => {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}, 6000);
+</script>
+
+
+<script>
+let tabItems = document.querySelectorAll(".tab-item");
+let contents = document.querySelectorAll(".content-box");
+
+tabItems.forEach(item => {
+    item.addEventListener("click", () => {
+
+        // Remove active classes
+        tabItems.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        // Add active to clicked tab
+        item.classList.add("active");
+
+        // Show correct content
+        let tabId = item.getAttribute("data-tab");
+        document.getElementById(tabId).classList.add("active");
+    });
+});
+</script>
+
+
+<script>
+function showBranch() {
+    let city = document.getElementById("branchSelect").value;
+    let output = document.getElementById("branchResult");
+
+    if (city === "chennai") {
+        output.innerHTML = "📍 Chennai Branch: No.21 Anna Salai, Chennai - 600002";
+    }
+    else if (city === "bangalore") {
+        output.innerHTML = "📍 Bangalore Branch: MG Road, Near Brigade Towers, Bangalore - 560001";
+    }
+    else if (city === "hyderabad") {
+        output.innerHTML = "📍 Hyderabad Branch: Banjara Hills Road No.2, Hyderabad - 500034";
+    }
+    else {
+        output.innerHTML = "Please select a branch.";
+    }
+}
+</script>
+
+
+<script>
+// MOBILE MENU OPEN/CLOSE
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobile-menu");
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+});
+
+// MOBILE DROPDOWN
+const homeLink = document.querySelector(".home-link");
+const arrow = document.querySelector(".dropdown-arrow");
+const dropdown = document.querySelector(".dropdown-menu");
+
+// Clicking HOME text → go to index.html (normal behavior)
+
+// Clicking arrow → toggle dropdown (prevent link)
+arrow.addEventListener("click", (e) => {
+  e.preventDefault(); 
+
+  dropdown.classList.toggle("show");
+  arrow.classList.toggle("rotate");
+});
+
+</script>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Header</title>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="account.css">
+</head>
+<body>
+
+<div class="header-wrapper">
+
+  <!-- LOGO -->
+  <div class="left-logo">
+    <img src="Images/logo3.webp" alt="Stackly Logo">
+  </div>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-right">
+      <span><i class="fa-solid fa-envelope red-icon"></i> info@example.com</span>
+      <span><i class="fa-solid fa-phone red-icon"></i> +91 1234567890</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="nav-bar">
+
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENU -->
+    <div class="menu-container" id="mobile-menu">
+      <ul class="menu">
+
+        <!-- HOME DROPDOWN -->
+        <li class="home-dropdown">
+
+          <a href="index.html" class="home-link">
+            Home 
+            <i class="fa-solid fa-caret-down dropdown-arrow"></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a href="saas.html">Home 1</a></li>
+          </ul>
+
+        </li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="loans.html">Loans</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+      </ul>
+    </div>
+
+    <!-- RIGHT BUTTONS -->
+    <div class="nav-buttons">
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="account.html" class="open-btn">Open Account</a>
+    </div>
+
+  </nav>
+</div>
+
+<!-- SERVICES HEADER SECTION -->
+<section class="inner-banner">
+    <div class="banner-overlay"></div>
+
+    <div class="container">
+        <h1 class="page-title">Account Opening</h1>
+
+        <div class="breadcrumb">
+            <p>Home</p>
+            <span>›</span>
+            <p>Open Account</p>
+        </div>
+    </div>
+</section>
+
+
+<div class="account-container">
+
+    <div class="account-card">
+
+        <h2 class="title">Open a New Account</h2>
+        <p class="subtitle">Fill the details to create your bank account</p>
+
+        <form id="accountForm" class="form-grid">
+
+            <!-- FULL NAME -->
+            <div class="input-group">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" class="fullname" placeholder=" ">
+                <label>Full Name</label>
+                <small class="error"></small>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" class="email" placeholder=" ">
+                <label>Email Address</label>
+                <small class="error"></small>
+            </div>
+
+            <!-- PHONE -->
+            <div class="input-group">
+                <i class="fa-solid fa-phone"></i>
+                <input type="text" class="phone" placeholder=" ">
+                <label>Phone Number</label>
+                <small class="error"></small>
+            </div>
+
+            <!-- AADHAAR -->
+            <div class="input-group">
+                <i class="fa-solid fa-id-card"></i>
+                <input type="text" class="aadhaar" placeholder=" ">
+                <label>Aadhaar Number</label>
+                <small class="error"></small>
+            </div>
+
+            <!-- ADDRESS -->
+            <div class="input-group full">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" class="address" placeholder=" ">
+                <label>Full Address</label>
+                <small class="error"></small>
+            </div>
+
+            <!-- ACCOUNT TYPE -->
+            <div class="input-group full">
+                <i class="fa-solid fa-building-columns"></i>
+                <select class="account-type">
+                    <option value="">Select Account Type</option>
+                    <option>Savings Account</option>
+                    <option>Current Account</option>
+                    <option>Salary Account</option>
+                    <option>Student Account</option>
+                </select>
+                <small class="error"></small>
+            </div>
+
+            <!-- SUBMIT -->
+            <button type="submit" class="submit-btn">Submit Application</button>
+
+            <p class="success"></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<section class="subscribe-section">
+    <div class="subscribe-left">
+        <h2>Subscribe us to Receive<br>Latest Updates</h2>
+    </div>
+
+    <div class="subscribe-right">
+        <input type="text" placeholder="Your email">
+        <button>Subscribe Now</button>
+    </div>
+</section>
+
+<!-- 🔥 MAIN FOOTER -->
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <!-- COLUMN 1 - LOGO + DESCRIPTION + SOCIAL -->
+        <div class="footer-col">
+            <div class="footer-logo">
+                <img src="images/logo.webp" alt="Bank Logo" class="logo-icon">
+            </div>
+
+            <p class="bank-desc">
+                Stackly is committed to delivering secure, fast, and reliable financial 
+                services.
+            </p>
+
+            <div class="social-icons">
+                <a href="#" class="social facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="social instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- COLUMN 2 - EXPLORE -->
+        <div class="footer-col">
+            <h3>Explore</h3>
+            <ul>
+                <li>About Us</li>
+                <li>Testimonials</li>
+                <li>Careers</li>
+                <li>Career Detail</li>
+                <li>Faq's</li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 3 - USEFUL LINKS -->
+        <div class="footer-col">
+            <h3>Useful Links</h3>
+            <ul>
+                <li>Credit Card</li>
+                <li>Saving Account</li>
+                <li>Digital Gift Cards</li>
+                <li>Apply for Loans</li>
+                <li>Mobile Application</li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 4 - FIND BRANCH -->
+        <div class="footer-col">
+            <h3>Find Our Branch & ATM</h3>
+
+            <select id="branchSelect" class="footer-select">
+                <option value="">Select Branch</option>
+                <option value="chennai">Chennai</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="hyderabad">Hyderabad</option>
+            </select>
+
+            <button class="map-btn" onclick="showBranch()">Find on Map</button>
+
+            <p id="branchResult" class="branch-output"></p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- COPYRIGHT -->
+<div class="copyright">
+    Copyright 2023 by <span>Stackly</span>. All Rights Reserved.
+</div>
+
+
+<script>
+// MOBILE MENU OPEN/CLOSE
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobile-menu");
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+});
+
+// MOBILE DROPDOWN
+const homeLink = document.querySelector(".home-link");
+const arrow = document.querySelector(".dropdown-arrow");
+const dropdown = document.querySelector(".dropdown-menu");
+
+// Clicking HOME text → go to index.html (normal behavior)
+
+// Clicking arrow → toggle dropdown (prevent link)
+arrow.addEventListener("click", (e) => {
+  e.preventDefault(); 
+
+  dropdown.classList.toggle("show");
+  arrow.classList.toggle("rotate");
+});
+
+</script>
+
+
+<script>
+function showBranch() {
+    let city = document.getElementById("branchSelect").value;
+    let output = document.getElementById("branchResult");
+
+    if (city === "chennai") {
+        output.innerHTML = "📍 Chennai Branch: No.21 Anna Salai, Chennai - 600002";
+    }
+    else if (city === "bangalore") {
+        output.innerHTML = "📍 Bangalore Branch: MG Road, Near Brigade Towers, Bangalore - 560001";
+    }
+    else if (city === "hyderabad") {
+        output.innerHTML = "📍 Hyderabad Branch: Banjara Hills Road No.2, Hyderabad - 500034";
+    }
+    else {
+        output.innerHTML = "Please select a branch.";
+    }
+}
+</script>
+
+
+
+<script src="account.js"></script>
+
+
+</body>
+</html>
+

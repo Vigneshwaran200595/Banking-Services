@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Transactions — Admin</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="dashboard.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo-box"><img src="Images/logo.webp" alt="Logo" class="logo"></div>
+    <nav class="menu">
+      <a class="menu-item" href="dashboard.html"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></a>
+      <a class="menu-item" href="customers.html"><i class="fa-solid fa-users"></i><span>Customer Accounts</span></a>
+      <a class="menu-item" href="creditcards.html"><i class="fa-solid fa-credit-card"></i><span>Credit Card Applications</span></a>
+      <a class="menu-item" href="loans1.html"><i class="fa-solid fa-file-invoice"></i><span>Loan Applications</span></a>
+      <a class="menu-item active" href="transactions.html"><i class="fa-solid fa-money-bill-transfer"></i><span>Transactions</span></a>
+      <a class="menu-item" href="reports.html"><i class="fa-solid fa-chart-pie"></i><span>Reports & Analytics</span></a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="top-header">
+      <div class="header-left"><button class="home-btn" onclick="location.href='index.html'">Home</button><div class="header-breadcrumb">Transactions</div></div>
+      <div class="admin-box"><img src="Images/profile.webp" alt="Admin" class="admin-img"><div class="admin-info"><h4>Admin Name</h4><small>Administrator</small></div></div>
+    </header>
+
+    <div class="content-area">
+      <section id="transactions" class="section active">
+        <h1 class="page-title">Transactions</h1>
+
+        <div class="chart-row">
+          <div class="chart-card"><h3>Daily Transaction Volume</h3><div class="chart-wrap canvas-holder"><canvas id="txnChart"></canvas></div></div>
+          <div class="chart-card"><h3>Transaction Type Breakdown</h3><div class="chart-wrap canvas-holder"><canvas id="txnPie"></canvas></div></div>
+        </div>
+
+        <div class="large-card">
+          <h3>Recent Transactions</h3>
+          <table class="simple-table" style="margin-top:14px">
+            <thead><tr><th>User</th><th>Type</th><th>Amount</th><th>Date</th></tr></thead>
+            <tbody>
+              <tr><td>Arun</td><td>Deposit</td><td>₹15,000</td><td>2025-11-10</td></tr>
+              <tr><td>Priya</td><td>Withdrawal</td><td>₹5,000</td><td>2025-11-11</td></tr>
+              <tr><td>Manoj</td><td>UPI</td><td>₹1,200</td><td>2025-11-11</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

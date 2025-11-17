@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Header</title>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="loans.css">
+</head>
+<body>
+
+<div class="header-wrapper">
+
+  <!-- LOGO -->
+  <div class="left-logo">
+    <img src="Images/logo3.webp" alt="Stackly Logo">
+  </div>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-right">
+      <span><i class="fa-solid fa-envelope red-icon"></i> info@example.com</span>
+      <span><i class="fa-solid fa-phone red-icon"></i> +91 1234567890</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="nav-bar">
+
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENU -->
+    <div class="menu-container" id="mobile-menu">
+      <ul class="menu">
+
+        <!-- HOME DROPDOWN -->
+        <li class="home-dropdown">
+
+          <a href="index.html" class="home-link">
+            Home 
+            <i class="fa-solid fa-caret-down dropdown-arrow"></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a href="saas.html">Home 1</a></li>
+          </ul>
+
+        </li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="loans.html">Loans</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+      </ul>
+    </div>
+
+    <!-- RIGHT BUTTONS -->
+    <div class="nav-buttons">
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="account.html" class="open-btn">Open Account</a>
+    </div>
+
+  </nav>
+</div>
+
+<!-- SERVICES HEADER SECTION -->
+<section class="inner-banner">
+    <div class="banner-overlay"></div>
+
+    <div class="container">
+        <h1 class="page-title">Loans</h1>
+
+        <div class="breadcrumb">
+            <p>Home</p>
+            <span>›</span>
+            <p>Loans</p>
+        </div>
+    </div>
+</section>
+
+<section class="loan-process-section">
+
+    <p class="loan-subtitle">HOW IT'S WORK</p>
+   <h2 class="loan-title">Start Loan Within 5 Mins</h2>
+
+
+    <div class="loan-process-container">
+
+        <!-- STEP 1 -->
+<div class="loan-card">
+    <div class="step-number">01</div>
+    <h3>Verify Customer</h3>
+    <p>Complete a quick identity verification to begin your loan application process safely and securely.</p>
+    <div class="bottom-icon">
+        <i class="fa-solid fa-user-check"></i>
+    </div>
+</div>
+
+<!-- STEP 2 -->
+<div class="loan-card">
+    <div class="step-number">02</div>
+    <h3>Submit Documents</h3>
+    <p>Upload essential documents like ID proof, income proof, and bank statements for validation.</p>
+    <div class="bottom-icon">
+        <i class="fa-solid fa-file-arrow-up"></i>
+    </div>
+</div>
+
+<!-- STEP 3 -->
+<div class="loan-card">
+    <div class="step-number">03</div>
+    <h3>Loan Approval</h3>
+    <p>Our team reviews your application and verifies your eligibility to approve the requested loan amount.</p>
+    <div class="bottom-icon">
+    <i class="fa-solid fa-clipboard-check"></i>
+</div>
+</div>
+
+<!-- STEP 4 -->
+<div class="loan-card">
+    <div class="step-number">04</div>
+    <h3>Loan Disbursal</h3>
+    <p>Once approved, the loan amount is quickly credited to your registered bank account within minutes.</p>
+    <div class="bottom-icon">
+        <i class="fa-solid fa-money-bill-transfer"></i>
+    </div>
+</div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOME LOAN ================= -->
+<section class="appointment-section home-loan">
+
+    <div class="left-text">
+        <h2>HOME<br>LOAN</h2>
+    </div>
+
+    <div class="appointment-container">
+        <form class="appointment-form loanForm" novalidate>
+
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter name here" class="name">
+            <small class="error"></small>
+
+            <label>Email</label>
+            <input type="email" placeholder="Email address" class="email">
+            <small class="error"></small>
+
+            <label>Phone</label>
+            <input type="text" placeholder="Phone number" class="phone">
+            <small class="error"></small>
+
+            <div class="row-2">
+                <div>
+                    <label>Date</label>
+                    <input type="date" class="date">
+                    <small class="error"></small>
+                </div>
+
+                <div>
+                    <label>Time</label>
+                    <input type="time" class="time">
+                    <small class="error"></small>
+                </div>
+            </div>
+
+            <label>Address</label>
+            <input type="text" placeholder="Your address" class="address">
+            <small class="error"></small>
+
+            <button type="submit" class="submit-btn">→ Send Your Request</button>
+
+        </form>
+    </div>
+
+    <div class="right-image home-loan-img"></div>
+</section>
+
+
+<!-- ================= PERSONAL LOAN ================= -->
+<section class="appointment-section personal-loan">
+
+    <div class="left-text">
+        <h2>PERSONAL<br>LOAN</h2>
+    </div>
+
+    <div class="appointment-container">
+        <form class="appointment-form loanForm" novalidate>
+
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter name here" class="name">
+            <small class="error"></small>
+
+            <label>Email</label>
+            <input type="email" placeholder="Email address" class="email">
+            <small class="error"></small>
+
+            <label>Phone</label>
+            <input type="text" placeholder="Phone number" class="phone">
+            <small class="error"></small>
+
+            <div class="row-2">
+                <div>
+                    <label>Date</label>
+                    <input type="date" class="date">
+                    <small class="error"></small>
+                </div>
+
+                <div>
+                    <label>Time</label>
+                    <input type="time" class="time">
+                    <small class="error"></small>
+                </div>
+            </div>
+
+            <label>Address</label>
+            <input type="text" placeholder="Your address" class="address">
+            <small class="error"></small>
+
+            <button type="submit" class="submit-btn">→ Send Your Request</button>
+
+        </form>
+    </div>
+
+    <div class="right-image personal-loan-img"></div>
+</section>
+
+
+<!-- ================= VEHICLE LOAN ================= -->
+<section class="appointment-section vehicle-loan">
+
+    <div class="left-text">
+        <h2>VEHICLE<br>LOAN</h2>
+    </div>
+
+    <div class="appointment-container">
+        <form class="appointment-form loanForm" novalidate>
+
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter name here" class="name">
+            <small class="error"></small>
+
+            <label>Email</label>
+            <input type="email" placeholder="Email address" class="email">
+            <small class="error"></small>
+
+            <label>Phone</label>
+            <input type="text" placeholder="Phone number" class="phone">
+            <small class="error"></small>
+
+            <div class="row-2">
+                <div>
+                    <label>Date</label>
+                    <input type="date" class="date">
+                    <small class="error"></small>
+                </div>
+
+                <div>
+                    <label>Time</label>
+                    <input type="time" class="time">
+                    <small class="error"></small>
+                </div>
+            </div>
+
+            <label>Address</label>
+            <input type="text" placeholder="Your address" class="address">
+            <small class="error"></small>
+
+            <button type="submit" class="submit-btn">→ Send Your Request</button>
+
+        </form>
+    </div>
+
+    <div class="right-image vehicle-loan-img"></div>
+</section>
+
+
+<!-- ================= EDUCATION LOAN ================= -->
+<section class="appointment-section education-loan">
+
+    <div class="left-text">
+        <h2>EDUCATION<br>LOAN</h2>
+    </div>
+
+    <div class="appointment-container">
+        <form class="appointment-form loanForm" novalidate>
+
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter name here" class="name">
+            <small class="error"></small>
+
+            <label>Email</label>
+            <input type="email" placeholder="Email address" class="email">
+            <small class="error"></small>
+
+            <label>Phone</label>
+            <input type="text" placeholder="Phone number" class="phone">
+            <small class="error"></small>
+
+            <div class="row-2">
+                <div>
+                    <label>Date</label>
+                    <input type="date" class="date">
+                    <small class="error"></small>
+                </div>
+
+                <div>
+                    <label>Time</label>
+                    <input type="time" class="time">
+                    <small class="error"></small>
+                </div>
+            </div>
+
+            <label>Address</label>
+            <input type="text" placeholder="Your address" class="address">
+            <small class="error"></small>
+
+            <button type="submit" class="submit-btn">→ Send Your Request</button>
+
+        </form>
+    </div>
+
+    <div class="right-image education-loan-img"></div>
+</section>
+
+
+<!-- ================= GOLD LOAN ================= -->
+<section class="appointment-section gold-loan">
+
+    <div class="left-text">
+        <h2>GOLD<br>LOAN</h2>
+    </div>
+
+    <div class="appointment-container">
+        <form class="appointment-form loanForm" novalidate>
+
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter name here" class="name">
+            <small class="error"></small>
+
+            <label>Email</label>
+            <input type="email" placeholder="Email address" class="email">
+            <small class="error"></small>
+
+            <label>Phone</label>
+            <input type="text" placeholder="Phone number" class="phone">
+            <small class="error"></small>
+
+            <div class="row-2">
+                <div>
+                    <label>Date</label>
+                    <input type="date" class="date">
+                    <small class="error"></small>
+                </div>
+
+                <div>
+                    <label>Time</label>
+                    <input type="time" class="time">
+                    <small class="error"></small>
+                </div>
+            </div>
+
+            <label>Address</label>
+            <input type="text" placeholder="Your address" class="address">
+            <small class="error"></small>
+
+            <button type="submit" class="submit-btn">→ Send Your Request</button>
+
+        </form>
+    </div>
+
+    <div class="right-image gold-loan-img"></div>
+</section>
+
+
+<section class="subscribe-section">
+    <div class="subscribe-left">
+        <h2>Subscribe us to Receive<br>Latest Updates</h2>
+    </div>
+
+    <div class="subscribe-right">
+        <input type="text" placeholder="Your email">
+        <button>Subscribe Now</button>
+    </div>
+</section>
+
+<!-- 🔥 MAIN FOOTER -->
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <!-- COLUMN 1 - LOGO + DESCRIPTION + SOCIAL -->
+        <div class="footer-col">
+            <div class="footer-logo">
+                <img src="images/logo.webp" alt="Bank Logo" class="logo-icon">
+            </div>
+
+            <p class="bank-desc">
+                Stackly is committed to delivering secure, fast, and reliable financial 
+                services.
+            </p>
+
+            <div class="social-icons">
+                <a href="#" class="social facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="social instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- COLUMN 2 - EXPLORE -->
+        <div class="footer-col">
+            <h3>Explore</h3>
+            <ul>
+                <li>About Us</li>
+                <li>Testimonials</li>
+                <li>Careers</li>
+                <li>Career Detail</li>
+                <li>Faq's</li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 3 - USEFUL LINKS -->
+        <div class="footer-col">
+            <h3>Useful Links</h3>
+            <ul>
+                <li>Credit Card</li>
+                <li>Saving Account</li>
+                <li>Digital Gift Cards</li>
+                <li>Apply for Loans</li>
+                <li>Mobile Application</li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 4 - FIND BRANCH -->
+        <div class="footer-col">
+            <h3>Find Our Branch & ATM</h3>
+
+            <select id="branchSelect" class="footer-select">
+                <option value="">Select Branch</option>
+                <option value="chennai">Chennai</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="hyderabad">Hyderabad</option>
+            </select>
+
+            <button class="map-btn" onclick="showBranch()">Find on Map</button>
+
+            <p id="branchResult" class="branch-output"></p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- COPYRIGHT -->
+<div class="copyright">
+    Copyright 2023 by <span>Stackly</span>. All Rights Reserved.
+</div>
+
+
+<script>
+document.querySelectorAll(".loanForm").forEach(form => {
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let valid = true;
+
+        let name = form.querySelector(".name");
+        let email = form.querySelector(".email");
+        let phone = form.querySelector(".phone");
+        let date = form.querySelector(".date");
+        let time = form.querySelector(".time");
+        let address = form.querySelector(".address");
+
+        // Clear errors
+        form.querySelectorAll(".error").forEach(err => err.innerHTML = "");
+
+        // Name
+        if (name.value.trim() === "") {
+            name.nextElementSibling.innerHTML = "Name is required";
+            valid = false;
+        }
+
+        // Email
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email.value)) {
+            email.nextElementSibling.innerHTML = "Enter valid email";
+            valid = false;
+        }
+
+        // Phone
+        if (!/^[0-9]{10}$/.test(phone.value)) {
+            phone.nextElementSibling.innerHTML = "Phone must be 10 digits";
+            valid = false;
+        }
+
+        // Date
+        if (date.value === "") {
+            date.nextElementSibling.innerHTML = "Select date";
+            valid = false;
+        }
+
+        // Time
+        if (time.value === "") {
+            time.nextElementSibling.innerHTML = "Select time";
+            valid = false;
+        }
+
+        // Address
+        if (address.value.trim() === "") {
+            address.nextElementSibling.innerHTML = "Address required";
+            valid = false;
+        }
+
+        if (valid) {
+            window.location.href = "404.html";
+        }
+    });
+
+});
+
+</script>
+
+<script>
+// MOBILE MENU OPEN/CLOSE
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobile-menu");
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+});
+
+// MOBILE DROPDOWN
+const homeLink = document.querySelector(".home-link");
+const arrow = document.querySelector(".dropdown-arrow");
+const dropdown = document.querySelector(".dropdown-menu");
+
+// Clicking HOME text → go to index.html (normal behavior)
+
+// Clicking arrow → toggle dropdown (prevent link)
+arrow.addEventListener("click", (e) => {
+  e.preventDefault(); 
+
+  dropdown.classList.toggle("show");
+  arrow.classList.toggle("rotate");
+});
+
+</script>
+
+
+<script>
+function showBranch() {
+    let city = document.getElementById("branchSelect").value;
+    let output = document.getElementById("branchResult");
+
+    if (city === "chennai") {
+        output.innerHTML = "📍 Chennai Branch: No.21 Anna Salai, Chennai - 600002";
+    }
+    else if (city === "bangalore") {
+        output.innerHTML = "📍 Bangalore Branch: MG Road, Near Brigade Towers, Bangalore - 560001";
+    }
+    else if (city === "hyderabad") {
+        output.innerHTML = "📍 Hyderabad Branch: Banjara Hills Road No.2, Hyderabad - 500034";
+    }
+    else {
+        output.innerHTML = "Please select a branch.";
+    }
+}
+</script>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
