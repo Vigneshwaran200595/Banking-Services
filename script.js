@@ -195,7 +195,7 @@ bindSideMenuClicks();
 // ================================
 const loanTypes = {
   home: {
-    title: "Flexible Online Home Loan Calculator",
+    title: "Stackly Online Home Loan Calculator",
     desc: "Calculate EMIs for home buying, construction or renovation.",
     min: 500000,
     max: 25000000,
@@ -205,7 +205,7 @@ const loanTypes = {
     rate: 8.5
   },
   vehicle: {
-    title: "Flexible Online Vehicle Loan Calculator",
+    title: "Stackly Online Vehicle Loan Calculator",
     desc: "Calculate EMIs for new & used car or bike loans.",
     min: 100000,
     max: 2500000,
@@ -215,7 +215,7 @@ const loanTypes = {
     rate: 9.2
   },
   personal: {
-    title: "Flexible Online Personal Loan Calculator",
+    title: "Stackly Online Personal Loan Calculator",
     desc: "Estimate EMIs for your personal financial needs.",
     min: 50000,
     max: 2000000,
@@ -225,7 +225,7 @@ const loanTypes = {
     rate: 11.5
   },
   education: {
-    title: "Flexible Online Education Loan Calculator",
+    title: "Stackly Online Education Loan Calculator",
     desc: "Plan EMIs for higher education in India & abroad.",
     min: 100000,
     max: 3000000,
@@ -235,7 +235,7 @@ const loanTypes = {
     rate: 10
   },
   mortgage: {
-    title: "Flexible Online Mortgage Loan Calculator",
+    title: "Stackly Online Mortgage Loan Calculator",
     desc: "Calculate EMIs for mortgage & property loans.",
     min: 500000,
     max: 50000000,

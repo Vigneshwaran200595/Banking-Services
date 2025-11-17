@@ -9,7 +9,7 @@ html,body{height:100%;width:100%;font-family:Inter, "Segoe UI", Arial, sans-seri
   color:#fff;padding:22px 16px;display:flex;flex-direction:column;gap:18px;z-index:40;
 }
 .logo-box{display:flex;align-items:center;justify-content:center;padding:6px 0 2px 0}
-.logo{width:130px;max-width:100%;display:block}
+.logo{width:150px;max-width:100%;display:block}
 .menu{display:flex;flex-direction:column;gap:6px;overflow:auto;padding-right:6px}
 .menu-item{
   display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;
@@ -77,22 +77,82 @@ html,body{height:100%;width:100%;font-family:Inter, "Segoe UI", Arial, sans-seri
 /* small ghost button */
 .btn-ghost{border:1px solid #b84;background:transparent;padding:8px 12px;border-radius:10px;color:#8B0000;font-weight:700;cursor:pointer}
 
-/* responsive */
+/* ================= RESPONSIVE FIXED ================= */
+
+/* Tablets & Small Laptops */
 @media (max-width:980px){
-  .sidebar{width:64px;padding:18px 8px}
-  .logo{width:48px}
-  .menu-item span{display:none}
-  .main{margin-left:64px}
-  .top-header{left:64px;width:calc(100% - 64px)}
-  .chart-card{flex:1 1 100%;min-width:unset}
-  .kpi-box{flex-direction:column}
-  .page-title{font-size:24px}
-  .chart-wrap{min-height:220px}
+
+  /* COLLAPSED SIDEBAR */
+  .sidebar{
+    width:80px;              /* Increased from 64 → 80px */
+    padding:18px 10px;
+  }
+
+  /* LOGO BIGGER IN MOBILE VIEW */
+  .logo-box{
+    text-align:center;
+  }
+
+  .logo{
+    width:70px !important;   /* Increased from 48px → 70px */
+    height:auto;
+  }
+
+  .menu-item span{
+    display:none;            /* hide text, keep icons only */
+  }
+
+  .main{
+    margin-left:80px;        /* match new sidebar width */
+  }
+
+  .top-header{
+    left:80px;
+    width:calc(100% - 80px);
+  }
+
+  .chart-card{
+    flex:1 1 100%;
+    min-width:unset;
+  }
+
+  .kpi-box{
+    flex-direction:column;
+  }
+
+  .page-title{
+    font-size:24px;
+  }
+
+  .chart-wrap{
+    min-height:220px;
+  }
 }
+
+
+/* ================= SMALL MOBILE PHONES ================= */
 @media (max-width:520px){
-  .content-area{padding:18px}
-  .top-header{padding:0 12px}
-  .admin-info h4{font-size:13px}
-  .admin-info small{display:none}
-  .logo{width:42px}
+
+  .content-area{
+    padding:18px;
+  }
+
+  .top-header{
+    padding:0 12px;
+  }
+
+  /* ADMIN INFO SHRINK */
+  .admin-info h4{
+    font-size:13px;
+  }
+
+  .admin-info small{
+    display:none;
+  }
+
+  /* EVEN BIGGER LOGO FOR SMALL PHONES */
+  .logo{
+    width:85px !important;   /* Increased from 42px → 85px */
+    height:auto;
+  }
 }
