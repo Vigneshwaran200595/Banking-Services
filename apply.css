@@ -1120,6 +1120,28 @@
 }
 
 
+/* FIX FLOATING LABEL ON MOBILE */
+@media (max-width: 600px) {
+
+    /* Reduce label jump height so it stays inside input box */
+    .cc-input-group input:focus + label,
+    .cc-input-group input:not(:placeholder-shown) + label,
+    .cc-input-group select:focus + label,
+    .cc-input-group select:not([value=""]) + label {
+        top: -4px !important;
+        left: 10px !important;
+        font-size: 11px !important;
+        background: #fff !important;
+        padding: 0 4px !important;
+    }
+
+    /* Add extra padding on top so label does not overlap with text */
+    .cc-input-group input,
+    .cc-input-group select {
+        padding-top: 20px !important;
+    }
+}
+
 /* ======================
    SUBSCRIBE SECTION
    ====================== */

@@ -21,27 +21,22 @@ function closeForget() {
     document.getElementById("signinForm").classList.add("active");
 }
 
-// GO HOME BUTTON
-function goHome() {
-    window.location.href = "index.html";
-}
-
-// UNIVERSAL ERROR MESSAGE
+// UNIVERSAL ERROR FUNCTION
 function showError(input, msg) {
-    let original = input.placeholder;
+    let realPlaceholder = input.placeholder;
     input.value = "";
     input.placeholder = msg;
     input.style.border = "2px solid red";
     input.style.color = "red";
 
     setTimeout(() => {
-        input.placeholder = original;
+        input.placeholder = realPlaceholder;
         input.style.border = "";
         input.style.color = "";
     }, 2000);
 }
 
-// VALIDATIONS
+// VALIDATION FUNCTIONS
 function validateName(name) {
     if (name.value.trim() === "") {
         showError(name, "Please fill the field");
@@ -79,7 +74,32 @@ function validatePassword(password) {
     return true;
 }
 
-// SIGN IN
+// ----------- LIVE VALIDATIONS (BLUR EVENTS) -----------
+
+// NAME FIELD LIVE CHECK
+document.querySelectorAll("input.name").forEach(input => {
+    input.addEventListener("blur", () => validateName(input));
+});
+
+// EMAIL FIELD LIVE CHECK (signin + signup)
+document.querySelectorAll("input.email").forEach(input => {
+    input.addEventListener("blur", () => validateEmail(input));
+});
+
+// PASSWORD FIELD LIVE CHECK
+document.querySelectorAll("input.password").forEach(input => {
+    input.addEventListener("blur", () => validatePassword(input));
+});
+
+// RESET PASSWORD EMAIL (forget page) LIVE CHECK
+let forgetEmail = document.querySelector(".forget-email");
+if (forgetEmail) {
+    forgetEmail.addEventListener("blur", () => validateEmail(forgetEmail));
+}
+
+// ----------- FORM SUBMISSIONS -----------
+
+// SIGN IN FORM
 document.getElementById("signinForm").addEventListener("submit", e => {
     e.preventDefault();
 
@@ -91,7 +111,7 @@ document.getElementById("signinForm").addEventListener("submit", e => {
     }
 });
 
-// SIGN UP
+// SIGN UP FORM
 document.getElementById("signupForm").addEventListener("submit", e => {
     e.preventDefault();
 
@@ -104,14 +124,15 @@ document.getElementById("signupForm").addEventListener("submit", e => {
     }
 });
 
-// FORGET PASSWORD — SEND RESET LINK (with success message)
+// RESET PASSWORD — SEND LINK
 function sendReset() {
     let email = document.querySelector(".forget-email");
     let successBox = document.querySelector(".reset-success");
 
-    if (validateEmail(email)) {
-        successBox.innerHTML = "Reset link sent successfully!";
-        successBox.style.color = "green";
-        successBox.style.marginTop = "10px";
-    }
+        // Redirect to 404.html after 1 second
+        {
+            window.location.href = "404.html";
+        }
+
 }
+

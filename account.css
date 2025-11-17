@@ -1153,6 +1153,28 @@
     }
 }
 
+/* FIX FLOATING LABEL ON MOBILE */
+@media (max-width: 600px) {
+
+    /* Reduce label jump height */
+    .input-group input:focus + label,
+    .input-group input:not(:placeholder-shown) + label,
+    .input-group select:focus + label,
+    .input-group select:not([value=""]) + label {
+        top: -4px !important;
+        left: 10px !important;
+        font-size: 11px !important;
+        background: #fff !important;
+        padding: 0 4px !important;
+    }
+
+    /* More top space inside input */
+    .input-group input,
+    .input-group select {
+        padding-top: 20px !important;
+    }
+}
+
 /* ======================
    SUBSCRIBE SECTION
    ====================== */
