@@ -1449,6 +1449,48 @@
   }
 }
 
+/* --- FIX: Mobile Right-Side Content Cut Issue --- */
+@media (max-width: 768px) {
+  .banking-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .content-box {
+    padding: 10px 5px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .banking-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .tabs-row {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .tab-item {
+    width: 100%;
+  }
+
+  .content-box {
+    padding: 0 5px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .banking-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .content-box {
+    padding: 0 !important;
+  }
+}
 
 .main-title {
   font-size: 42px;
