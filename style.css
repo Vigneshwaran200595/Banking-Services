@@ -461,7 +461,7 @@
     }
 
     .top-right {
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .menu li {
@@ -491,6 +491,10 @@
       padding: 10px;
       font-size: 14px;
     }
+
+     .top-right {
+      font-size: 12px;
+    }
   }
 
   /* ============= 360px (mini phones) ============= */
@@ -501,7 +505,8 @@
     }
 
     .top-right {
-      font-size: 12px;
+      font-size: 10px;
+      margin-left: 20px;
     }
 
     .menu li {
@@ -552,6 +557,8 @@
 
   }
 
+
+  
 
   @media (max-width: 768px) {
 
@@ -1137,6 +1144,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     margin-top: 55px;
+    padding: 20px;
 }
 
 .content-box.active {
