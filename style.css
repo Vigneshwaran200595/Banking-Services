@@ -3847,6 +3847,12 @@ input[type="range"] {
   }
 }
 
+.input-error {
+    border: 2px solid #fff !important;
+    background: rgba(255,0,0,0.3) !important;
+}
+
+
 
 /* ======================
    FOOTER
@@ -3969,6 +3975,11 @@ input[type="range"] {
 .copyright span {
     color: #e82d2d;
     font-weight: bold;
+}
+
+.social-icons a {
+    text-decoration: none;   /* remove underline */
+    color: inherit;          /* keep default icon color */
 }
 
 /* ============================================================
@@ -4116,3 +4127,78 @@ input[type="range"] {
     font-size: 14px;
   }
 }
+
+.footer-col ul li a {
+    text-decoration: none;     /* remove underline */
+    color: #ccc;               /* normal color */
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;               /* hover color */
+}
+
+
+.locker-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #e71228;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;   /* remove underline */
+  font-weight: 600;
+}
+
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+/* When visible */
+[data-animate].animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🔹 Bounce Animations */
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+@keyframes bounceInUp {
+  0% { opacity: 0; transform: translateY(100px); }
+  60% { opacity: 1; transform: translateY(-20px); }
+  80% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+@keyframes bounceInDown {
+  0% { opacity: 0; transform: translateY(-100px); }
+  60% { opacity: 1; transform: translateY(20px); }
+  80% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+@keyframes bounceInLeft {
+  0% { opacity: 0; transform: translateX(-120px); }
+  60% { opacity: 1; transform: translateX(25px); }
+  80% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+@keyframes bounceInRight {
+  0% { opacity: 0; transform: translateX(120px); }
+  60% { opacity: 1; transform: translateX(-25px); }
+  80% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+/* Animation class applied dynamically */
+.animate.bounceIn     { animation: bounceIn 1.5s ease both; }
+.animate.bounceInUp   { animation: bounceInUp 1.5s ease both; }
+.animate.bounceInDown { animation: bounceInDown 1.5s ease both; }
+.animate.bounceInLeft { animation: bounceInLeft 1.5s ease both; }
+.animate.bounceInRight{ animation: bounceInRight 1.5s ease both; }

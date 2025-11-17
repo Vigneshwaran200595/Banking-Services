@@ -75,7 +75,7 @@
     <div class="banner-overlay"></div>
 
     <div class="container">
-        <h1 class="page-title">Services</h1>
+        <h1 class="page-title1">Services</h1>
 
         <div class="breadcrumb">
             <p>Home</p>
@@ -88,13 +88,13 @@
 
 <section class="services-area">
 
-    <div class="top-label">CUSTOM BANKING</div>
-    <h2 class="main-heading">Banking For Your Needs</h2>
+    <div class="top-label" data-animate="bounceInUp">CUSTOM BANKING</div>
+    <h2 class="main-heading" data-animate="bounceInUp">Banking For Your Needs</h2>
 
     <div class="services-grid">
 
         <!-- CARD 1 -->
-        <div class="service-card">
+        <div class="service-card" data-animate="bounceIn">
             <div class="card-inner">
                 <h3>Savings Account</h3>
                 <p>Perfectly simple and easy to distinguish the claims of duty ...</p>
@@ -111,7 +111,7 @@
         </div>
 
         <!-- CARD 2 -->
-        <div class="service-card">
+        <div class="service-card" data-animate="bounceIn">
             <div class="card-inner">
                 <h3>Current Account</h3>
                 <p>Duty through weakness of will, which is the same as saying through...</p>
@@ -128,7 +128,7 @@
         </div>
 
         <!-- CARD 3 -->
-        <div class="service-card">
+        <div class="service-card" data-animate="bounceIn">
             <div class="card-inner">
                 <h3>Family 360o</h3>
                 <p>Choice is untrammelled when nothing prevents our being able to do...</p>
@@ -145,7 +145,7 @@
         </div>
 
         <!-- CARD 4 -->
-        <div class="service-card">
+        <div class="service-card" data-animate="bounceIn">
             <div class="card-inner">
                 <h3>Senior Citizen</h3>
                 <p>Choice is untrammelled when nothing prevents our being able to do...</p>
@@ -162,7 +162,7 @@
         </div>
 
         <!-- CARD 5 -->
-        <div class="service-card">
+        <div class="service-card" data-animate="bounceIn">
             <div class="card-inner">
                 <h3>Demat Account</h3>
                 <p>Perfectly simple and easy to distinguish the claims of duty ...</p>
@@ -179,7 +179,7 @@
         </div>
 
         <!-- CARD 6 -->
-        <div class="service-card">
+        <div class="service-card" data-animate="bounceIn">
             <div class="card-inner">
                 <h3>Business Accounts</h3>
                 <p>Duty through weakness of will, which is the same as saying through...</p>
@@ -203,7 +203,7 @@
     <div class="stackly-container">
 
         <!-- LEFT SIDE CONTENT -->
-        <div class="stackly-left">
+        <div class="stackly-left" data-animate="bounceInLeft">
             <h2>More than just<br>a card—It’s freedom…</h2>
 
             <p>
@@ -231,7 +231,7 @@
         </div>
 
         <!-- RIGHT SIDE CARD -->
-        <div class="stackly-right">
+        <div class="stackly-right" data-animate="bounceInRight">
             <div class="circle-bg"></div>
 
             <img src="Images/card.webp" alt="Stackly Card" class="stackly-card-img">
@@ -240,7 +240,7 @@
     </div>
 
     <!-- BOTTOM ENQUIRY BAR -->
-    <div class="stackly-bottom-bar">
+    <div class="stackly-bottom-bar" data-animate="bounceInUp">
         <div class="bottom-left">
             <i class="fa-solid fa-star-of-life"></i>
             Unlock Exclusive Rewards, Apply Now and Elevate your Everyday Spending.
@@ -256,7 +256,7 @@
     <div class="credit-layout">
 
         <!-- LEFT LIST -->
-        <div class="left-sidebar">
+        <div class="left-sidebar" data-animate="bounceInLeft">
             <h3>Card Types</h3>
 
             <ul class="card-type-list">
@@ -269,7 +269,7 @@
         </div>
 
         <!-- RIGHT CONTENT -->
-        <div class="right-content">
+        <div class="right-content" data-animate="bounceInRight">
             <div id="card-details-container"></div>
         </div>
 
@@ -280,12 +280,12 @@
 
     <div class="top-badge"><i class="fa-solid fa-minus"></i> INSTANT HELP</div>
 
-    <h2 class="page-title">Immediate Service Request</h2>
+    <h2 class="page-title" data-animate="bounceIn">Immediate Service Request</h2>
 
     <div class="service-layout">
 
         <!-- ================= LEFT ACCORDION ================= -->
-        <div class="accordion">
+        <div class="accordion" data-animate="bounceIn">
 
             <!-- ========= ACCOUNT MANAGEMENT ========= -->
             <div class="accordion-item open">
@@ -418,7 +418,7 @@
         </div>
 
         <!-- ================= RIGHT SUPPORT BOX ================= -->
-        <div class="support-box">
+        <div class="support-box" data-animate="bounceInRight">
 
             <div class="support-img-area">
                 <img src="Images/agent.webp" class="support-img">
@@ -439,19 +439,20 @@
     </div>
 </div>
 
-<section class="subscribe-section">
+<section class="subscribe-section" data-animate="bounceIn">
     <div class="subscribe-left">
         <h2>Subscribe us to Receive<br>Latest Updates</h2>
     </div>
 
     <div class="subscribe-right">
-        <input type="text" placeholder="Your email">
-        <button>Subscribe Now</button>
+        <input id="emailInput" type="text" placeholder="Your email">
+        <button onclick="validateEmail()">Subscribe Now</button>
     </div>
 </section>
 
+
 <!-- 🔥 MAIN FOOTER -->
-<footer class="footer">
+<footer class="footer" data-animate="bounceIn">
 
     <div class="footer-grid">
 
@@ -466,36 +467,39 @@
                 services.
             </p>
 
-            <div class="social-icons">
-                <a href="#" class="social facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="social twitter"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" class="social instagram"><i class="fa-brands fa-instagram"></i></a>
-            </div>
+          <div class="social-icons">
+    <a href="404.html" class="social facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="404.html" class="social twitter"><i class="fa-brands fa-twitter"></i></a>
+    <a href="404.html" class="social instagram"><i class="fa-brands fa-instagram"></i></a>
+</div>
+
         </div>
 
         <!-- COLUMN 2 - EXPLORE -->
-        <div class="footer-col">
-            <h3>Explore</h3>
-            <ul>
-                <li>About Us</li>
-                <li>Testimonials</li>
-                <li>Careers</li>
-                <li>Career Detail</li>
-                <li>Faq's</li>
-            </ul>
-        </div>
+      <div class="footer-col">
+    <h3>Quick Links</h3>
+    <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.css">Services</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="loans.html">Loans</a></li>
+    </ul>
+</div>
+
 
         <!-- COLUMN 3 - USEFUL LINKS -->
-        <div class="footer-col">
-            <h3>Useful Links</h3>
-            <ul>
-                <li>Credit Card</li>
-                <li>Saving Account</li>
-                <li>Digital Gift Cards</li>
-                <li>Apply for Loans</li>
-                <li>Mobile Application</li>
-            </ul>
-        </div>
+     <div class="footer-col">
+    <h3>Useful Links</h3>
+    <ul>
+        <li><a href="apply.html">Credit Card</a></li>
+        <li><a href="404.html">Saving Account</a></li>
+        <li><a href="404.html">Digital Gift Cards</a></li>
+        <li><a href="loans.html">Apply for Loans</a></li>
+        <li><a href="404.html">Mobile Application</a></li>
+    </ul>
+</div>
+
 
         <!-- COLUMN 4 - FIND BRANCH -->
         <div class="footer-col">
@@ -517,9 +521,45 @@
 </footer>
 
 <!-- COPYRIGHT -->
-<div class="copyright">
+<div class="copyright" data-animate="bounceIn">
     Copyright 2023 by <span>Stackly</span>. All Rights Reserved.
 </div>
+
+
+<script>
+function validateEmail() {
+    let input = document.getElementById("emailInput");
+    let email = input.value.trim();
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // EMPTY FIELD
+    if (email === "") {
+        input.value = ""; 
+        input.placeholder = "❌ Please fill the field";
+        input.classList.add("input-error");
+        return;
+    }
+
+    // INVALID EMAIL
+    if (!emailPattern.test(email)) {
+        input.value = "";
+        input.placeholder = "❌ Invalid email address";
+        input.classList.add("input-error");
+        return;
+    }
+
+    // VALID EMAIL — REMOVE ERROR & REDIRECT
+    input.classList.remove("input-error");
+    window.location.href = "404.html";
+}
+
+// Reset error style when user types
+document.getElementById("emailInput").addEventListener("input", function () {
+    this.classList.remove("input-error");
+    this.placeholder = "Your email";
+});
+</script>
 
 
 <script>
@@ -718,9 +758,23 @@ function showBranch() {
 </script>
 
 
+<script>
+// 🌟 Common Bounce Scroll Animation Script
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll("[data-animate]");
 
-<script src="script.js"></script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const anim = entry.target.dataset.animate;
+        entry.target.classList.add("animate", anim);
+      }
+    });
+  }, { threshold: 0.2 }); // triggers when 20% visible
 
+  elements.forEach((el) => observer.observe(el));
+});
+</script>
 
 </body>
 </html>

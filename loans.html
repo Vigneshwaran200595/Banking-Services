@@ -71,7 +71,7 @@
 </div>
 
 <!-- SERVICES HEADER SECTION -->
-<section class="inner-banner">
+<section class="inner-banner" data-animate="bounceIn">
     <div class="banner-overlay"></div>
 
     <div class="container">
@@ -87,14 +87,14 @@
 
 <section class="loan-process-section">
 
-    <p class="loan-subtitle">HOW IT'S WORK</p>
-   <h2 class="loan-title">Start Loan Within 5 Mins</h2>
+    <p class="loan-subtitle" data-animate="bounceInUp">HOW IT'S WORK</p>
+   <h2 class="loan-title" data-animate="bounceInUp">Start Loan Within 5 Mins</h2>
 
 
     <div class="loan-process-container">
 
         <!-- STEP 1 -->
-<div class="loan-card">
+<div class="loan-card" data-animate="bounceIn">
     <div class="step-number">01</div>
     <h3>Verify Customer</h3>
     <p>Complete a quick identity verification to begin your loan application process safely and securely.</p>
@@ -104,7 +104,7 @@
 </div>
 
 <!-- STEP 2 -->
-<div class="loan-card">
+<div class="loan-card" data-animate="bounceIn">
     <div class="step-number">02</div>
     <h3>Submit Documents</h3>
     <p>Upload essential documents like ID proof, income proof, and bank statements for validation.</p>
@@ -114,7 +114,7 @@
 </div>
 
 <!-- STEP 3 -->
-<div class="loan-card">
+<div class="loan-card" data-animate="bounceIn">
     <div class="step-number">03</div>
     <h3>Loan Approval</h3>
     <p>Our team reviews your application and verifies your eligibility to approve the requested loan amount.</p>
@@ -124,7 +124,7 @@
 </div>
 
 <!-- STEP 4 -->
-<div class="loan-card">
+<div class="loan-card" data-animate="bounceIn">
     <div class="step-number">04</div>
     <h3>Loan Disbursal</h3>
     <p>Once approved, the loan amount is quickly credited to your registered bank account within minutes.</p>
@@ -139,7 +139,7 @@
 
 
 <!-- ================= HOME LOAN ================= -->
-<section class="appointment-section home-loan">
+<section class="appointment-section home-loan" data-animate="bounceIn">
 
     <div class="left-text">
         <h2>HOME<br>LOAN</h2>
@@ -188,7 +188,7 @@
 
 
 <!-- ================= PERSONAL LOAN ================= -->
-<section class="appointment-section personal-loan">
+<section class="appointment-section personal-loan" data-animate="bounceIn">
 
     <div class="left-text">
         <h2>PERSONAL<br>LOAN</h2>
@@ -237,7 +237,7 @@
 
 
 <!-- ================= VEHICLE LOAN ================= -->
-<section class="appointment-section vehicle-loan">
+<section class="appointment-section vehicle-loan" data-animate="bounceIn">
 
     <div class="left-text">
         <h2>VEHICLE<br>LOAN</h2>
@@ -286,7 +286,7 @@
 
 
 <!-- ================= EDUCATION LOAN ================= -->
-<section class="appointment-section education-loan">
+<section class="appointment-section education-loan" data-animate="bounceIn">
 
     <div class="left-text">
         <h2>EDUCATION<br>LOAN</h2>
@@ -335,7 +335,7 @@
 
 
 <!-- ================= GOLD LOAN ================= -->
-<section class="appointment-section gold-loan">
+<section class="appointment-section gold-loan" data-animate="bounceIn">
 
     <div class="left-text">
         <h2>GOLD<br>LOAN</h2>
@@ -383,19 +383,20 @@
 </section>
 
 
-<section class="subscribe-section">
+<section class="subscribe-section" data-animate="bounceIn">
     <div class="subscribe-left">
         <h2>Subscribe us to Receive<br>Latest Updates</h2>
     </div>
 
     <div class="subscribe-right">
-        <input type="text" placeholder="Your email">
-        <button>Subscribe Now</button>
+        <input id="emailInput" type="text" placeholder="Your email">
+        <button onclick="validateEmail()">Subscribe Now</button>
     </div>
 </section>
 
+
 <!-- 🔥 MAIN FOOTER -->
-<footer class="footer">
+<footer class="footer" data-animate="bounceIn">
 
     <div class="footer-grid">
 
@@ -410,36 +411,39 @@
                 services.
             </p>
 
-            <div class="social-icons">
-                <a href="#" class="social facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="social twitter"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" class="social instagram"><i class="fa-brands fa-instagram"></i></a>
-            </div>
+          <div class="social-icons">
+    <a href="404.html" class="social facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="404.html" class="social twitter"><i class="fa-brands fa-twitter"></i></a>
+    <a href="404.html" class="social instagram"><i class="fa-brands fa-instagram"></i></a>
+</div>
+
         </div>
 
         <!-- COLUMN 2 - EXPLORE -->
-        <div class="footer-col">
-            <h3>Explore</h3>
-            <ul>
-                <li>About Us</li>
-                <li>Testimonials</li>
-                <li>Careers</li>
-                <li>Career Detail</li>
-                <li>Faq's</li>
-            </ul>
-        </div>
+      <div class="footer-col">
+    <h3>Quick Links</h3>
+    <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.css">Services</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="loans.html">Loans</a></li>
+    </ul>
+</div>
+
 
         <!-- COLUMN 3 - USEFUL LINKS -->
-        <div class="footer-col">
-            <h3>Useful Links</h3>
-            <ul>
-                <li>Credit Card</li>
-                <li>Saving Account</li>
-                <li>Digital Gift Cards</li>
-                <li>Apply for Loans</li>
-                <li>Mobile Application</li>
-            </ul>
-        </div>
+     <div class="footer-col">
+    <h3>Useful Links</h3>
+    <ul>
+        <li><a href="apply.html">Credit Card</a></li>
+        <li><a href="404.html">Saving Account</a></li>
+        <li><a href="404.html">Digital Gift Cards</a></li>
+        <li><a href="loans.html">Apply for Loans</a></li>
+        <li><a href="404.html">Mobile Application</a></li>
+    </ul>
+</div>
+
 
         <!-- COLUMN 4 - FIND BRANCH -->
         <div class="footer-col">
@@ -461,9 +465,45 @@
 </footer>
 
 <!-- COPYRIGHT -->
-<div class="copyright">
+<div class="copyright" data-animate="bounceIn">
     Copyright 2023 by <span>Stackly</span>. All Rights Reserved.
 </div>
+
+
+<script>
+function validateEmail() {
+    let input = document.getElementById("emailInput");
+    let email = input.value.trim();
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // EMPTY FIELD
+    if (email === "") {
+        input.value = ""; 
+        input.placeholder = "❌ Please fill the field";
+        input.classList.add("input-error");
+        return;
+    }
+
+    // INVALID EMAIL
+    if (!emailPattern.test(email)) {
+        input.value = "";
+        input.placeholder = "❌ Invalid email address";
+        input.classList.add("input-error");
+        return;
+    }
+
+    // VALID EMAIL — REMOVE ERROR & REDIRECT
+    input.classList.remove("input-error");
+    window.location.href = "404.html";
+}
+
+// Reset error style when user types
+document.getElementById("emailInput").addEventListener("input", function () {
+    this.classList.remove("input-error");
+    this.placeholder = "Your email";
+});
+</script>
 
 
 <script>
@@ -481,54 +521,66 @@ document.querySelectorAll(".loanForm").forEach(form => {
         let time = form.querySelector(".time");
         let address = form.querySelector(".address");
 
-        // Clear errors
+        // Clear previous errors
         form.querySelectorAll(".error").forEach(err => err.innerHTML = "");
+
+        // Helper function → show error & auto-hide
+        function showError(input, message) {
+            let errorBox = input.nextElementSibling;
+            errorBox.innerHTML = message;
+
+            setTimeout(() => {
+                errorBox.innerHTML = "";
+            }, 3000); // hide after 3 sec
+        }
 
         // Name
         if (name.value.trim() === "") {
-            name.nextElementSibling.innerHTML = "Name is required";
+            showError(name, "Name is required");
             valid = false;
         }
 
         // Email
         let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        if (!emailPattern.test(email.value)) {
-            email.nextElementSibling.innerHTML = "Enter valid email";
+        if (!emailPattern.test(email.value.trim())) {
+            showError(email, "Enter valid email");
             valid = false;
         }
 
-        // Phone
-        if (!/^[0-9]{10}$/.test(phone.value)) {
-            phone.nextElementSibling.innerHTML = "Phone must be 10 digits";
+        // Phone (10 digits)
+        if (!/^[0-9]{10}$/.test(phone.value.trim())) {
+            showError(phone, "Phone must be 10 digits");
             valid = false;
         }
 
         // Date
         if (date.value === "") {
-            date.nextElementSibling.innerHTML = "Select date";
+            showError(date, "Select date");
             valid = false;
         }
 
         // Time
         if (time.value === "") {
-            time.nextElementSibling.innerHTML = "Select time";
+            showError(time, "Select time");
             valid = false;
         }
 
         // Address
         if (address.value.trim() === "") {
-            address.nextElementSibling.innerHTML = "Address required";
+            showError(address, "Address required");
             valid = false;
         }
 
+        // Submit if all fields valid
         if (valid) {
             window.location.href = "404.html";
         }
+
     });
 
 });
-
 </script>
+
 
 <script>
 // MOBILE MENU OPEN/CLOSE
@@ -578,8 +630,24 @@ function showBranch() {
 </script>
 
 
+<script>
+// 🌟 Common Bounce Scroll Animation Script
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll("[data-animate]");
 
-<script src="script.js"></script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const anim = entry.target.dataset.animate;
+        entry.target.classList.add("animate", anim);
+      }
+    });
+  }, { threshold: 0.2 }); // triggers when 20% visible
+
+  elements.forEach((el) => observer.observe(el));
+});
+</script>
+
 
 
 </body>
