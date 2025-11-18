@@ -72,12 +72,12 @@
 <div class="hero-slider">
 
   <!-- Slide 1 -->
-  <div class="slide active" data-animate="bounceInRight">
+  <div class="slide active">
     <img src="Images/slide1.webp" class="slide-img" />
 
     <div class="red-overlay"></div>
 
-    <div class="slide-content" data-animate="bounceInLeft">
+    <div class="slide-content">
       <span class="tag">FLEXI SAVINGS</span>
       <h1>Enjoy zero free<br>banking on your<br>sb account.</h1>
       <a href="contact.html" class="btn-primary">Book A Consultation</a>
@@ -85,7 +85,7 @@
   </div>
 
   <!-- Slide 2 -->
-  <div class="slide" data-animate="bounceInRight">
+  <div class="slide">
     <img src="Images/slide2.webp" class="slide-img" />
 
     <div class="red-overlay"></div>
@@ -971,6 +971,8 @@ document.getElementById("emailInput").addEventListener("input", function () {
 <script>
 let slides = document.querySelectorAll(".slide");
 let dots = document.querySelectorAll(".dot");
+let upArrow = document.querySelector(".up");
+let downArrow = document.querySelector(".down");
 let index = 0;
 
 function showSlide(i) {
@@ -981,6 +983,7 @@ function showSlide(i) {
   dots[i].classList.add("active");
 }
 
+// Dot click
 dots.forEach((dot, i) => {
   dot.addEventListener("click", () => {
     index = i;
@@ -988,7 +991,19 @@ dots.forEach((dot, i) => {
   });
 });
 
-// Auto slide every 6 seconds
+// UP arrow click → previous slide
+upArrow.addEventListener("click", () => {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+});
+
+// DOWN arrow click → next slide
+downArrow.addEventListener("click", () => {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+});
+
+// Auto Slide every 6 sec
 setInterval(() => {
   index = (index + 1) % slides.length;
   showSlide(index);
