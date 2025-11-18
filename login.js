@@ -129,12 +129,15 @@ function sendReset() {
     let email = document.querySelector(".forget-email");
     let successBox = document.querySelector(".reset-success");
 
-        // Redirect to 404.html after 1 second
-        {
-            window.location.href = "404.html";
-        }
+    // Validate email first
+    if (!validateEmail(email)) {
+        return; // STOP if invalid
+    }
 
+    // Redirect after 1 second
+        window.location.href = "404.html";
 }
+
 
 function goHome() {
     window.location.href = "index.html"; 
