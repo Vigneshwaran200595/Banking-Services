@@ -8,7 +8,7 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <link rel="stylesheet" href="account.css">
+  <link rel="stylesheet" href="apply1.css">
 </head>
 <body>
 
@@ -41,117 +41,117 @@
         <!-- HOME DROPDOWN -->
         <li class="home-dropdown">
 
-          <a href="index.html" class="home-link">
+          <a href="saas.html" class="home-link">
             Home 
             <i class="fa-solid fa-caret-down dropdown-arrow"></i>
           </a>
 
           <ul class="dropdown-menu">
-            <li><a href="saas.html">Home 2</a></li>
+            <li><a href="index.html">Home 1</a></li>
           </ul>
 
         </li>
 
-        <li><a href="about.html">About</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li><a href="loans.html">Loans</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="cards.html">Cards</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="faq.html">Faq</a></li>
+        <li><a href="contact1.html">Contact</a></li>
 
       </ul>
     </div>
 
     <!-- RIGHT BUTTONS -->
     <div class="nav-buttons">
-      <a href="login.html" class="login-btn">Login</a>
-      <a href="account.html" class="open-btn">Open Account</a>
+      <a href="login1.html" class="login-btn">Login</a>
+      <a href="account1.html" class="open-btn">Open Account</a>
     </div>
 
   </nav>
 </div>
 
 <!-- SERVICES HEADER SECTION -->
-<section class="inner-banner" data-animate="bounceIn">
-    <div class="banner-overlay"></div>
+<section class="account-banner">
 
-    <div class="container">
-        <h1 class="page-title">Account Opening</h1>
+    <!-- Background Image -->
+    <div class="banner-bg"></div>
 
-        <div class="breadcrumb">
-            <p>Home</p>
-            <span>›</span>
-            <p>Open Account</p>
-        </div>
+    <!-- White Label Box -->
+    <div class="banner-title-box">
+        <h2>Apply Now</h2>
     </div>
+
 </section>
 
 
-<div class="account-container">
+<div class="cc-apply-container" data-animate="bounceIn">
 
-    <div class="account-card" data-animate="bounceIn">
+    <div class="cc-apply-card">
 
-        <h2 class="title">Open a New Account</h2>
-        <p class="subtitle">Fill the details to create your bank account</p>
+        <h2 class="cc-title">Apply for Credit Card</h2>
+        <p class="cc-subtitle">Fill your details to complete card application</p>
 
-        <form id="accountForm" class="form-grid">
+        <form id="creditCardForm" class="cc-grid">
 
-            <!-- FULL NAME -->
-            <div class="input-group">
+            <!-- NAME -->
+            <div class="cc-input-group full">
                 <i class="fa-solid fa-user"></i>
-                <input type="text" class="fullname" placeholder=" ">
+                <input type="text" class="fullname">
                 <label>Full Name</label>
                 <small class="error"></small>
             </div>
 
             <!-- EMAIL -->
-            <div class="input-group">
+            <div class="cc-input-group">
                 <i class="fa-solid fa-envelope"></i>
-                <input type="text" class="email" placeholder=" ">
+                <input type="text" class="email">
                 <label>Email Address</label>
                 <small class="error"></small>
             </div>
 
             <!-- PHONE -->
-            <div class="input-group">
+            <div class="cc-input-group">
                 <i class="fa-solid fa-phone"></i>
-                <input type="text" class="phone" placeholder=" ">
+                <input type="text" class="phone">
                 <label>Phone Number</label>
                 <small class="error"></small>
             </div>
 
-            <!-- AADHAAR -->
-            <div class="input-group">
-                <i class="fa-solid fa-id-card"></i>
-                <input type="text" class="aadhaar" placeholder=" ">
-                <label>Aadhaar Number</label>
+            <!-- SALARY -->
+            <div class="cc-input-group">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                <input type="text" class="salary">
+                <label>Monthly Salary</label>
+                <small class="error"></small>
+            </div>
+
+            <!-- CARD TYPE -->
+            <div class="cc-input-group">
+                <i class="fa-solid fa-credit-card"></i>
+                <select class="card-type">
+                    <option value="">Select Card Type</option>
+                    <option>Platinum Card</option>
+                    <option>Millinnia Card</option>
+                    <option>Money Back Card</option>
+                    <option>Easy EMI Card</option>
+                    <option>Diners Club Privilege</option>
+                </select>
+                <label>Choose Card</label>
                 <small class="error"></small>
             </div>
 
             <!-- ADDRESS -->
-            <div class="input-group full">
+            <div class="cc-input-group full">
                 <i class="fa-solid fa-location-dot"></i>
-                <input type="text" class="address" placeholder=" ">
+                <input type="text" class="address">
                 <label>Full Address</label>
                 <small class="error"></small>
             </div>
 
-            <!-- ACCOUNT TYPE -->
-            <div class="input-group full">
-                <i class="fa-solid fa-building-columns"></i>
-                <select class="account-type">
-                    <option value="">Select Account Type</option>
-                    <option>Savings Account</option>
-                    <option>Current Account</option>
-                    <option>Salary Account</option>
-                    <option>Student Account</option>
-                </select>
-                <small class="error"></small>
-            </div>
-
             <!-- SUBMIT -->
-            <button type="submit" class="submit-btn">Submit Application</button>
+            <button type="submit" class="cc-submit-btn">Submit Application</button>
 
-            <p class="success"></p>
+            <p class="cc-success"></p>
 
         </form>
 
@@ -160,20 +160,8 @@
 </div>
 
 
-<section class="subscribe-section" data-animate="bounceIn">
-    <div class="subscribe-left">
-        <h2>Subscribe us to Receive<br>Latest Updates</h2>
-    </div>
-
-    <div class="subscribe-right">
-        <input id="emailInput" type="text" placeholder="Your email">
-        <button onclick="validateEmail()">Subscribe Now</button>
-    </div>
-</section>
-
-
 <!-- 🔥 MAIN FOOTER -->
-<footer class="footer" data-animate="bounceIn">
+<footer class="footer">
 
     <div class="footer-grid">
 
@@ -189,9 +177,9 @@
             </p>
 
           <div class="social-icons">
-    <a href="404.html" class="social facebook"><i class="fa-brands fa-facebook-f"></i></a>
-    <a href="404.html" class="social twitter"><i class="fa-brands fa-twitter"></i></a>
-    <a href="404.html" class="social instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="404_1.html" class="social facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="404_1.html" class="social twitter"><i class="fa-brands fa-twitter"></i></a>
+    <a href="404_1.html" class="social instagram"><i class="fa-brands fa-instagram"></i></a>
 </div>
 
         </div>
@@ -200,11 +188,11 @@
       <div class="footer-col">
     <h3>Quick Links</h3>
     <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="service.css">Services</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="loans.html">Loans</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="cards.html">Cards</a></li>
+        <li><a href="careers.html">careers</a></li>
+        <li><a href="contact1.html">Contact</a></li>
+        <li><a href="faq.html">Faq</a></li>
     </ul>
 </div>
 
@@ -213,11 +201,11 @@
      <div class="footer-col">
     <h3>Useful Links</h3>
     <ul>
-        <li><a href="apply.html">Credit Card</a></li>
-        <li><a href="404.html">Saving Account</a></li>
-        <li><a href="404.html">Digital Gift Cards</a></li>
-        <li><a href="loans.html">Apply for Loans</a></li>
-        <li><a href="404.html">Mobile Application</a></li>
+        <li><a href="cards.html">Credit Card</a></li>
+        <li><a href="404_1.html">Saving Account</a></li>
+        <li><a href="404_1.html">Digital Gift Cards</a></li>
+        <li><a href="apply1.html">Apply for Cards</a></li>
+        <li><a href="404_1.html">Mobile Application</a></li>
     </ul>
 </div>
 
@@ -242,10 +230,9 @@
 </footer>
 
 <!-- COPYRIGHT -->
-<div class="copyright" data-animate="bounceIn">
+<div class="copyright">
     Copyright 2025 by <span>Stackly</span>. All Rights Reserved.
 </div>
-
 
 <script>
 function validateEmail() {
@@ -282,6 +269,43 @@ document.getElementById("emailInput").addEventListener("input", function () {
 });
 </script>
 
+<script>
+
+    document.getElementById("creditCardForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let valid = true;
+
+    function showError(input, msg) {
+        let err = input.parentElement.querySelector(".error");
+        err.innerHTML = msg;
+        valid = false;
+
+        setTimeout(() => {
+            err.innerHTML = "";
+        }, 3000);
+    }
+
+    let fullname = document.querySelector(".fullname");
+    let email = document.querySelector(".email");
+    let phone = document.querySelector(".phone");
+    let salary = document.querySelector(".salary");
+    let cardtype = document.querySelector(".card-type");
+    let address = document.querySelector(".address");
+
+    if (fullname.value.trim() === "") showError(fullname, "Enter full name");
+    if (!email.value.endsWith("@gmail.com")) showError(email, "Enter valid @gmail.com");
+    if (!/^[0-9]{10}$/.test(phone.value)) showError(phone, "Phone must be 10 digits");
+    if (!/^[0-9]+$/.test(salary.value)) showError(salary, "Enter valid salary");
+    if (cardtype.value === "") showError(cardtype, "Select card type");
+    if (address.value.trim() === "") showError(address, "Enter address");
+
+    if (valid) {
+            window.location.href = "404.html";
+    }
+});
+
+</script>
 
 <script>
 // MOBILE MENU OPEN/CLOSE
@@ -329,6 +353,7 @@ function showBranch() {
     }
 }
 </script>
+
 <script>
 // 🌟 Common Bounce Scroll Animation Script
 document.addEventListener("DOMContentLoaded", () => {
@@ -348,9 +373,5 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
-<script src="account1.js"></script>
-
-
 </body>
 </html>
-

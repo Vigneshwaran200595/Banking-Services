@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Header</title>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="careers.css">
+</head>
+<body>
+
+<div class="header-wrapper">
+
+  <!-- LOGO -->
+  <div class="left-logo">
+    <img src="Images/logo3.webp" alt="Stackly Logo">
+  </div>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-right">
+<span>Contact: <i class="fa-solid fa-envelope red-icon"></i> info@example.com</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="nav-bar">
+
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENU -->
+    <div class="menu-container" id="mobile-menu">
+      <ul class="menu">
+
+        <!-- HOME DROPDOWN -->
+        <li class="home-dropdown">
+
+          <a href="saas.html" class="home-link">
+            Home 
+            <i class="fa-solid fa-caret-down dropdown-arrow"></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+          </ul>
+
+        </li>
+
+        <li><a href="features.html">Features</a></li>
+        <li><a href="cards.html">Cards</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="faq.html">Faq</a></li>
+        <li><a href="contact1.html">Contact</a></li>
+
+      </ul>
+    </div>
+
+    <!-- RIGHT BUTTONS -->
+    <div class="nav-buttons">
+      <a href="login1.html" class="login-btn">Login</a>
+      <a href="account1.html" class="open-btn">Open Account</a>
+    </div>
+
+  </nav>
+</div>
+
+<section class="account-banner scroll-animate" data-anim="backInLeft">
+
+    <!-- Background Image -->
+    <div class="banner-bg"></div>
+
+    <!-- White Label Box -->
+    <div class="banner-title-box">
+        <h2>Careers</h2>
+    </div>
+
+</section>
+
+<section class="career-section">
+
+    <!-- TOP CONTENT -->
+    <div class="career-top">
+
+        <!-- LEFT IMAGE -->
+        <div class="career-left scroll-animate" data-anim="lightSpeedInLeft">
+            <img src="Images1/careers.webp" alt="Team" class="career-img">
+
+            <div class="shape-box">
+                <div class="shape shape1"></div>
+                <div class="shape shape2"></div>
+            </div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="career-right scroll-animate" data-anim="backInRight">
+            <h1 class="career-title">
+                Mountains Move <br>
+                For A Determined Team
+            </h1>
+
+            <p class="career-desc">
+                Desire that they cannot foresee the pain & trouble that are bound too ensue 
+                equal blame belongs through shrinking.
+            </p>
+
+            <p class="career-desc">
+                To enjoy a pleasure that has no annoying consequences.
+            </p>
+
+            <ul class="career-list">
+                <li><i class="fa-solid fa-check"></i> Great explorer of the master-builder</li>
+                <li><i class="fa-solid fa-check"></i> On the other hand</li>
+            </ul>
+
+            <div class="resume-box">
+                <i class="fa-solid fa-file-lines resume-icon"></i>
+                <div>
+                    <span class="resume-title">SEND RESUME</span>
+                    <p class="resume-email">info@example.com</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- JOB TABLE -->
+    <table class="job-table scroll-animate" data-anim="lightSpeedInLeft">
+
+        <thead>
+            <tr>
+                <th>DEPARTMENT</th>
+                <th>JOB ROLE</th>
+                <th>LOCATION</th>
+                <th>LAST DATE</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="dept red">Marketing</td>
+                <td>Regional Head</td>
+                <td>Chennai</td>
+                <td>18th Jul, 2022</td>
+                <td><button class="apply-btn" onclick="location.href='apply1.html'">
+    Apply
+</button></td>
+            </tr>
+
+            <tr>
+                <td class="dept red">Marketing</td>
+                <td>Team Leader</td>
+                <td>Salem</td>
+                <td>25th Jul, 2022</td>
+                <td><button class="apply-btn" onclick="location.href='apply1.html'">
+    Apply
+</button></td>
+            </tr>
+
+            <tr>
+                <td class="dept red">Finance</td>
+                <td>Assistant Manager</td>
+                <td>Hyderabad</td>
+                <td>10th Aug, 2022</td>
+                <td><button class="apply-btn" onclick="location.href='apply1.html'">
+    Apply
+</button></td>
+            </tr>
+
+            <tr>
+                <td class="dept red">Office</td>
+                <td>Office Executive</td>
+                <td>Bangalore</td>
+                <td>10th Oct, 2022</td>
+                <td><button class="apply-btn" onclick="location.href='apply1.html'">
+    Apply
+</button></td>
+            </tr>
+
+            <tr>
+                <td class="dept red">Customer Care</td>
+                <td>Help Desk Job</td>
+                <td>Chennai</td>
+                <td>23rd Sep, 2022</td>
+                <td><button class="apply-btn" onclick="location.href='apply1.html'">
+    Apply
+</button></td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+    <!-- SUBSCRIBE SECTION -->
+    <div class="subscribe-section scroll-animate" data-anim="lightSpeedInLeft">
+
+        <img src="Images1/mail.webp" class="sub-img">
+
+        <h2>Subscribe us to<br>Receive Career Updates</h2>
+<div class="sub-input-box">
+    <input type="email" id="emailInput" placeholder="Email address">
+    <i class="fa-regular fa-envelope sub-icon"></i>
+</div>
+
+<button class="sub-btn" id="subscribeBtn">Subscribe</button>
+
+<p id="emailError" class="error-msg"></p>
+
+    </div>
+
+</section>
+
+<!-- 🔥 MAIN FOOTER -->
+<footer class="footer scroll-animate" data-anim="flipInX">
+
+    <div class="footer-grid">
+
+        <!-- COLUMN 1 - LOGO + DESCRIPTION + SOCIAL -->
+        <div class="footer-col">
+            <div class="footer-logo">
+                <img src="Images/logo.webp" alt="Bank Logo" class="logo-icon">
+            </div>
+
+            <p class="bank-desc">
+                Stackly is committed to delivering secure, fast, and reliable financial 
+                services.
+            </p>
+
+          <div class="social-icons">
+    <a href="404_1.html" class="social facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="404_1.html" class="social twitter"><i class="fa-brands fa-twitter"></i></a>
+    <a href="404_1.html" class="social instagram"><i class="fa-brands fa-instagram"></i></a>
+</div>
+
+        </div>
+
+        <!-- COLUMN 2 - EXPLORE -->
+      <div class="footer-col">
+    <h3>Quick Links</h3>
+    <ul>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="cards.html">Cards</a></li>
+        <li><a href="careers.html">careers</a></li>
+        <li><a href="contact1.html">Contact</a></li>
+        <li><a href="faq.html">Faq</a></li>
+    </ul>
+</div>
+
+
+        <!-- COLUMN 3 - USEFUL LINKS -->
+     <div class="footer-col">
+    <h3>Useful Links</h3>
+    <ul>
+        <li><a href="cards.html">Credit Card</a></li>
+        <li><a href="404_1.html">Saving Account</a></li>
+        <li><a href="404_1.html">Digital Gift Cards</a></li>
+        <li><a href="apply1.html">Apply for Cards</a></li>
+        <li><a href="404_1.html">Mobile Application</a></li>
+    </ul>
+</div>
+
+
+        <!-- COLUMN 4 - FIND BRANCH -->
+        <div class="footer-col">
+            <h3>Find Our Branch & ATM</h3>
+
+            <select id="branchSelect" class="footer-select">
+                <option value="">Select Branch</option>
+                <option value="chennai">Chennai</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="hyderabad">Hyderabad</option>
+            </select>
+
+            <button class="map-btn" onclick="showBranch()">Find on Map</button>
+
+            <p id="branchResult" class="branch-output"></p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- COPYRIGHT -->
+<div class="copyright">
+    Copyright 2025 by <span>Stackly</span>. All Rights Reserved.
+</div>
+
+<script>
+const emailInput = document.getElementById("emailInput");
+const errorMsg = document.getElementById("emailError");
+const subscribeBtn = document.getElementById("subscribeBtn");
+
+subscribeBtn.addEventListener("click", function () {
+    const email = emailInput.value.trim();
+
+    // Gmail validation pattern
+    const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+    // 1️⃣ EMPTY CHECK
+    if (email === "") {
+        showError("Please fill the field.");
+        return;   // ❌ DO NOT REDIRECT
+    }
+
+    // 2️⃣ INVALID EMAIL CHECK (not Gmail)
+    if (!gmailPattern.test(email)) {
+        showError("Please enter a valid Gmail address (example@gmail.com).");
+        return;   // ❌ DO NOT REDIRECT
+    }
+
+    // 3️⃣ VALID EMAIL → REDIRECT
+    hideError();
+    window.location.href = "404.html";  // ✅ Redirect only when valid
+});
+
+// Hide error when typing
+emailInput.addEventListener("input", function () {
+    hideError();
+});
+
+// Show error function
+function showError(msg) {
+    errorMsg.innerText = msg;
+    errorMsg.style.display = "block";
+    emailInput.style.border = "1px solid #d10000";
+}
+
+// Hide error function
+function hideError() {
+    errorMsg.style.display = "none";
+    emailInput.style.border = "1px solid #ddd";
+}
+</script>
+
+
+<script>
+// MOBILE MENU OPEN/CLOSE
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobile-menu");
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+});
+
+// MOBILE DROPDOWN
+const homeLink = document.querySelector(".home-link");
+const arrow = document.querySelector(".dropdown-arrow");
+const dropdown = document.querySelector(".dropdown-menu");
+
+// Clicking HOME text → go to index.html (normal behavior)
+
+// Clicking arrow → toggle dropdown (prevent link)
+arrow.addEventListener("click", (e) => {
+  e.preventDefault(); 
+
+  dropdown.classList.toggle("show");
+  arrow.classList.toggle("rotate");
+});
+
+</script>
+
+
+<script>
+function showBranch() {
+    let city = document.getElementById("branchSelect").value;
+    let output = document.getElementById("branchResult");
+
+    if (city === "chennai") {
+        output.innerHTML = "📍 Chennai Branch: No.21 Anna Salai, Chennai - 600002";
+    }
+    else if (city === "bangalore") {
+        output.innerHTML = "📍 Bangalore Branch: MG Road, Near Brigade Towers, Bangalore - 560001";
+    }
+    else if (city === "hyderabad") {
+        output.innerHTML = "📍 Hyderabad Branch: Banjara Hills Road No.2, Hyderabad - 500034";
+    }
+    else {
+        output.innerHTML = "Please select a branch.";
+    }
+}
+</script>
+
+
+<script>
+    const scrollElements = document.querySelectorAll(".scroll-animate");
+
+    function scrollAnimation() {
+        scrollElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+
+            if (rect.top < window.innerHeight - 100) {
+                el.classList.add("show");
+
+                /* Start the desired animation */
+                if (el.dataset.anim) {
+                    el.classList.add(el.dataset.anim);
+                }
+            }
+        });
+    }
+
+    window.addEventListener("scroll", scrollAnimation);
+    window.addEventListener("load", scrollAnimation);
+</script>
+
+</body>
+</html>

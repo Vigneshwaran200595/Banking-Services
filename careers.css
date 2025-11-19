@@ -1,0 +1,1579 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* WRAPPER */
+.header-wrapper {
+  position: relative;
+  padding-left: 240px;
+}
+
+/* LEFT LOGO FIXED */
+.left-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+.left-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #1f1f23;
+  color: #fff;
+  padding: 12px 40px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* RIGHT SIDE */
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.red-icon {
+  color: #e71228;
+  margin-right: 5px;
+}
+
+/* NAV BAR */
+.nav-bar {
+  background: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CENTER MENU */
+.menu-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* GLOBAL NAV ITEMS */
+.menu li {
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+.menu li:hover {
+  color: #e71228;
+}
+
+/* Underline animation (GLOBAL — EXCEPT DROPDOWN) */
+.menu li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e71228;
+  transition: width 0.3s ease;
+}
+.menu li:hover::after {
+  width: 100%;
+}
+
+/* REMOVE UNDERLINE ONLY FOR DROPDOWN */
+.menu > li.home-dropdown::after,
+.menu > li.home-dropdown:hover::after {
+  content: none !important;
+  width: 0 !important;
+}
+
+/* REMOVE GAP FOR DROPDOWN */
+.menu > li.home-dropdown {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* REMOVE ALL UNDERLINES & BLUE COLOR */
+.menu a,
+.menu li a,
+.dropdown-menu li a {
+  text-decoration: none !important;
+  color: inherit !important;   /* keeps text same color */
+}
+
+/* REMOVE THE RED UNDERLINE ANIMATION */
+.menu li::after {
+  content: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* REMOVE HOVER COLOR CHANGE TO BLUE */
+.menu li:hover a,
+.menu li:hover {
+  color: #e71228 !important;   /* your red hover color */
+}
+    
+
+/* DROPDOWN WRAPPER */
+.home-dropdown {
+  position: relative;
+}
+
+/* HOME LINK — ALIGNED PERFECTLY */
+.home-dropdown > a {
+  text-decoration: none !important;
+  color: #000 !important;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 0 !important;
+  margin: 0;
+  line-height: normal;
+}
+
+/* Hover color */
+.home-dropdown:hover > a {
+  color: #e71228 !important;
+}
+
+/* Caret arrow alignment */
+.home-dropdown > a .fa-caret-down {
+  font-size: 10px;
+  margin-top: 2px;
+  transition: 0.3s;
+}
+.home-dropdown:hover > a .fa-caret-down {
+  color: #e71228;
+}
+
+/* DROPDOWN MENU */
+.home-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 140px;
+  background: #fff;
+  padding: 5px 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+.home-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* DROPDOWN ITEMS */
+.home-dropdown .dropdown-menu li a {
+  padding: 8px 12px;
+  display: block;
+  color: #333;
+  font-size: 14px;
+}
+.home-dropdown .dropdown-menu li a:hover {
+  background: #e71228;
+  color: #fff;
+}
+
+/* BUTTONS */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+.login-btn {
+  padding: 10px 20px;
+  border: 2px solid #000;
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+.login-btn:hover {
+  background: #000;
+  color: #fff;
+}
+.open-btn {
+  padding: 10px 25px;
+  background: #e71228;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.open-btn:hover {
+  background: #c10f21;
+  transform: translateY(-2px);
+}
+
+/* Remove bullets for dropdown list */
+.home-dropdown .dropdown-menu {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove bullets for dropdown li */
+.home-dropdown .dropdown-menu li {
+  list-style: none !important;
+}
+
+/* Remove underline from dropdown links */
+.home-dropdown .dropdown-menu li a {
+  text-decoration: none !important;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #000;
+}
+
+
+
+/* Mobile Menu Hidden */
+#mobile-menu {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  #mobile-menu {
+    display: none !important;
+  }
+
+  #mobile-menu.active {
+    display: block !important;
+  }
+}
+
+.home-dropdown a .fa-caret-down {
+  font-size: 18px !important;   /* bigger arrow */
+  transition: .3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+
+  /* Center whole mobile menu */
+  .menu {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Center HOME itself */
+ /* --- MOBILE HOME DROPDOWN FIX (NO OVERLAY) --- */
+
+.home-dropdown {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important; /* important: vertical layout */
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Home title centered */
+.home-dropdown > a {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px;
+  padding: 12px 0;
+}
+
+/* Dropdown list acts like normal block */
+.home-dropdown .dropdown-menu {
+  display: none !important;
+  width: 100% !important;
+  margin-top: 5px !important;  /* space below Home */
+  position: relative !important; /* remove absolute */
+  left: 0 !important;
+  text-align: center !important;
+  background: #fff !important;
+  padding: 10px 0 !important;
+  box-shadow: none !important;
+}
+
+/* Show dropdown */
+.dropdown-menu.show {
+  display: block !important;
+}
+
+/* Dropdown item full width */
+/* Dropdown item styling */
+.dropdown-menu li a {
+  display: block !important;
+  width: 100% !important;
+  padding: 6px 0 !important;   /* reduced top & bottom padding */
+  font-size: 17px !important;  /* increased text size */
+  text-align: center !important;
+  background: #fff !important;
+}
+
+/* Arrow rotation */
+.home-dropdown .fa-caret-down {
+  font-size: 18px !important;
+  transition: .3s;
+}
+
+.home-dropdown .rotate {
+  transform: rotate(180deg);
+}
+
+}
+
+
+
+
+/* ===============================================
+   RESPONSIVE STYLING FOR ALL DEVICES
+   1024px → 768px → 576px → 480px → 360px
+================================================ */
+
+  /* ============= 1024px (small laptops / tablets) ============= */
+  @media (max-width: 1024px) {
+
+    .header-wrapper {
+      padding-left: 0 !important;
+    }
+
+    .left-logo {
+      position: relative !important;
+      width: 240px;
+      height: auto;
+      margin: 10px auto;
+    }
+
+    .nav-bar {
+      padding: 15px 20px;
+    }
+
+    .menu {
+      gap: 20px;
+    }
+  }
+
+  /* ============= 768px (tablets & large mobiles) ============= */
+  @media (max-width: 768px) {
+
+    /* --- LOGO FIX --- */
+    .left-logo {
+      width: 180px;
+      margin-left: 0px;
+    }
+
+      .left-logo  img{
+      width: 180px;
+    }
+
+    /* --- TOP BAR FIX --- */
+    .top-right {
+      flex-direction: column;
+      font-size: 14px;
+      gap: 6px;
+    }
+
+    /* --- NAVBAR BACKGROUND BLACK --- */
+    .nav-bar {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 20px;
+    }
+
+    /* --- HAMBURGER SHOW --- */
+    .hamburger {
+      display: block;
+      color: #000000 !important;
+      margin-bottom: 12px;
+    }
+
+    /* --- MENU HIDE INITIALLY --- */
+    .menu-container {
+      width: 100%;
+      display: none;
+      background: #fff;
+      padding: 12px 0;
+    }
+
+    .menu-container.active {
+      display: block !important;
+    }
+
+    /* --- MENU STACKED --- */
+    .menu {
+      flex-direction: column !important;
+      gap: 15px;
+      width: 100%;
+      padding-left: 10px;
+    }
+
+    .menu li {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    /* --- BUTTONS FULL WIDTH --- */
+    .nav-buttons {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+      gap: 12px;
+    }
+
+    .login-btn,
+    .open-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  /* ============= 576px (normal phones) ============= */
+  @media (max-width: 576px) {
+
+    .left-logo {
+      width: 160px;
+    }
+
+    .top-right {
+      font-size: 13px;
+    }
+
+    .menu li {
+      font-size: 15px;
+    }
+
+    .home-dropdown > a {
+      font-size: 16px;
+    }
+  }
+
+  /* ============= 480px (small phones) ============= */
+  @media (max-width: 480px) {
+
+    .top-bar {
+      padding: 10px;
+      text-align: center;
+      height: auto;
+    }
+
+    .nav-bar {
+      padding: 12px 15px;
+    }
+
+    .login-btn,
+    .open-btn {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+
+  /* ============= 360px (mini phones) ============= */
+  @media (max-width: 360px) {
+
+    .left-logo {
+      width: 140px;
+    }
+
+    .top-right {
+      font-size: 12px;
+    }
+
+    .menu li {
+      font-size: 14px;
+    }
+
+    .login-btn,
+    .open-btn {
+      font-size: 13px;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+
+    /* Make top-bar normal container */
+    .top-bar {
+      position: relative;
+      padding-top: 60px;   /* space for logo overlay */
+      text-align: center;
+    }
+
+    /* Logo overlays top bar */
+    .left-logo {
+      position: absolute !important;
+      top: -30px !important;      /* adjust overlay amount */
+      left: 50% !important;
+      transform: translateX(-50%); /* center logo */
+      z-index: 999 !important;
+      width: 160px !important;
+      height: auto;
+      margin: 0 !important;
+    }
+
+    .left-logo img {
+      width: 100% !important;
+    }
+
+    /* Contact info below logo */
+    .top-right {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 14px;
+      color: #fff;
+    }
+
+  }
+
+
+  @media (max-width: 768px) {
+
+    /* Remove desktop offset */
+    .header-wrapper {
+      padding-left: 0 !important;
+    }
+
+    /* TOP BAR becomes container for contact only */
+  .top-right {
+      display: flex !important;
+      flex-direction: row !important;   /* ← side by side */
+      align-items: center !important;
+      justify-content: center !important; 
+      gap: 8px !important;             /* space between email & phone */
+      text-align: center !important;
+      font-size: 12px !important;
+      color: #fff !important;
+    }
+
+
+    /* LOGO overlays top bar + navbar */
+    .left-logo {
+    position: absolute !important;
+    top: 0px !important;      /* vertical positioning */
+    left: 70px !important;      /* THIS moves logo to left side */
+    z-index: 999 !important;
+    width: 160px !important;
+    height: auto;
+  }
+
+    .top-bar {
+      padding-top: 20px !important;   /* reduced from 60px/70px */
+      padding-bottom: 5px !important;
+    }
+
+    .left-logo img {
+      width: 100% !important;
+      height: auto;
+    }
+
+    /* CONTACT stays BELOW logo */
+    .top-right {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center !important;
+      gap: 5px;
+      font-size: 14px;
+      color: #fff !important;
+    }
+
+    /* NAVBAR BELOW top bar */
+    .nav-bar {
+      width: 100%;
+      background: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
+
+    /* Hamburger goes RIGHT */
+    .hamburger {
+      display: block !important;
+      font-size: 28px;
+      color: #000 !important;
+    }
+
+    /* MENU hidden initially */
+    .menu-container {
+      display: none;
+      width: 100%;
+    }
+
+    .menu-container.active {
+      display: block !important;
+    }
+
+    /* MENU stacks vertically */
+    .menu {
+      flex-direction: column !important;
+      width: 100%;
+      gap: 15px;
+      padding-left: 10px;
+    }
+
+    .menu li {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    /* BUTTONS full width */
+    .nav-buttons {
+      flex-direction: column !important;
+      width: 100%;
+      margin-top: 10px;
+      gap: 10px;
+    }
+
+    .login-btn,
+    .open-btn {
+      width: 100% !important;
+      text-align: center;
+    }
+  }
+
+
+  /* DESKTOP DROPDOWN MENU (RED) */
+.home-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100px;
+  list-style: none;
+  padding: 0;
+  background: #e71228;  /* RED */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.home-dropdown .dropdown-menu li a {
+  color: #fff !important;     /* WHITE TEXT */
+  display: block;
+  padding: 10px 14px;
+  font-size: 15px;
+}
+
+.home-dropdown .dropdown-menu li a:hover {
+  background: #fff !important;
+  color: #e71228 !important;  /* RED TEXT */
+}
+
+/* Desktop hover open */
+@media (min-width: 769px) {
+  .home-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* NAV LINKS COLOR RESET */
+.menu a {
+  color: #000 !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+/* MOBILE MODE */
+@media (max-width: 768px) {
+
+  .menu-container {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-container.active {
+    display: block !important;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .home-dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-dropdown .dropdown-menu {
+    position: relative !important;
+    width: 100%;
+    display: none;
+    box-shadow: none!important;
+    background: #fff !important;
+  }
+
+  .home-dropdown .dropdown-menu li a {
+    color: #000 !important;
+    padding: 8px 0 !important;
+    background: #fff;
+  }
+
+  /* Show dropdown when toggled */
+  .dropdown-menu.show {
+    display: block !important;
+  }
+
+  /* Rotate arrow */
+  .dropdown-arrow.rotate {
+    transform: rotate(180deg);
+  }
+}
+
+/* MAKE HOME TEXT SAME STYLE AS OTHER NAV LINKS */
+.menu a,
+.home-link {
+  font-size: 18px !important;
+  font-weight: normal !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  padding: 0;      /* SAME AS OTHER LINKS */
+  margin: 0;
+}
+
+/* Hover color same as others */
+.home-link:hover {
+  color: #e71228 !important;
+}
+
+/* Arrow style same */
+.dropdown-arrow {
+  font-size: 14px !important;
+  margin-left: 4px;
+  transition: .3s;
+}
+
+
+@media (max-width: 768px) {
+    .nav-bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between !important;  /* keeps logo left + hamburger right */
+        align-items: center !important;
+    }
+
+    .hamburger {
+        display: block !important;
+        margin-left: auto !important;  /* pushes hamburger to the right */
+        margin-right: 10px;            /* little right spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    .home-dropdown .dropdown-menu li a {
+        background: #e71228 !important;  /* red hover */
+        color: #fff !important;          /* white text */
+    }
+}
+
+/* MAIN BANNER CONTAINER */
+.account-banner {
+    width: 100%;
+    margin-top: 7px;
+    height: 340px;            /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+.banner-bg {
+    width: 100%;
+    height: 100%;
+    background: url('Images1/background.webp') no-repeat center center/cover;
+    filter: grayscale(100%);      /* Black & white effect */
+}
+
+/* WHITE TITLE BOX */
+.banner-title-box {
+    position: absolute;
+    left: 18%;
+    bottom: 60px;
+    background: #fff;
+    padding: 22px 40px;
+    border-left: 4px solid #d1001f;  /* red left border */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.banner-title-box h2 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .account-banner {
+        height: 220px;
+    }
+
+    .banner-title-box {
+        left: 10%;
+        bottom: 30px;
+        padding: 15px 25px;
+    }
+
+    .banner-title-box h2 {
+        font-size: 24px;
+    }
+}
+
+/* SECTION LAYOUT */
+.career-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* TOP CONTENT */
+.career-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* LEFT IMAGE */
+.career-left {
+    position: relative;
+}
+
+.career-img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.shape-box {
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+}
+
+.shape {
+    background-color: #c6002d;
+    width: 60px;
+    height: 60px;
+}
+
+.shape1 {
+    transform: rotate(45deg);
+    margin-bottom: 20px;
+}
+
+.shape2 {
+    transform: rotate(45deg);
+}
+
+/* RIGHT CONTENT */
+.career-title {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.career-desc {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.career-list {
+    margin: 20px 0;
+}
+
+.career-list li {
+    list-style: none;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.career-list i {
+    color: #c6002d;
+    margin-right: 8px;
+}
+
+/* SEND RESUME */
+.resume-box {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.resume-icon {
+    font-size: 30px;
+    color: #c6002d;
+    margin-right: 15px;
+}
+
+.resume-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #c6002d;
+}
+
+.resume-email {
+    font-size: 15px;
+}
+
+/* JOB TABLE */
+.job-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+}
+
+.job-table th {
+    text-align: left;
+    background: #f7f5f2;
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.job-table td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.dept.red {
+    color: #d0002f;
+    font-weight: 600;
+}
+
+.apply-btn {
+    padding: 7px 18px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background: #c6002d;
+    color: #fff;
+    border-color: #c6002d;
+}
+
+/* SUBSCRIPTION */
+.subscribe-section {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.sub-img {
+    width: 160px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.subscribe-section h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.sub-input-box {
+    max-width: 360px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sub-input-box input {
+    width: 100%;
+    padding: 14px 40px 14px 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.sub-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.sub-btn {
+    margin-top: 15px;
+    padding: 12px 32px;
+    border: none;
+    background: #000;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sub-btn:hover {
+    background: #c6002d;
+}
+
+.error-msg {
+    color: #d10000;
+    font-size: 14px;
+    margin-top: 8px;
+    display: none;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .career-top {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .career-left {
+        display: flex;
+        justify-content: center;
+    }
+
+    .career-img {
+        width: 90%;
+    }
+
+    .shape-box {
+        left: 10px;
+        bottom: -10px;
+    }
+
+    .career-title {
+        font-size: 30px;
+    }
+
+    .career-desc {
+        font-size: 14px;
+    }
+
+    .career-list li {
+        font-size: 14px;
+    }
+
+    .resume-box {
+        justify-content: center;
+    }
+
+    /* Job table becomes scrollable */
+    .job-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .subscribe-section h2 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .sub-input-box {
+        max-width: 300px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .career-section {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+
+    .career-title {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .career-img {
+        width: 100%;
+    }
+
+    .shape {
+        width: 40px;
+        height: 40px;
+    }
+
+    .shape-box {
+        left: 5px;
+        bottom: -5px;
+    }
+
+    .career-desc {
+        font-size: 13px;
+    }
+
+    .career-list li {
+        font-size: 13px;
+    }
+
+    .resume-icon {
+        font-size: 24px;
+    }
+
+    .resume-email {
+        font-size: 14px;
+    }
+
+    /* Table */
+    .job-table th,
+    .job-table td {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    /* Subscribe */
+    .sub-img {
+        width: 130px;
+    }
+
+    .subscribe-section h2 {
+        font-size: 18px;
+    }
+
+    .sub-input-box input {
+        padding: 12px 35px 12px 12px;
+        font-size: 14px;
+    }
+
+    .sub-btn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+/* ======================
+   FOOTER
+   ====================== */
+.footer {
+    background: #0c1121;
+    color: #ccc;
+    overflow: hidden;
+    padding: 20px 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+/* LOGO */
+.footer-logo {
+    margin-bottom: 15px;
+}
+.footer-logo img {
+    width: 200px;
+}
+    
+
+.logo-icon {
+    width: 45px;
+}
+
+/* DESCRIPTION */
+.bank-desc {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social {
+    width: 40px;
+    height: 40px;
+    background: #1d2236;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+/* Hover Effects */
+.social:hover {
+    background: #e82d2d;
+    transform: translateY(-4px);
+}
+
+/* FOOTER COLUMNS */
+.footer-col h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-col ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-col ul li:hover {
+    color: #fff;
+}
+
+/* BRANCH SELECT */
+.footer-select {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #444;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-select option {
+    color: #000;
+}
+
+/* BUTTON */
+.map-btn {
+    width: 150px;
+    background: #e82d2d;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ADDRESS OUTPUT */
+.branch-output {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* COPYRIGHT */
+.copyright {
+    background: #090c18;
+    text-align: center;
+    padding: 18px;
+    color: #aaa;
+}
+
+.copyright span {
+    color: #e82d2d;
+    font-weight: bold;
+}
+
+.social-icons a {
+    text-decoration: none;   /* remove underline */
+    color: inherit;          /* keep default icon color */
+}
+
+/* ============================================================
+   📱 FOOTER SECTION – FULL RESPONSIVE MEDIA QUERIES
+============================================================ */
+
+/* ---------- Tablets (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+
+  .footer {
+    padding: 30px 50px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .footer-logo img {
+    width: 180px;
+  }
+}
+
+/* ---------- Tablets & Large Mobiles (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 30px 30px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;  /* Single column */
+    text-align: center;
+    gap: 35px;
+  }
+
+  .footer-logo img {
+    width: 160px;
+    margin: 0 auto;
+  }
+
+  .bank-desc {
+    font-size: 15px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-col h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li {
+    font-size: 15px;
+  }
+
+  .footer-select {
+    width: 100%;
+  }
+
+  .map-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .branch-output {
+    text-align: center;
+  }
+}
+
+/* ---------- Mobiles (max-width: 576px) ---------- */
+@media (max-width: 576px) {
+
+  .footer {
+    padding: 25px 20px;
+  }
+
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .social {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+  .footer-col ul li {
+    font-size: 14px;
+  }
+
+  .bank-desc {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Small Phones (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+
+  .footer {
+    padding: 20px 15px;
+  }
+
+  .footer-logo img {
+    width: 140px;
+  }
+
+  .footer-col h3 {
+    font-size: 16px;
+  }
+
+  .footer-col ul li {
+    font-size: 13px;
+  }
+
+  .map-btn {
+    padding: 10px;
+  }
+}
+
+/* ---------- Mini Phones (max-width: 360px) ---------- */
+@media (max-width: 360px) {
+
+  .footer-logo img {
+    width: 120px;
+  }
+
+  .footer-col ul li {
+    font-size: 12px;
+  }
+
+  .social {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .map-btn {
+    font-size: 14px;
+  }
+}
+
+.footer-col ul li a {
+    text-decoration: none;     /* remove underline */
+    color: #ccc;               /* normal color */
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;               /* hover color */
+}
+
+/* ============================
+   GLOBAL ANIMATION CLASSES
+============================ */
+
+/* 1. backInLeft Animation */
+.backInLeft {
+    opacity: 0;
+    animation: backInLeft 0.9s ease-out forwards;
+}
+
+@keyframes backInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-120px) scale(0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(30px) scale(1.05);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
+
+
+/* 2. backInRight Animation */
+.backInRight {
+    opacity: 0;
+    animation: backInRight 0.9s ease-out forwards;
+}
+
+@keyframes backInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(120px) scale(0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(-30px) scale(1.05);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
+
+
+/* 3. flipInX Animation */
+.flipInX {
+    opacity: 0;
+    animation: flipInX 0.8s ease-out forwards;
+}
+
+@keyframes flipInX {
+    0% {
+        transform: perspective(600px) rotateX(90deg);
+        opacity: 0;
+    }
+    50% {
+        transform: perspective(600px) rotateX(-10deg);
+        opacity: 1;
+    }
+    100% {
+        transform: perspective(600px) rotateX(0deg);
+    }
+}
+
+
+/* 4. lightSpeedInRight Animation */
+.lightSpeedInRight {
+    opacity: 0;
+    animation: lightSpeedInRight 0.7s ease-out forwards;
+}
+
+@keyframes lightSpeedInRight {
+    0% {
+        transform: translateX(150%) skewX(-30deg);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(-10%) skewX(10deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0) skewX(0);
+    }
+}
+
+
+/* 5. lightSpeedInLeft Animation */
+.lightSpeedInLeft {
+    opacity: 0;
+    animation: lightSpeedInLeft 0.7s ease-out forwards;
+}
+
+@keyframes lightSpeedInLeft {
+    0% {
+        transform: translateX(-150%) skewX(30deg);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(10%) skewX(-10deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0) skewX(0);
+    }
+}
+
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.4s ease;
+}
+
+.scroll-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}

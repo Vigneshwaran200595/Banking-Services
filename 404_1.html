@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 | ATM Error</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #0b0b0b; /* Black */
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    /* Animated background glow */
+    .bg {
+        position: absolute;
+        width: 550px;
+        height: 550px;
+        background: radial-gradient(circle, #3b2314, #000000, #6b0000);
+        filter: blur(70px);
+        opacity: 0.65;
+        animation: glowMove 12s infinite linear;
+        z-index: -1;
+    }
+    @keyframes glowMove {
+        0% { transform: translate(-200px, -200px) rotate(0deg); }
+        50% { transform: translate(200px, 200px) rotate(180deg); }
+        100% { transform: translate(-200px, -200px) rotate(360deg); }
+    }
+
+    /* Card container */
+    .card {
+        width: 90%;
+        max-width: 600px;
+        padding: 40px 30px;
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.08);
+        animation: fadeUp 1.2s ease-out forwards;
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    @keyframes fadeUp {
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Logo */
+    .logo-box img {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+    /* ATM Illustration (Pure CSS + Shapes) */
+    .atm-container {
+        margin: 0 auto 20px auto;
+        width: 160px;
+        height: 220px;
+        background: #1a1a1a;
+        border-radius: 10px;
+        position: relative;
+        border: 2px solid #3b2b20;
+        box-shadow: 0 0 25px rgba(255,0,0,0.3);
+        animation: atmPulse 2s infinite ease-in-out;
+    }
+
+    @keyframes atmPulse {
+        0%,100% { box-shadow: 0 0 25px rgba(255,0,0,0.3); }
+        50% { box-shadow: 0 0 55px rgba(255,0,0,0.6); }
+    }
+
+    /* ATM screen */
+    .atm-screen {
+        width: 120px;
+        height: 70px;
+        background: #2c2c2c;
+        border-radius: 6px;
+        margin: 20px auto 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .atm-screen::after {
+        content: "404 ERROR";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ff3333;
+        font-size: 15px;
+        font-weight: 700;
+        animation: flicker 1s infinite;
+    }
+
+    @keyframes flicker {
+        0%,100% { opacity: 1; }
+        50% { opacity: .4; }
+    }
+
+    /* Card slot */
+    .atm-slot {
+        width: 140px;
+        height: 15px;
+        background: #000;
+        margin: 15px auto;
+        border-radius: 4px;
+        border: 1px solid #3b2b20;
+    }
+
+    /* Card (moving animation) */
+    .atm-card {
+        width: 110px;
+        height: 55px;
+        background: linear-gradient(135deg, #b00000, #d90000);
+        border-radius: 8px;
+        margin: 0 auto;
+        animation: cardMove 2s infinite ease-in-out;
+    }
+
+    @keyframes cardMove {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(10px); }
+        100% { transform: translateY(0); }
+    }
+
+    .big-text {
+        font-size: 35px;
+        margin-top: 15px;
+        font-weight: 700;
+    }
+
+    .desc {
+        color: #ddd;
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .btn {
+        margin-top: 25px;
+        padding: 12px 35px;
+        font-size: 16px;
+        background: #d00000;
+        border: none;
+        border-radius: 6px;
+        color: #fff;
+        cursor: pointer;
+        font-weight: 600;
+        transition: .3s;
+    }
+    .btn:hover {
+        background: #b00000;
+        transform: translateY(-3px);
+    }
+
+    /* ===========================
+   MOBILE RESPONSIVE STYLES
+   =========================== */
+
+/* Tablets & Small Devices */
+@media (max-width: 768px) {
+
+    .card {
+        max-width: 90%;
+        padding: 30px 20px;
+    }
+
+    .logo-box img {
+        width: 100px;
+    }
+
+    .atm-container {
+        width: 150px;
+        height: 200px;
+    }
+
+    .atm-screen {
+        width: 110px;
+        height: 60px;
+    }
+
+    .atm-slot {
+        width: 130px;
+    }
+
+    .atm-card {
+        width: 100px;
+        height: 50px;
+    }
+
+    .big-text {
+        font-size: 30px;
+    }
+
+    .desc {
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 10px 28px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+        padding: 25px 18px;
+        border-radius: 14px;
+    }
+
+    .logo-box img {
+        width: 85px;
+    }
+
+    .atm-container {
+        width: 130px;
+        height: 180px;
+    }
+
+    .atm-screen {
+        width: 100px;
+        height: 55px;
+    }
+
+    .atm-screen::after {
+        font-size: 13px;
+    }
+
+    .atm-slot {
+        width: 120px;
+        height: 12px;
+    }
+
+    .atm-card {
+        width: 85px;
+        height: 45px;
+    }
+
+    .big-text {
+        font-size: 26px;
+        margin-top: 10px;
+    }
+
+    .desc {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="card">
+
+    <!-- Logo -->
+    <div class="logo-box">
+        <img src="Images/logo.webp" alt="Bank Logo">
+    </div>
+
+    <!-- ATM Illustration -->
+    <div class="atm-container">
+        <div class="atm-screen"></div>
+        <div class="atm-slot"></div>
+        <div class="atm-card"></div>
+    </div>
+
+    <div class="big-text">Oops! Page Not Found !</div>
+
+    <div class="desc">
+        Looks like this page is out of service right now.<br>
+        The page you requested is missing or unavailable.
+    </div>
+
+    <button class="btn" onclick="location.href='saas.html'">Go Back Home</button>
+
+</div>
+
+</body>
+</html>
