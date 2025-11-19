@@ -2026,6 +2026,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 70px 50px;
+    overflow: hidden;
     gap: 60px;
 }
 
