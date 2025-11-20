@@ -799,6 +799,12 @@
     }
 }
 
+.left-logo a {
+    display: block;        /* makes <a> behave like the old <img> */
+    width: 100%;
+    height: 100%;
+}
+
 /* MAIN BANNER CONTAINER */
 .account-banner {
     width: 100%;
