@@ -863,7 +863,7 @@
     display: flex;
     justify-content: center;
     padding: 60px 20px;
-    /* 🔥 ADD BACKGROUND IMAGE HERE */
+    /*  ADD BACKGROUND IMAGE HERE */
     background-image: url("Images1/accountbg.webp"); 
     background-size: cover;
     background-position: center;
