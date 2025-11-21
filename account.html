@@ -169,12 +169,11 @@
 
     <div class="subscribe-right">
         <input id="emailInput" type="text" placeholder="Your email">
-        <button onclick="validateEmail()">Subscribe Now</button>
+        <button onclick="validateSubscribeEmail()">Subscribe Now</button>
     </div>
 </section>
 
 
-<!-- 🔥 MAIN FOOTER -->
 <footer class="footer" data-animate="bounceIn">
 
     <div class="footer-grid">
@@ -250,21 +249,18 @@
 
 
 <script>
-function validateEmail() {
+function validateSubscribeEmail() {
     let input = document.getElementById("emailInput");
     let email = input.value.trim();
 
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // EMPTY FIELD
     if (email === "") {
-        input.value = ""; 
         input.placeholder = "❌ Please fill the field";
         input.classList.add("input-error");
         return;
     }
 
-    // INVALID EMAIL
     if (!emailPattern.test(email)) {
         input.value = "";
         input.placeholder = "❌ Invalid email address";
@@ -272,12 +268,10 @@ function validateEmail() {
         return;
     }
 
-    // VALID EMAIL — REMOVE ERROR & REDIRECT
     input.classList.remove("input-error");
-    window.location.href = "404.html";
+    window.location.href = "404.html";   // redirect works
 }
 
-// Reset error style when user types
 document.getElementById("emailInput").addEventListener("input", function () {
     this.classList.remove("input-error");
     this.placeholder = "Your email";
@@ -350,7 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
-<script src="account1.js"></script>
+<script src="account.js"></script>
 
 
 </body>
