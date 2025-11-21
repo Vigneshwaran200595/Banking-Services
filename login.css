@@ -261,7 +261,7 @@ h2 {
 
 @media (max-width: 350px) {
     .input-group input {
-        width: 80%;
+        width: 78%;
         padding: 10px 38px 10px 10px;
         font-size: 14px;
     }
@@ -271,3 +271,4 @@ h2 {
         font-size: 15px;
     }
 }
+
