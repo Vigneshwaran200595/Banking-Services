@@ -74,30 +74,25 @@ function validatePassword(password) {
     return true;
 }
 
-// ----------- LIVE VALIDATIONS (BLUR EVENTS) -----------
-
-// NAME FIELD LIVE CHECK
+// ----------- LIVE VALIDATIONS -----------
 document.querySelectorAll("input.name").forEach(input => {
     input.addEventListener("blur", () => validateName(input));
 });
 
-// EMAIL FIELD LIVE CHECK (signin + signup)
 document.querySelectorAll("input.email").forEach(input => {
     input.addEventListener("blur", () => validateEmail(input));
 });
 
-// PASSWORD FIELD LIVE CHECK
 document.querySelectorAll("input.password").forEach(input => {
     input.addEventListener("blur", () => validatePassword(input));
 });
 
-// RESET PASSWORD EMAIL (forget page) LIVE CHECK
 let forgetEmail = document.querySelector(".forget-email");
 if (forgetEmail) {
     forgetEmail.addEventListener("blur", () => validateEmail(forgetEmail));
 }
 
-// ----------- FORM SUBMISSIONS -----------
+// ----------- CORRECTED FORM SUBMISSIONS -----------
 
 // SIGN IN FORM
 document.getElementById("signinForm").addEventListener("submit", e => {
@@ -106,7 +101,12 @@ document.getElementById("signinForm").addEventListener("submit", e => {
     let email = document.querySelector("#signinForm .email");
     let password = document.querySelector("#signinForm .password");
 
-    if (validateEmail(email) && validatePassword(password)) {
+    // Run all validations
+    let valid =
+        validateEmail(email) &
+        validatePassword(password);
+
+    if (valid) {
         window.location.href = "404.html";
     }
 });
@@ -119,7 +119,13 @@ document.getElementById("signupForm").addEventListener("submit", e => {
     let email = document.querySelector("#signupForm .email");
     let password = document.querySelector("#signupForm .password");
 
-    if (validateName(name) && validateEmail(email) && validatePassword(password)) {
+    // Run all validations
+    let valid =
+        validateName(name) &
+        validateEmail(email) &
+        validatePassword(password);
+
+    if (valid) {
         window.location.href = "404.html";
     }
 });
@@ -127,18 +133,15 @@ document.getElementById("signupForm").addEventListener("submit", e => {
 // RESET PASSWORD — SEND LINK
 function sendReset() {
     let email = document.querySelector(".forget-email");
-    let successBox = document.querySelector(".reset-success");
 
-    // Validate email first
     if (!validateEmail(email)) {
-        return; // STOP if invalid
+        return;
     }
 
-    // Redirect after 1 second
-        window.location.href = "404.html";
+    window.location.href = "404.html";
 }
-
 
 function goHome() {
-    window.location.href = "index.html"; 
+    window.location.href = "index.html";
 }
+

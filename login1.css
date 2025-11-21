@@ -179,3 +179,97 @@ h2 {
         font-size: 12px;
     }
 }
+
+
+
+@media (max-width: 480px) {
+    .top-header {
+        gap: 10px;
+    }
+
+    .auth-logo {
+        width: 120px;
+    }
+
+    .back-home {
+        font-size: 12px;
+    }
+}
+
+/* ================================
+   MOBILE RESPONSIVE (MAX 600px)
+   ================================ */
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+        height: auto;
+    }
+
+    .auth-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .auth-card {
+        padding: 25px;
+        border-radius: 16px;
+    }
+
+    /* LOGO */
+    .auth-logo {
+        width: 120px;
+    }
+
+    /* BACK TO HOME */
+    .back-home {
+        font-size: 14px;
+    }
+
+    /* TABS */
+    .auth-tabs {
+        margin: 20px 0;
+    }
+
+    .auth-tab {
+        font-size: 16px;
+    }
+
+    .divider {
+        height: 20px;
+        margin: 0 12px;
+    }
+
+    /* INPUT */
+    .input-group input {
+        width: 85%;
+        padding: 12px 40px 12px 12px;
+        font-size: 15px;
+    }
+
+    .input-group i {
+        right: 10px;
+        font-size: 16px;
+    }
+
+    /* TITLES */
+    h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    /* BUTTON */
+    .auth-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* SPACING FIX */
+    .forgot {
+        font-size: 13px;
+    }
+
+    .back {
+        font-size: 14px;
+    }
+}
