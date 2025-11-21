@@ -185,11 +185,6 @@ h2 {
    ================================ */
 @media (max-width: 600px) {
 
-    body {
-        padding: 20px;
-        height: auto;
-    }
-
     .auth-container {
         max-width: 100%;
         padding: 10px;
@@ -271,5 +266,6 @@ h2 {
         font-size: 15px;
     }
 }
+
 
 
