@@ -200,9 +200,16 @@ h2 {
    MOBILE RESPONSIVE (MAX 600px)
    ================================ */
 @media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+        height: auto;
+    }
+
     .auth-container {
         max-width: 100%;
         padding: 10px;
+        height: 70vh;
     }
 
     .auth-card {
@@ -280,4 +287,3 @@ h2 {
         font-size: 15px;
     }
 }
-

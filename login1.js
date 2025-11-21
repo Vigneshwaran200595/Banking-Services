@@ -16,6 +16,7 @@ function openForget() {
     document.querySelectorAll(".auth-form").forEach(f => f.classList.remove("active"));
     document.getElementById("forgetForm").classList.add("active");
 }
+
 function closeForget() {
     document.querySelectorAll(".auth-form").forEach(f => f.classList.remove("active"));
     document.getElementById("signinForm").classList.add("active");
@@ -74,6 +75,24 @@ function validatePassword(password) {
     return true;
 }
 
+function validateConfirmPassword(password, confirm) {
+    
+    // Case 1: User hasn't filled confirm password
+    if (confirm.value.trim() === "") {
+        showError(confirm, "Please fill the field");
+        return false;
+    }
+
+    // Case 2: User filled it but does NOT match password
+    if (password.value.trim() !== confirm.value.trim()) {
+        showError(confirm, "Password mismatch");
+        return false;
+    }
+
+    // Case 3: All good
+    return true;
+}
+
 // ----------- LIVE VALIDATIONS -----------
 document.querySelectorAll("input.name").forEach(input => {
     input.addEventListener("blur", () => validateName(input));
@@ -87,21 +106,26 @@ document.querySelectorAll("input.password").forEach(input => {
     input.addEventListener("blur", () => validatePassword(input));
 });
 
+// ⭐ NEW LIVE VALIDATION FOR CONFIRM PASSWORD
+document.querySelectorAll("input.confirm-password").forEach(input => {
+    input.addEventListener("blur", () => {
+        let password = document.querySelector("#signupForm .password");
+        validateConfirmPassword(password, input);
+    });
+});
+
 let forgetEmail = document.querySelector(".forget-email");
 if (forgetEmail) {
     forgetEmail.addEventListener("blur", () => validateEmail(forgetEmail));
 }
 
-// ----------- CORRECTED FORM SUBMISSIONS -----------
-
-// SIGN IN FORM
+// ----------- SIGN IN FORM -----------
 document.getElementById("signinForm").addEventListener("submit", e => {
     e.preventDefault();
 
     let email = document.querySelector("#signinForm .email");
     let password = document.querySelector("#signinForm .password");
 
-    // Run all validations
     let valid =
         validateEmail(email) &
         validatePassword(password);
@@ -111,19 +135,20 @@ document.getElementById("signinForm").addEventListener("submit", e => {
     }
 });
 
-// SIGN UP FORM
+// ----------- SIGN UP FORM -----------
 document.getElementById("signupForm").addEventListener("submit", e => {
     e.preventDefault();
 
     let name = document.querySelector("#signupForm .name");
     let email = document.querySelector("#signupForm .email");
     let password = document.querySelector("#signupForm .password");
+    let confirm = document.querySelector("#signupForm .confirm-password");
 
-    // Run all validations
     let valid =
         validateName(name) &
         validateEmail(email) &
-        validatePassword(password);
+        validatePassword(password) &
+        validateConfirmPassword(password, confirm);
 
     if (valid) {
         window.location.href = "404_1.html";
