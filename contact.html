@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stackly Header</title>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -14,24 +15,17 @@
 
 <div class="header-wrapper">
 
-  <!-- LOGO -->
-   <div class="left-logo">
-    <a href="index.html">
-        <img src="Images/logo3.webp" alt="Stackly Logo">
-    </a>
-</div>
-
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div class="top-right">
-<span>Contact: <i class="fa-solid fa-envelope red-icon"></i> info@example.com</span>
-    </div>
-  </div>
-
   <!-- NAVBAR -->
   <nav class="nav-bar">
 
-    <!-- MOBILE HAMBURGER -->
+    <!-- LOGO -->
+    <div class="left-logo">
+      <a href="index.html">
+        <img src="Images/logo_new.webp" alt="Stackly Logo">
+      </a>
+    </div>
+
+    <!-- HAMBURGER (MOBILE) -->
     <div class="hamburger" id="hamburger">
       <i class="fa-solid fa-bars"></i>
     </div>
@@ -73,7 +67,7 @@
 </div>
 
 <!-- SERVICES HEADER SECTION -->
-<section class="inner-banner" data-animate="bounceIn">
+<section class="inner-banner" data-aos="fade-in">
     <div class="banner-overlay"></div>
 
     <div class="container">
@@ -90,13 +84,13 @@
 
 <section class="corporate-section">
 
-    <p class="corporate-subtitle" data-animate="bounceInUp">CORPORATE OFFICE</p>
-    <h2 class="corporate-title" data-animate="bounceInUp">Connect with Corporate Team</h2>
+    <p class="corporate-subtitle" data-aos="fade-in">CORPORATE OFFICE</p>
+    <h2 class="corporate-title" data-aos="fade-in">Connect with Corporate Team</h2>
 
     <div class="corporate-grid">
 
         <!-- Card 1 -->
-        <div class="corp-card" data-animate="bounceIn">
+        <div class="corp-card" data-aos="fade-in">
             <div class="icon-box">
                 <i class="fa-solid fa-headphones"></i>
             </div>
@@ -108,7 +102,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="corp-card" data-animate="bounceIn">
+        <div class="corp-card" data-aos="fade-in">
             <div class="icon-box red">
                 <i class="fa-solid fa-envelope"></i>
             </div>
@@ -120,7 +114,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="corp-card" data-animate="bounceIn">
+        <div class="corp-card" data-aos="fade-in">
             <div class="icon-box">
                 <i class="fa-solid fa-location-dot"></i>
             </div>
@@ -132,7 +126,7 @@
         </div>
 
         <!-- Card 4 -->
-        <div class="corp-card" data-animate="bounceIn">
+        <div class="corp-card" data-aos="fade-in">
             <div class="icon-box red">
                 <i class="fa-solid fa-clock"></i>
             </div>
@@ -148,7 +142,7 @@
 
 <section class="branch-section">
 
-    <div class="branch-box" data-animate="bounceInLeft">
+    <div class="branch-box" data-aos="fade-in">
 
         <h2>Over 280 Branches & ATM’s<br>Nationwide</h2>
 
@@ -201,7 +195,7 @@
 
     </div>
 
-    <div class="map-area" data-animate="bounceInRight">
+    <div class="map-area" data-aos="fade-in">
         <iframe id="mapFrame"
             src="https://www.google.com/maps?q=India&output=embed"
             allowfullscreen loading="lazy">
@@ -214,11 +208,11 @@
 <section class="support-section">
 
     <div class="support-header">
-    <span class="mini-title" data-animate="bounceInUp">SEND MESSAGE</span>
+    <span class="mini-title" data-aos="fade-in">SEND MESSAGE</span>
 </div>
-    <h2 class="support-title" data-animate="bounceInUp">Message Our Support Team</h2>
+    <h2 class="support-title" data-aos="fade-in">Message Our Support Team</h2>
 
-    <div class="support-tabs" data-animate="bounceIn">
+    <div class="support-tabs" data-aos="fade-in">
         <button class="tab-btn active" data-tab="personal">Personal Banking</button>
         <button class="tab-btn" data-tab="corporate">Corporate Banking</button>
     </div>
@@ -227,7 +221,7 @@
     <div class="form-wrapper active zoom" id="personal">
         <form class="support-form" novalidate>
 
-            <div class="left-form" data-animate="bounceInLeft">
+            <div class="left-form" data-aos="fade-in">
 
                 <label>Your Name</label>
                 <div class="input-icon">
@@ -262,7 +256,7 @@
                 <small class="error"></small>
             </div>
 
-            <div class="right-form" data-animate="bounceInRight">
+            <div class="right-form" data-aos="fade-in">
                 <label>Message</label>
                 <textarea class="message" placeholder="Message goes here"></textarea>
                 <small class="error"></small>
@@ -327,10 +321,10 @@
 
 <section class="care-container">
 
-    <div class="mini-title-care" data-animate="bounceInUp">CUSTOMER CARE</div>
-    <h2 class="care-title" data-animate="bounceInUp">Connect with Customer Care</h2>
+    <div class="mini-title-care" data-aos="fade-in">CUSTOMER CARE</div>
+    <h2 class="care-title" data-aos="fade-in">Connect with Customer Care</h2>
 
-    <div class="care-table-box" data-animate="bounceIn">
+    <div class="care-table-box" data-aos="fade-in">
         <table class="care-table">
 
             <thead>
@@ -373,7 +367,7 @@
 
 </section>
 
-<section class="subscribe-section" data-animate="bounceIn">
+<section class="subscribe-section" data-aos="fade-in">
     <div class="subscribe-left">
         <h2>Subscribe us to Receive<br>Latest Updates</h2>
     </div>
@@ -386,14 +380,14 @@
 
 
 <!--  MAIN FOOTER -->
-<footer class="footer" data-animate="bounceIn">
+<footer class="footer" data-aos="fade-in">
 
     <div class="footer-grid">
 
         <!-- COLUMN 1 - LOGO + DESCRIPTION + SOCIAL -->
         <div class="footer-col">
             <div class="footer-logo">
-                <img src="Images/logo.webp" alt="Bank Logo" class="logo-icon">
+                <img src="Images/logo_new.webp" alt="Bank Logo" class="logo-icon">
             </div>
 
             <p class="bank-desc">
@@ -455,7 +449,7 @@
 </footer>
 
 <!-- COPYRIGHT -->
-<div class="copyright" data-animate="bounceIn">
+<div class="copyright">
     Copyright 2025 by <span>Stackly</span>. All Rights Reserved.
 </div>
 
@@ -673,6 +667,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach((el) => observer.observe(el));
 });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 800,          // smooth timing
+    easing: 'ease-in-out',
+    once: true,             // animate only once
+    offset: 80,             // trigger slightly earlier
+  });
 </script>
 
 

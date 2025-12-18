@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stackly Banking Services</title>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -13,24 +14,17 @@
 
 <div class="header-wrapper">
 
-  <!-- LOGO -->
-   <div class="left-logo">
-    <a href="saas.html">
-        <img src="Images/logo3.webp" alt="Stackly Logo">
-    </a>
-</div>
-
-  <!-- TOP BAR -->
-  <div class="top-bar" >
-    <div class="top-right">
-      <span>Contact: <i class="fa-solid fa-envelope red-icon"></i> info@example.com</span>
-    </div>
-  </div>
-
   <!-- NAVBAR -->
   <nav class="nav-bar">
 
-    <!-- MOBILE HAMBURGER -->
+    <!-- LOGO -->
+    <div class="left-logo">
+      <a href="index.html">
+        <img src="Images/logo_new.webp" alt="Stackly Logo">
+      </a>
+    </div>
+
+    <!-- HAMBURGER (MOBILE) -->
     <div class="hamburger" id="hamburger">
       <i class="fa-solid fa-bars"></i>
     </div>
@@ -152,15 +146,15 @@
 
 <section class="services-section">
 
-  <h2 class="section-title scroll-animate" data-anim="backInLeft">Bank For A Better Tomorrow</h2>
-  <p class="section-subtitle scroll-animate" data-anim="backInLeft">Committed to helping our customers succeed.</p>
+  <h2 class="section-title" data-aos="fade-in">Bank For A Better Tomorrow</h2>
+  <p class="section-subtitle" data-aos="fade-in">Committed to helping our customers succeed.</p>
 
   <div class="services-wrapper">
 
     <!-- BOX 1 -->
-    <div class="service-box scroll-animate" data-anim="backInLeft">
+    <div class="service-box" data-aos="fade-in">
 
-      <div class="diamond-wrap" data-anim="flipInX">
+      <div class="diamond-wrap" data-aos="fade-in">
         <div class="diamond">
           <span>01</span>
         </div>
@@ -176,7 +170,7 @@
     </div>
 
     <!-- BOX 2 -->
-    <div class="service-box scroll-animate" data-anim="backInLeft">
+    <div class="service-box" data-aos="fade-in">
 
       <div class="diamond-wrap">
         <div class="diamond">
@@ -194,7 +188,7 @@
     </div>
 
     <!-- BOX 3 -->
-    <div class="service-box scroll-animate" data-anim="backInLeft">
+    <div class="service-box" data-aos="fade-in">
 
       <div class="diamond-wrap">
         <div class="diamond">
@@ -216,18 +210,18 @@
 <section class="banking-section">
 
     <!-- RED CHAT ICON -->
-    <div class="chat-icon scroll-animate" data-anim="backInLeft" >
+    <div class="chat-icon" data-aos="fade-in" >
         <i class="fa fa-comment"></i>
     </div>
 
     <div class="banking-container">
 
         <!-- TEXT HEADER -->
-        <h2 class="bank-title scroll-animate" data-anim="backInLeft">Banking For Your Needs</h2>
-        <p class="bank-subtitle scroll-animate" data-anim="backInLeft">The bank that builds better relationships.</p>
+        <h2 class="bank-title" data-aos="fade-in">Banking For Your Needs</h2>
+        <p class="bank-subtitle" data-aos="fade-in">The bank that builds better relationships.</p>
 
         <!-- TOP OPTIONS -->
-        <div class="bank-options scroll-animate" data-anim="backInLeft">
+        <div class="bank-options" data-aos="fade-in">
             <div id="tab-individuals" class="option-box active">
                 <span class="label">Banking for</span>
                 <h3>Individuals</h3>
@@ -242,7 +236,7 @@
         </div>
 
         <!-- INDIVIDUAL SERVICES -->
-        <div id="individual-content" class="service-card-wrapper scroll-animate" data-anim="backInLeft">
+        <div id="individual-content" class="service-card-wrapper" data-aos="fade-in">
 
             <div class="service-card">
                 <div class="icon-box"><i class="fa fa-database"></i></div>
@@ -306,7 +300,7 @@
         </div>
 
         <!-- VIEW BUTTON -->
-  <a href="features.html" class="view-btn scroll-animate" data-anim="backInLeft">View All Features</a>
+  <a href="features.html" class="view-btn" data-aos="fade-in">View All Features</a>
 
     </div>
 
@@ -314,11 +308,11 @@
 
 <div class="service-section">
 
-    <h2 class="main-title scroll-animate" data-anim="backInLeft">Emergency Service Requests</h2>
-    <p class="sub-title scroll-animate" data-anim="backInLeft">List of banking service requests all in one place.</p>
+    <h2 class="main-title">Emergency Service Requests</h2>
+    <p class="sub-title">List of banking service requests all in one place.</p>
 
     <!-- TOP TABS -->
-    <div class="service-tabs scroll-animate" data-anim="backInLeft">
+    <div class="service-tabs">
 
         <div class="tab active" data-target="tab1">
             <div class="circle"><i class="fa-solid fa-credit-card"></i></div>
@@ -346,10 +340,10 @@
     </div>
 
     <!-- LEFT + RIGHT LAYOUT -->
-    <div class="tab-row scroll-animate" data-anim="backInLeft">
+    <div class="tab-row" data-aos="fade-in">
 
         <!-- LEFT CONTENT -->
-        <div id="tab1" class="tab-content scroll-animate" data-anim="backInLeft">
+        <div id="tab1" class="tab-content">
             <div class="list-card" onclick="go404()">Block Debit / ATM Card <span>→</span></div>
             <div class="list-card" onclick="go404()">Generate Debit Card Pin Number <span>→</span></div>
             <div class="list-card" onclick="go404()">Unlock Debit / ATM Card <span>→</span></div>
@@ -379,7 +373,7 @@
 
         <!-- RIGHT BANNER -->
         <div class="es-banner">
-            <div class="banner-inner scroll-animate" data-anim="backInLeft">
+            <div class="banner-inner" data-aos="fade-in">
                 <i class="fa-solid fa-headset banner-icon"></i>
                 <h3>Call for<br><b>Private Banking</b></h3>
                 <p class="phone">+8(222)123–456–78</p>
@@ -420,7 +414,7 @@
     </div>
 
     <!-- RIGHT CONTENT -->
-    <div class="right-box scroll-animate" data-anim="backInLeft">
+    <div class="right-box" data-aos="fade-in">
 
         <h1 class="title">
             Personalize Your <br>
@@ -448,7 +442,7 @@
 
 </section>
 
-<section class="offer-slider scroll-animate" data-anim="backInLeft">
+<section class="offer-slider" data-aos="fade-in">
 
     <!-- === SLIDE 1 === -->
     <div class="offer-slide active" id="offer-slide1">
@@ -530,12 +524,12 @@
     <div class="faq-container">
 
         <!-- LEFT IMAGE -->
-        <div class="faq-left scroll-animate" data-anim="backInLeft">
+        <div class="faq-left" data-aos="fade-in">
             <img src="Images1/faq.webp" alt="FAQ Image">
         </div>
 
         <!-- RIGHT FAQ -->
-        <div class="faq-right scroll-animate" data-anim="backInRight">
+        <div class="faq-right" data-aos="fade-in">
 
             <h2 class="faq-title">Questions & Answers</h2>
             <p class="faq-subtitle">Find answers to all your queries about our service.</p>
@@ -602,14 +596,14 @@
 </section>
 
 <!--  MAIN FOOTER -->
-<footer class="footer scroll-animate" data-anim="flipInX">
+<footer class="footer" data-aos="fade-in">
 
     <div class="footer-grid">
 
         <!-- COLUMN 1 - LOGO + DESCRIPTION + SOCIAL -->
         <div class="footer-col">
             <div class="footer-logo">
-                <img src="Images/logo.webp" alt="Bank Logo" class="logo-icon">
+                <img src="Images/logo_new.webp" alt="Bank Logo" class="logo-icon">
             </div>
 
             <p class="bank-desc">
@@ -922,6 +916,18 @@ function showBranch() {
 });
 
 </script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 800,          // smooth timing
+    easing: 'ease-in-out',
+    once: true,             // animate only once
+    offset: 80,             // trigger slightly earlier
+  });
+</script>
+
 </body>
 </html>
 

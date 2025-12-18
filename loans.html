@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stackly Header</title>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -14,24 +15,17 @@
 
 <div class="header-wrapper">
 
-  <!-- LOGO -->
-   <div class="left-logo">
-    <a href="index.html">
-        <img src="Images/logo3.webp" alt="Stackly Logo">
-    </a>
-</div>
-
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div class="top-right">
-<span>Contact: <i class="fa-solid fa-envelope red-icon"></i> info@example.com</span>
-    </div>
-  </div>
-
   <!-- NAVBAR -->
   <nav class="nav-bar">
 
-    <!-- MOBILE HAMBURGER -->
+    <!-- LOGO -->
+    <div class="left-logo">
+      <a href="index.html">
+        <img src="Images/logo_new.webp" alt="Stackly Logo">
+      </a>
+    </div>
+
+    <!-- HAMBURGER (MOBILE) -->
     <div class="hamburger" id="hamburger">
       <i class="fa-solid fa-bars"></i>
     </div>
@@ -73,7 +67,7 @@
 </div>
 
 <!-- SERVICES HEADER SECTION -->
-<section class="inner-banner" data-animate="bounceIn">
+<section class="inner-banner" data-aos="fade-in">
     <div class="banner-overlay"></div>
 
     <div class="container">
@@ -89,14 +83,14 @@
 
 <section class="loan-process-section">
 
-    <p class="loan-subtitle" data-animate="bounceInUp">HOW IT'S WORK</p>
-   <h2 class="loan-title" data-animate="bounceInUp">Start Loan Within 5 Mins</h2>
+    <p class="loan-subtitle" data-aos="fade-in">HOW IT'S WORK</p>
+   <h2 class="loan-title" data-aos="fade-in">Start Loan Within 5 Mins</h2>
 
 
     <div class="loan-process-container">
 
         <!-- STEP 1 -->
-<div class="loan-card" data-animate="bounceIn">
+<div class="loan-card" data-aos="fade-in">
     <div class="step-number">01</div>
     <h3>Verify Customer</h3>
     <p>Complete a quick identity verification to begin your loan application process safely and securely.</p>
@@ -106,7 +100,7 @@
 </div>
 
 <!-- STEP 2 -->
-<div class="loan-card" data-animate="bounceIn">
+<div class="loan-card" data-aos="fade-in">
     <div class="step-number">02</div>
     <h3>Submit Documents</h3>
     <p>Upload essential documents like ID proof, income proof, and bank statements for validation.</p>
@@ -116,7 +110,7 @@
 </div>
 
 <!-- STEP 3 -->
-<div class="loan-card" data-animate="bounceIn">
+<div class="loan-card" data-aos="fade-in">
     <div class="step-number">03</div>
     <h3>Loan Approval</h3>
     <p>Our team reviews your application and verifies your eligibility to approve the requested loan amount.</p>
@@ -126,7 +120,7 @@
 </div>
 
 <!-- STEP 4 -->
-<div class="loan-card" data-animate="bounceIn">
+<div class="loan-card" data-aos="fade-in">
     <div class="step-number">04</div>
     <h3>Loan Disbursal</h3>
     <p>Once approved, the loan amount is quickly credited to your registered bank account within minutes.</p>
@@ -141,7 +135,7 @@
 
 
 <!-- ================= HOME LOAN ================= -->
-<section class="appointment-section home-loan" data-animate="bounceIn">
+<section class="appointment-section home-loan" data-aos="fade-in">
 
     <div class="left-text">
         <h2>HOME<br>LOAN</h2>
@@ -190,7 +184,7 @@
 
 
 <!-- ================= PERSONAL LOAN ================= -->
-<section class="appointment-section personal-loan" data-animate="bounceIn">
+<section class="appointment-section personal-loan" data-aos="fade-in">
 
     <div class="left-text">
         <h2>PERSONAL<br>LOAN</h2>
@@ -239,7 +233,7 @@
 
 
 <!-- ================= VEHICLE LOAN ================= -->
-<section class="appointment-section vehicle-loan" data-animate="bounceIn">
+<section class="appointment-section vehicle-loan" data-aos="fade-in">
 
     <div class="left-text">
         <h2>VEHICLE<br>LOAN</h2>
@@ -288,7 +282,7 @@
 
 
 <!-- ================= EDUCATION LOAN ================= -->
-<section class="appointment-section education-loan" data-animate="bounceIn">
+<section class="appointment-section education-loan" data-aos="fade-in">
 
     <div class="left-text">
         <h2>EDUCATION<br>LOAN</h2>
@@ -337,7 +331,7 @@
 
 
 <!-- ================= GOLD LOAN ================= -->
-<section class="appointment-section gold-loan" data-animate="bounceIn">
+<section class="appointment-section gold-loan" data-aos="fade-in">
 
     <div class="left-text">
         <h2>GOLD<br>LOAN</h2>
@@ -385,7 +379,7 @@
 </section>
 
 
-<section class="subscribe-section" data-animate="bounceIn">
+<section class="subscribe-section" data-aos="fade-in">
     <div class="subscribe-left">
         <h2>Subscribe us to Receive<br>Latest Updates</h2>
     </div>
@@ -398,14 +392,14 @@
 
 
 <!-- 🔥 MAIN FOOTER -->
-<footer class="footer" data-animate="bounceIn">
+<footer class="footer" data-aos="fade-in">
 
     <div class="footer-grid">
 
         <!-- COLUMN 1 - LOGO + DESCRIPTION + SOCIAL -->
         <div class="footer-col">
             <div class="footer-logo">
-                <img src="Images/logo.webp" alt="Bank Logo" class="logo-icon">
+                <img src="Images/logo_new.webp" alt="Bank Logo" class="logo-icon">
             </div>
 
             <p class="bank-desc">
@@ -467,7 +461,7 @@
 </footer>
 
 <!-- COPYRIGHT -->
-<div class="copyright" data-animate="bounceIn">
+<div class="copyright">
     Copyright 2025 by <span>Stackly</span>. All Rights Reserved.
 </div>
 
@@ -650,6 +644,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 800,          // smooth timing
+    easing: 'ease-in-out',
+    once: true,             // animate only once
+    offset: 80,             // trigger slightly earlier
+  });
+</script>
 
 
 </body>

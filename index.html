@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stackly Banking Service</title>
-
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css">
@@ -13,25 +13,17 @@
 
 <div class="header-wrapper">
 
-  <!-- LOGO -->
- <div class="left-logo">
-    <a href="index.html">
-        <img src="Images/logo3.webp" alt="Stackly Logo">
-    </a>
-</div>
-
-
-  <!-- TOP BAR -->
-  <div class="top-bar" >
-    <div class="top-right">
-      <span>Contact: <i class="fa-solid fa-envelope red-icon"></i> info@example.com</span>
-    </div>
-  </div>
-
   <!-- NAVBAR -->
   <nav class="nav-bar">
 
-    <!-- MOBILE HAMBURGER -->
+    <!-- LOGO -->
+    <div class="left-logo">
+      <a href="index.html">
+        <img src="Images/logo_new.webp" alt="Stackly Logo">
+      </a>
+    </div>
+
+    <!-- HAMBURGER (MOBILE) -->
     <div class="hamburger" id="hamburger">
       <i class="fa-solid fa-bars"></i>
     </div>
@@ -40,18 +32,13 @@
     <div class="menu-container" id="mobile-menu">
       <ul class="menu">
 
-        <!-- HOME DROPDOWN -->
         <li class="home-dropdown">
-
           <a href="index.html" class="home-link">
-            Home 
-            <i class="fa-solid fa-caret-down dropdown-arrow"></i>
+            Home <i class="fa-solid fa-caret-down dropdown-arrow"></i>
           </a>
-
           <ul class="dropdown-menu">
             <li><a href="saas.html">Home 2</a></li>
           </ul>
-
         </li>
 
         <li><a href="about.html">About</a></li>
@@ -63,7 +50,7 @@
       </ul>
     </div>
 
-    <!-- RIGHT BUTTONS -->
+    <!-- BUTTONS -->
     <div class="nav-buttons">
       <a href="login.html" class="login-btn">Login</a>
       <a href="account.html" class="open-btn">Open Account</a>
@@ -128,7 +115,7 @@
 <section class="banking-section">
 
     <!-- TOP TITLE -->
-    <div class="section-header" data-animate="bounceInUp">
+    <div class="section-header" data-aos="fade-in">
         <span class="label">CUSTOM BANKING</span>
         <h2>Banking For Your Needs</h2>
     </div>
@@ -136,28 +123,28 @@
     <!-- TAB MENU -->
     <div class="tabs-row">
 
-        <div class="tab-item active" data-tab="fixed" data-animate="bounceIn">
+        <div class="tab-item active" data-tab="fixed" data-aos="fade-in">
             <div class="icon-bg"><img src="Images/doller.webp"></div>
             <h3>Fixed Deposit</h3>
             <p>Higher Returns & Security.</p>
             <span class="arrow"></span>
         </div>
 
-        <div class="tab-item" data-tab="accounts" data-animate="bounceIn">
+        <div class="tab-item" data-tab="accounts" data-aos="fade-in">
             <div class="icon-bg"><img src="Images/account.webp"></div>
             <h3>Accounts</h3>
             <p>Duty the obligations business.</p>
             <span class="arrow"></span>
         </div>
 
-        <div class="tab-item" data-tab="investments" data-animate="bounceIn">
+        <div class="tab-item" data-tab="investments" data-aos="fade-in">
             <div class="icon-bg"><img src="Images/increase.webp"></div>
             <h3>Investments</h3>
             <p>Secure you & your family.</p>
             <span class="arrow"></span>
         </div>
 
-        <div class="tab-item" data-tab="family" data-animate="bounceIn">
+        <div class="tab-item" data-tab="family" data-aos="fade-in">
             <div class="icon-bg"><img src="Images/family.webp"></div>
             <h3>Family 360º</h3>
             <p>Complete banking solutions.</p>
@@ -168,7 +155,7 @@
 
 
     <!-- CONTENT AREA -->
-    <div class="tab-content" data-animate="bounceInUp">
+    <div class="tab-content" data-aos="fade-in">
 
         <!-- FIXED -->
         <div class="content-box active" id="fixed">
@@ -245,15 +232,15 @@
 <section class="secure-growth-section">
   <div class="top-label">
     <span class="red-line"></span>
-    <span class="label-text" data-animate="bounceInUp">SECURE GROWTH</span>
+    <span class="label-text" data-aos="fade-in">SECURE GROWTH</span>
   </div>
 
-  <h2 class="main-title" data-animate="bounceInUp">Enhance Your Wealth Safely</h2>
+  <h2 class="main-title" data-aos="fade-in">Enhance Your Wealth Safely</h2>
 
   <div class="fd-cards-row">
 
     <!-- FD CARD 1 -->
-    <div class="fd-card" data-animate="bounceIn">
+    <div class="fd-card" data-aos="fade-in">
       <div class="fd-image">
         <img src="Images/fd1.webp" alt="Regular FD">
         <div class="fd-icon"><i class="fas fa-piggy-bank"></i></div>
@@ -269,7 +256,7 @@
     </div>
 
     <!-- FD CARD 2 -->
-    <div class="fd-card" data-animate="bounceIn">
+    <div class="fd-card" data-aos="fade-in">
       <div class="fd-image">
         <img src="Images/fd2.webp" alt="Tax Saver FD">
         <div class="fd-icon"><i class="fas fa-lock"></i></div>
@@ -285,7 +272,7 @@
     </div>
 
     <!-- FD CARD 3 -->
-    <div class="fd-card" data-animate="bounceIn">
+    <div class="fd-card" data-aos="fade-in">
       <div class="fd-image">
         <img src="Images/fd3.webp" alt="Senior FD">
         <div class="fd-icon"><i class="fas fa-chart-line"></i></div>
@@ -304,7 +291,7 @@
 </section>
 
 <!-- ===== BANKING HEADER START ===== -->
-<section class="bankingV2-header" data-animate="bounceInRight">
+<section class="bankingV2-header" data-aos="fade-in">
 
   <div class="bankingV2-header-left">
     <div class="v2-mini-label">
@@ -337,18 +324,18 @@
 <section class="bankingV2-section">
 
   <!-- LEFT IMAGE -->
-  <div class="v2-left-image" data-animate="bounceInLeft">
+  <div class="v2-left-image" data-aos="fade-in">
     <img src="Images/invest.webp" alt="Bank Image">
   </div>
 
   <!-- LEFT TABS -->
-  <div class="v2-tabs" data-animate="bounceInLeft">
+  <div class="v2-tabs" data-aos="fade-in">
     <div class="v2-tab active" data-tab="business">BUSINESS</div>
     <div class="v2-tab" data-tab="individual">INDIVIDUAL</div>
   </div>
 
   <!-- LEFT SIDEBAR -->
-  <div class="v2-sidebar" data-animate="bounceInLeft">
+  <div class="v2-sidebar" data-aos="fade-in">
 
     <!-- BUSINESS MENU -->
     <div class="v2-menu-group businessMenu">
@@ -421,7 +408,7 @@
   </div>
 
   <!-- DYNAMIC CONTENT -->
-  <div class="v2-content-area" id="dynamicContent" data-animate="bounceInRight">
+  <div class="v2-content-area" id="dynamicContent" data-aos="fade-in">
 
     <div class="v2-content-block">
 
@@ -461,7 +448,7 @@
 
 <section class="banking-stats-section">
 
-  <div class="banking-stat-box" data-animate="bounceIn">
+  <div class="banking-stat-box" data-aos="fade-in">
     <div class="stat-icon">
       <i class="fas fa-users"></i>
     </div>
@@ -470,7 +457,7 @@
     <p class="stat-text">Happy Customers World Wide.</p>
   </div>
 
-  <div class="banking-stat-box" data-animate="bounceIn">
+  <div class="banking-stat-box" data-aos="fade-in">
     <div class="stat-icon">
       <i class="fas fa-sync"></i>
     </div>
@@ -479,7 +466,7 @@
     <p class="stat-text">Transactions Processed Daily.</p>
   </div>
 
-  <div class="banking-stat-box" data-animate="bounceIn">
+  <div class="banking-stat-box" data-aos="fade-in">
     <div class="stat-icon">
       <i class="fas fa-map-pin"></i>
     </div>
@@ -488,7 +475,7 @@
     <p class="stat-text">ATMs and Branches Globally.</p>
   </div>
 
-  <div class="banking-stat-box" data-animate="bounceIn">
+  <div class="banking-stat-box" data-aos="fade-in">
     <div class="stat-icon">
       <i class="fas fa-university"></i>
     </div>
@@ -503,7 +490,7 @@
 <section class="loan-section">
 
   <!-- LEFT IMAGE -->
-  <div class="loan-left-img" data-animate="bounceInLeft">
+  <div class="loan-left-img" data-aos="fade-in">
     <img src="Images/calc.webp" alt="Loan User">
   </div>
 
@@ -520,7 +507,7 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <div class="loan-container" data-animate="bounceIn">
+    <div class="loan-container" data-aos="fade-in">
 
       <!-- LEFT DETAILS -->
       <div class="loan-details">
@@ -607,7 +594,7 @@
 
   <!-- LEFT SIDE IMAGE AREA -->
   <div class="cc-left">
-    <div class="cc-card-bg" data-animate="bounceInLeft">
+    <div class="cc-card-bg" data-aos="fade-in">
 
       <div class="cc-badge cashback">Cashback Up to: 25%</div>
 
@@ -632,7 +619,7 @@
   </div>
 
   <!-- RIGHT SIDE CONTENT -->
-  <div class="cc-right" data-animate="bounceInRight">
+  <div class="cc-right" data-aos="fade-in">
     
     <span class="cc-small-title">CREDIT CARD</span>
 
@@ -668,7 +655,7 @@
 <section class="locker-section">
 
   <!-- LEFT CONTENT -->
-  <div class="locker-left" data-animate="bounceInLeft">
+  <div class="locker-left" data-aos="fade-in">
 
     <span class="locker-small-title">LOCKER FACILITY</span>
 
@@ -715,7 +702,7 @@
   </div>
 
   <!-- RIGHT IMAGE -->
-  <div class="locker-right" data-animate="bounceInRight">
+  <div class="locker-right" data-aos="fade-in">
     <img src="Images/locker.webp" alt="Locker Image">
   </div>
 
@@ -723,13 +710,13 @@
 
 <!--  FIRST BLOG SECTION -->
 <section class="top-blog">
-    <h2 class="title" data-animate="bounceIn">BLOG POST</h2>
+    <h2 class="title" data-aos="fade-in">BLOG POST</h2>
 </section>
 
 <!--  LATEST FROM BLOG POST -->
 <section class="latest-blog-section">
 
-    <div class="latest-title-box" data-animate="bounceIn">
+    <div class="latest-title-box" data-aos="fade-in">
         <h2>Latest from Blog Post</h2>
     </div>
 
@@ -737,7 +724,7 @@
     <div class="blog-grid">
 
         <!-- CARD 1 -->
-        <div class="blog-card" data-animate="bounceIn">
+        <div class="blog-card" data-aos="fade-in">
             <img src="Images/blog1.webp" class="blog-img">
 
             <div class="blog-content">
@@ -755,7 +742,7 @@
         </div>
 
         <!-- CARD 2 -->
-        <div class="blog-card" data-animate="bounceIn">
+        <div class="blog-card" data-aos="fade-in">
             <img src="Images/blog2.webp" class="blog-img">
 
             <div class="blog-content">
@@ -773,7 +760,7 @@
         </div>
 
         <!-- CARD 3 -->
-        <div class="blog-card" data-animate="bounceIn">
+        <div class="blog-card" data-aos="fade-in">
             <img src="Images/blog3.webp" class="blog-img">
 
             <div class="blog-content">
@@ -791,7 +778,7 @@
         </div>
 
         <!-- CARD 4 -->
-        <div class="blog-card" data-animate="bounceIn">
+        <div class="blog-card" data-aos="fade-in">
             <img src="Images/blog4.webp" class="blog-img">
 
             <div class="blog-content">
@@ -809,7 +796,7 @@
         </div>
 
         <!-- CARD 5 -->
-        <div class="blog-card" data-animate="bounceIn">
+        <div class="blog-card" data-aos="fade-in">
             <img src="Images/blog5.webp" class="blog-img">
 
             <div class="blog-content">
@@ -827,7 +814,7 @@
         </div>
 
         <!-- CARD 6 -->
-        <div class="blog-card" data-animate="bounceIn">
+        <div class="blog-card" data-aos="fade-in">
             <img src="Images/blog6.webp" class="blog-img">
 
             <div class="blog-content">
@@ -847,7 +834,7 @@
     </div>
 </section>
 
-<section class="subscribe-section" data-animate="bounceIn">
+<section class="subscribe-section" data-aos="fade-in">
     <div class="subscribe-left">
         <h2>Subscribe us to Receive<br>Latest Updates</h2>
     </div>
@@ -859,13 +846,13 @@
 </section>
 
 
-<footer class="footer" data-animate="bounceIn">
+<footer class="footer" data-aos="fade-in">
 
     <div class="footer-grid">
 
         <div class="footer-col">
             <div class="footer-logo">
-                <img src="Images/logo.webp" alt="Bank Logo" class="logo-icon">
+                <img src="Images/logo_new.webp" alt="Bank Logo" class="logo-icon">
             </div>
 
             <p class="bank-desc">
@@ -927,7 +914,7 @@
 </footer>
 
 <!-- COPYRIGHT -->
-<div class="copyright" data-animate="bounceIn">
+<div class="copyright">
     Copyright 2025 by <span>Stackly</span>. All Rights Reserved.
 </div>
 
@@ -1134,6 +1121,18 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script src="script.js"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 800,          // smooth timing
+    easing: 'ease-in-out',
+    once: true,             // animate only once
+    offset: 80,             // trigger slightly earlier
+  });
+</script>
 
 
 </body>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stackly Header</title>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -14,24 +15,17 @@
 
 <div class="header-wrapper">
 
-  <!-- LOGO -->
-   <div class="left-logo">
-    <a href="index.html">
-        <img src="Images/logo3.webp" alt="Stackly Logo">
-    </a>
-</div>
-
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div class="top-right">
-<span>Contact: <i class="fa-solid fa-envelope red-icon"></i> info@example.com</span>
-    </div>
-  </div>
-
   <!-- NAVBAR -->
   <nav class="nav-bar">
 
-    <!-- MOBILE HAMBURGER -->
+    <!-- LOGO -->
+    <div class="left-logo">
+      <a href="index.html">
+        <img src="Images/logo_new.webp" alt="Stackly Logo">
+      </a>
+    </div>
+
+    <!-- HAMBURGER (MOBILE) -->
     <div class="hamburger" id="hamburger">
       <i class="fa-solid fa-bars"></i>
     </div>
@@ -73,7 +67,7 @@
 </div>
 
 <!-- SERVICES HEADER SECTION -->
-<section class="inner-banner" data-animate="bounceIn">
+<section class="inner-banner" data-aos="fade-in">
     <div class="banner-overlay"></div>
 
     <div class="container">
@@ -92,7 +86,7 @@
     <div class="overview-grid">
 
         <!-- LEFT COLUMN -->
-        <div class="overview-left" data-animate="bounceInLeft">
+        <div class="overview-left" data-aos="fade-in">
 
             <div class="overview-badge">
                 <i class="fa-solid fa-minus"></i> OVERVIEW
@@ -112,7 +106,7 @@
         </div>
 
         <!-- RIGHT COLUMN -->
-        <div class="overview-right" data-animate="bounceInRight">
+        <div class="overview-right" data-aos="fade-in">
 
             <p class="overview-para">
                 On the other hand, we denounce with righteous indignation dislike men who are so
@@ -146,17 +140,17 @@
     <!-- ========== BOTTOM 3-BLOCK GRID ========== -->
     <div class="bottom-grid">
 
-        <div class="bottom-img-left" data-animate="bounceInLeft">
+        <div class="bottom-img-left" data-aos="fade-in">
             <img src="Images/team.webp">
         </div>
 
-        <div class="bottom-career-box" data-animate="bounceInUp">
+        <div class="bottom-career-box" data-aos="fade-in">
             <h1>29+</h1>
             <p class="career-small">DISCOVER<br>CAREER OPTIONS</p>
             <a href="404.html" class="career-btn">→ Start Hiring</a>
         </div>
 
-        <div class="bottom-video" data-animate="bounceInRight">
+        <div class="bottom-video" data-aos="fade-in">
             <img src="Images/ceo.webp" class="video-img">
 
             <button class="play-btn">
@@ -172,7 +166,7 @@
     <div class="stats-container">
 
         <!-- ITEM 1 -->
-        <div class="stat-item" data-animate="bounceIn">
+        <div class="stat-item" data-aos="fade-in">
             <div class="stat-icon">
                 <i class="fa-solid fa-users"></i>
             </div>
@@ -181,7 +175,7 @@
         </div>
 
         <!-- ITEM 2 -->
-        <div class="stat-item" data-animate="bounceIn">
+        <div class="stat-item" data-aos="fade-in">
             <div class="stat-icon">
                 <i class="fa-solid fa-rotate"></i>
             </div>
@@ -190,7 +184,7 @@
         </div>
 
         <!-- ITEM 3 -->
-        <div class="stat-item" data-animate="bounceIn">
+        <div class="stat-item" data-aos="fade-in">
             <div class="stat-icon">
                 <i class="fa-solid fa-location-pin"></i>
             </div>
@@ -199,7 +193,7 @@
         </div>
 
         <!-- ITEM 4 -->
-        <div class="stat-item" data-animate="bounceIn">
+        <div class="stat-item" data-aos="fade-in">
             <div class="stat-icon">
                 <i class="fa-solid fa-landmark"></i>
             </div>
@@ -212,20 +206,20 @@
 
 <section class="purpose-section">
 
-    <div class="section-label" data-animate="bounceInUp"><i class="fa-solid fa-minus"></i> STATEMENTS</div>
-    <h2 class="purpose-title" data-animate="bounceInUp">Our Purpose and Principles</h2>
+    <div class="section-label" data-aos="fade-in"><i class="fa-solid fa-minus"></i> STATEMENTS</div>
+    <h2 class="purpose-title" data-aos="fade-in">Our Purpose and Principles</h2>
 
     <!-- GRID WRAPPER -->
     <div class="purpose-wrapper">
 
         <!-- LEFT COLUMN -->
-        <div class="col left-col" data-animate="bounceInLeft">
+        <div class="col left-col" data-aos="fade-in">
             <div class="top-card">
                 <img src="Images/mission.webp">
                 <h3 class="card-title">Our Mission</h3>
             </div>
 
-            <div class="bottom-card" data-animate="bounceInLeft">
+            <div class="bottom-card" data-aos="fade-in">
                 <div class="top-arrow"></div>
                 <i class="fa-solid fa-bullseye bottom-icon"></i>
                 <p>Equal blame belongs to those who fail in their duty through weakness of will which the same as saying.</p>
@@ -233,7 +227,7 @@
         </div>
 
         <!-- CENTER COLUMN (COMMON CENTER) -->
-        <div class="col center-col" data-animate="bounceInUp">
+        <div class="col center-col" data-aos="fade-in">
             <div class="center-box">
                 <i class="fa-solid fa-star center-icon"></i>
 
@@ -254,13 +248,13 @@
         </div>
 
         <!-- RIGHT COLUMN -->
-        <div class="col right-col" data-animate="bounceInRight">
+        <div class="col right-col" data-aos="fade-in">
             <div class="top-card">
                 <img src="Images/vision.webp">
                 <h3 class="card-title">Our Vision</h3>
             </div>
 
-            <div class="bottom-card" data-animate="bounceInRight">
+            <div class="bottom-card" data-aos="fade-in">
                 <div class="top-arrow"></div>
                 <i class="fa-solid fa-handshake bottom-icon"></i>
                 <p>Equal blame belongs to those who fail in their duty through weakness of will which the same as saying.</p>
@@ -274,7 +268,7 @@
 <section class="awards-section">
 
   <!-- LEFT CONTENT -->
-  <div class="awards-left" data-animate="bounceInLeft">
+  <div class="awards-left" data-aos="fade-in">
     <div class="awards-label"><i class="fa-solid fa-minus"></i> AWARDS</div>
 
     <h2 class="awards-title">Prestigious Awards<br>and Honors</h2>
@@ -292,7 +286,7 @@
   </div>
 
   <!-- RIGHT AWARD SLIDER -->
-  <div class="awards-right" data-animate="bounceIn">
+  <div class="awards-right" data-aos="fade-in">
 
     <!-- ARROWS -->
     <div class="slide-control">
@@ -345,7 +339,7 @@
 <section class="reason-section">
 
     <!-- LEFT IMAGE + ROUND CARD -->
-    <div class="reason-left" data-animate="bounceInLeft">
+    <div class="reason-left" data-aos="fade-in">
         <img src="Images/business.webp" class="reason-man">
 
         <div class="growth-card">
@@ -367,7 +361,7 @@
     </div>
 
     <!-- RIGHT SIDE CONTENT -->
-    <div class="reason-right" data-animate="bounceInRight">
+    <div class="reason-right" data-aos="fade-in">
 
         <h2 class="reason-title">Reason for Choosing Us</h2>
 
@@ -406,7 +400,7 @@
     </div>
 </section>
 
-<section class="subscribe-section" data-animate="bounceIn">
+<section class="subscribe-section" data-aos="fade-in">
     <div class="subscribe-left">
         <h2>Subscribe us to Receive<br>Latest Updates</h2>
     </div>
@@ -419,14 +413,14 @@
 
 
 <!--  MAIN FOOTER -->
-<footer class="footer" data-animate="bounceIn">
+<footer class="footer" data-aos="fade-in">
 
     <div class="footer-grid">
 
         <!-- COLUMN 1 - LOGO + DESCRIPTION + SOCIAL -->
         <div class="footer-col">
             <div class="footer-logo">
-                <img src="Images/logo.webp" alt="Bank Logo" class="logo-icon">
+                <img src="Images/logo_new.webp" alt="Bank Logo" class="logo-icon">
             </div>
 
             <p class="bank-desc">
@@ -488,7 +482,7 @@
 </footer>
 
 <!-- COPYRIGHT -->
-<div class="copyright" data-animate="bounceIn">
+<div class="copyright">
     Copyright 2025 by <span>Stackly</span>. All Rights Reserved.
 </div>
 
@@ -659,6 +653,18 @@ document.addEventListener("DOMContentLoaded", () => {
   elements.forEach((el) => observer.observe(el));
 });
 </script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 800,          // smooth timing
+    easing: 'ease-in-out',
+    once: true,             // animate only once
+    offset: 80,             // trigger slightly earlier
+  });
+</script>
+
 
 </body>
 </html>

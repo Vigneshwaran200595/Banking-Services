@@ -5,50 +5,197 @@
   font-family: Arial, sans-serif;
 }
 
-/* WRAPPER */
+/* HEADER must allow overflow */
 .header-wrapper {
   position: relative;
-  padding-left: 240px;
+  overflow: visible !important;
+  z-index: 1000;
 }
 
-/* LEFT LOGO FIXED */
-.left-logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 320px;
-  height: 150px;
+/* NAVBAR must allow dropdown */
+.nav-bar {
+  position: relative;
+  overflow: visible !important;
+  z-index: 1001;
+}
+
+.header-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.nav-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 20;
+  justify-content: space-between;
+  padding: 16px 40px;
 }
+
+/* LOGO */
+.left-logo {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+
+
 .left-logo img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
-/* TOP BAR */
-.top-bar {
-  background: #1f1f23;
-  color: #fff;
-  padding: 12px 40px;
-  height: 60px;
+/* MENU */
+.menu-container {
+  flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 22px;
   align-items: center;
 }
 
-/* RIGHT SIDE */
-.top-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
 }
-.red-icon {
+
+.menu a:hover {
   color: #e71228;
-  margin-right: 5px;
+}
+
+/* DROPDOWN */
+.home-dropdown {
+  position: relative;
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  margin-left: 4px;
+  transition: 0.3s;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #e71228;
+  list-style: none;
+  min-width: 120px;
+  border-radius: 4px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 14px;
+  color: #fff;
+}
+
+.dropdown-menu li a:hover {
+  background: #fff;
+  color: #e71228;
+}
+
+/* Desktop hover */
+@media (min-width: 769px) {
+  .home-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* BUTTONS */
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.login-btn {
+  padding: 8px 18px;
+  border: 2px solid #000;
+  text-decoration: none;
+  color: #000;
+}
+
+.login-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.open-btn {
+  padding: 8px 22px;
+  background: #e71228;
+  color: #fff;
+  text-decoration: none;
+}
+
+.open-btn:hover {
+  background: #c10f21;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu-container {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-container.active {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .login-btn,
+  .open-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    background: #fff;
+  }
+
+  .dropdown-menu li a {
+    color: #000;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  .dropdown-arrow.rotate {
+    transform: rotate(180deg);
+  }
 }
 
 /* NAV BAR */
@@ -362,13 +509,6 @@
       padding-left: 0 !important;
     }
 
-    .left-logo {
-      position: relative !important;
-      width: 240px;
-      height: auto;
-      margin: 10px auto;
-    }
-
     .nav-bar {
       padding: 15px 20px;
     }
@@ -461,7 +601,7 @@
     }
 
     .top-right {
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .menu li {
@@ -491,6 +631,10 @@
       padding: 10px;
       font-size: 14px;
     }
+
+     .top-right {
+      font-size: 12px;
+    }
   }
 
   /* ============= 360px (mini phones) ============= */
@@ -501,7 +645,8 @@
     }
 
     .top-right {
-      font-size: 12px;
+      font-size: 10px;
+      margin-left: 20px;
     }
 
     .menu li {
@@ -525,16 +670,15 @@
     }
 
     /* Logo overlays top bar */
-    .left-logo {
-      position: absolute !important;
-      top: -30px !important;      /* adjust overlay amount */
-      left: 50% !important;
-      transform: translateX(-50%); /* center logo */
-      z-index: 999 !important;
-      width: 160px !important;
-      height: auto;
-      margin: 0 !important;
-    }
+  .left-logo {
+    position: relative !important;
+    margin-top: 10px !important;
+    transform: none !important;
+    width: 140px !important;
+    height: auto;
+    margin-left: -50px;
+    z-index: 999 !important;
+  }
 
     .left-logo img {
       width: 100% !important;
@@ -552,6 +696,8 @@
 
   }
 
+
+  
 
   @media (max-width: 768px) {
 
@@ -798,7 +944,6 @@
         color: #fff !important;          /* white text */
     }
 }
-
 
 .left-logo a {
     display: block;        /* makes <a> behave like the old <img> */

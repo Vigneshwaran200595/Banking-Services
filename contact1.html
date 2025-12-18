@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stackly Header</title>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -14,24 +15,17 @@
 
 <div class="header-wrapper">
 
-  <!-- LOGO -->
-  <div class="left-logo">
-    <a href="saas.html">
-        <img src="Images/logo3.webp" alt="Stackly Logo">
-    </a>
-</div>
-
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div class="top-right">
-<span>Contact: <i class="fa-solid fa-envelope red-icon"></i> info@example.com</span>
-    </div>
-  </div>
-
   <!-- NAVBAR -->
   <nav class="nav-bar">
 
-    <!-- MOBILE HAMBURGER -->
+    <!-- LOGO -->
+    <div class="left-logo">
+      <a href="index.html">
+        <img src="Images/logo_new.webp" alt="Stackly Logo">
+      </a>
+    </div>
+
+    <!-- HAMBURGER (MOBILE) -->
     <div class="hamburger" id="hamburger">
       <i class="fa-solid fa-bars"></i>
     </div>
@@ -72,7 +66,7 @@
   </nav>
 </div>
 
-<section class="account-banner scroll-animate" data-anim="backInLeft">
+<section class="account-banner" data-aos="fade-in">
 
     <!-- Background Image -->
     <div class="banner-bg"></div>
@@ -88,7 +82,7 @@
 <section class="support-section">
 
     <!-- LEFT INFO -->
-    <div class="support-left scroll-animate" data-anim="lightSpeedInLeft">
+    <div class="support-left" data-aos="fade-in">
         <h2>Get Support for<br> any Queries or Complaints</h2>
         <p class="subtext">Committed to helping you meet all your banking needs.</p>
 
@@ -155,7 +149,7 @@
     </div>
 
     <!-- RIGHT FORM -->
-   <div class="support-right scroll-animate" data-anim="lightSpeedInLeft">
+   <div class="support-right" data-aos="fade-in">
         <form id="contactForm">
             <label>Name</label>
             <input type="text" id="name" placeholder="Name">
@@ -182,7 +176,7 @@
 
 
 <!-- ================= MAP SECTION ================= -->
-<section class="map-section scroll-animate" data-anim="backInLeft">
+<section class="map-section" data-aos="fade-in">
 
     <div class="map-search-bar">
         <select id="locationSelect">
@@ -226,7 +220,7 @@
 
 </section>
 
-<section class="customer-care-section scroll-animate" data-anim="lightSpeedInLeft">
+<section class="customer-care-section" data-aos="fade-in">
 
     <h2 class="care-title">Customer Care Contact Details</h2>
 
@@ -266,14 +260,14 @@
 </section>
 
 <!--  MAIN FOOTER -->
-<footer class="footer scroll-animate" data-anim="flipInX">
+<footer class="footer" data-aos="fade-in">
 
     <div class="footer-grid">
 
         <!-- COLUMN 1 - LOGO + DESCRIPTION + SOCIAL -->
         <div class="footer-col">
             <div class="footer-logo">
-                <img src="Images/logo.webp" alt="Bank Logo" class="logo-icon">
+                <img src="Images/logo_new.webp" alt="Bank Logo" class="logo-icon">
             </div>
 
             <p class="bank-desc">
@@ -498,6 +492,18 @@ function showBranch() {
     window.addEventListener("scroll", scrollAnimation);
     window.addEventListener("load", scrollAnimation);
 </script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 800,          // smooth timing
+    easing: 'ease-in-out',
+    once: true,             // animate only once
+    offset: 80,             // trigger slightly earlier
+  });
+</script>
+
 
 
 </body>
